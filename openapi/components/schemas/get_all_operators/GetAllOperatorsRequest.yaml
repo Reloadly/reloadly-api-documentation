@@ -1,0 +1,18 @@
+type: object
+properties:
+  includeBundles:
+    description: This indicates if any airtime and data bundles being offered by the operator should be included in the API response. Default value is true.
+    type: boolean
+  includeData:
+    description: 
+      This indicates if any airtime or data plans being offered by the operator should be included in the API response. Default value is true.
+    type: boolean
+  suggestedAmountsMap:
+    description: This indicates if this field should be returned as a response. Default value is  false.
+    type: boolean
+  size:
+    description: This indicates the number of operators to be retrieved on a page. Default value is  200.
+    type: integer
+  page:
+    description: This indicates the page of the operator list being retrieved. Default value is   1.
+    type: integer

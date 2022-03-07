@@ -1,0 +1,65 @@
+post:
+  tags:
+    - Access Token
+  summary: Create an access token
+  description: Reloadly's authentication flow uses the OAuth 2.0 standard. With this endpoint, you can create an access token that will be used when making requests through our API endpoints or SDKs.
+  operationId: access-token
+  security: 
+    - OAuth2Credentials: []
+  responses:
+    '200':
+      description: Successfully created an access token
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/access_token/AccessTokenResponse200.yaml
+          example:
+            access_token: eyJraXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+            scope: developer
+            expires_in: 5184000
+            token_type: Bearer
+    '401':
+      description: Failed due to an unauthorized request
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/access_token/AccessTokenResponse401.yaml
+          example:
+            timeStamp: 2022-01-06 10:57:50
+            message: Access Denied
+            path: /oauth/token
+            errorCode: INVALID_CREDENTIALS
+            infoLink: null
+            details: []
+   
+  requestBody:
+    description: Payload Description
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/access_token/AccessTokenRequest.yaml
+  x-codeSamples:
+    - lang: "C#"
+      source:
+        $ref: "../code_samples/csharp/access_token/code.cs"
+    - lang: "PHP"
+      source:
+        $ref: "../code_samples/PHP/access_token/code.php"
+    - lang: "Golang"
+      source:
+        $ref: "../code_samples/golang/access_token/code.go"
+    - lang: "Java"
+      source:
+        $ref: "../code_samples/java/access_token/code.class"
+    - lang: "Node JS"
+      source:
+        $ref: "../code_samples/nodejs/access_token/code.js"
+    - lang: "Python"
+      source:
+        $ref: "../code_samples/python/access_token/code.py"
+      
+
+      
+
+  

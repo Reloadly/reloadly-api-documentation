@@ -1,0 +1,43 @@
+type: object
+properties:
+  content:
+    type: array
+    description: An array containing details of every promotion being offered within a country.
+    items:
+      type: object
+      properties:
+        promotionId:
+          description: This is a unique identifier for the ongoing promotion.
+          type: integer
+        operatorId:
+          description: This indicates the identification number of the operator offering the promotion.
+          type: integer
+          example:
+        title1:
+          description: This indicates the duration of the promotion and the name of the operator offering it.
+          type: string
+          example: 
+        title2:
+          description: This indicates additional information on the promotion.
+          type: string
+          example: 
+        description:
+          description: This indicates a summary of what the promotion is about.
+          type: string
+          example: 
+        startDate:
+          description: The date the promotion begins.
+          type: string
+          example: 
+        endDate:
+          description: The date the promotion ends.
+          type: string
+          example: 
+        denominations:
+          description: This indicates the top-up amounts that are eligible for the promotion.
+          type: string
+          example: 
+        localDenominations:
+          description: This indicates the local top-up amounts in the destination's currency that are eligible for the promotion.
+          type: string
+          example:      

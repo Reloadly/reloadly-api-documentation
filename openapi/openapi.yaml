@@ -1,0 +1,101 @@
+openapi: 3.1.0
+info:
+  version: 1.0.0
+  title: Reloadly
+  termsOfService: 'https://www.reloadly.com/terms-of-use'
+  contact:
+    email: support@reloadly.com
+    url: 'https://www.reloadly.com/'
+  # license:
+  #   name: Apache 2.0
+  #   url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+  # x-logo:
+  #   url: 'https://res.cloudinary.com/fullstackmafia/image/upload/c_thumb,w_200,g_face/v1626946901/favicon_ijjlbn.png'
+  # description: Documentation is nice
+# externalDocs:
+#   description: Find out how to create a GitHub repo for your OpenAPI definition.
+#   url: 'https://github.com/Rebilly/generator-openapi-repo'
+tags:
+  - name: Access Token
+    description: Reloadly issues access tokens (also called bearer tokens) that are used to authorize API requests.
+  - name: Accounts Balance
+    description: Reloadly enables you to retrieve the balance of your account in real time while making transactions.
+  - name: Countries
+    description: Reloadly provides access to multiple countries where top-ups can be sent and received.
+  - name: Operators
+    description: Reloadly enables integration with various operators that can send and receive airtime and data top-ups.
+  - name: FX Rates
+    description: Reloadly provides access to foreign exchange rate data of every operator while making international top-ups.
+  - name: Commissions
+    description: Reloadly provides access to airtime and data commissions or discounts for various operators globally.
+  - name: Promotions
+    description: Get access to any promotion - airtime or data - being run by any operator on the Reloadly network.
+  - name: Top-ups
+    description: Make an airtime or data recharge to a mobile number working with any of the operators on Reloadly's network.
+  - name: Transactions
+    description: View transaction reports and history for every top-up made through your Reloadly account.
+    
+servers:
+  - url: https://topups.reloadly.com
+    description: Production
+  - url: https://topups-sandbox.reloadly.com
+    description: Sandbox
+paths:
+  /oauth/token:
+    $ref: paths/access-token.yaml
+    servers:
+      - url: https://auth.reloadly.com
+        description: Production
+  /accounts/balance:
+    $ref: paths/accounts-balance.yaml
+  /countries:
+    $ref: paths/get-all-countries.yaml
+  /countries/{countrycode}:
+    $ref: paths/get-country-by-iso.yaml
+  /operators:
+    $ref: paths/get-all-operators.yaml
+  /operators/{operatorid}:
+    $ref: paths/get-operator-by-id.yaml
+  /operators/auto-detect/phone/{phone}/countries/{countryisocode}:
+    $ref: paths/auto-detect-an-operator.yaml
+  /operators/countries/{countrycode}:
+    $ref: paths/get-operator-by-iso.yaml
+  /operators/fx-rate:
+    $ref: paths/fx-rate.yaml
+  /operators/commissions:
+    $ref: paths/get-all-commissions.yaml
+  /operators/{operatorid}/commissions:
+    $ref: paths/get-commission-by-id.yaml
+  /promotions:
+    $ref: paths/get-all-promotions.yaml
+  /promotions/{promotionid}:
+    $ref: paths/get-promotion-by-id.yaml
+  /promotions/country-codes/{countrycode}:
+    $ref: paths/get-promotion-by-iso.yaml
+  /promotions/operators/{operatorid}:
+    $ref: paths/get-promotion-by-operator-id.yaml
+  /topups:
+    $ref: paths/top-ups.yaml
+  /topups-async:
+    $ref: paths/top-ups-async.yaml
+  /topups/{transactionId}/status:
+    $ref: paths/top-ups-status.yaml
+  /topups/reports/transactions:
+    $ref: paths/get-all-transactions.yaml
+  /topups/reports/transactions/{transactionId}:
+    $ref: paths/get-transaction-by-id.yaml
+    
+components:
+  securitySchemes:
+    OAuth2Credentials:
+      type: oauth2
+      flows:
+        implicit:
+          authorizationUrl: 'https://auth.reloadly.com'
+          scopes:
+            'developer': To be used in production or sandbox environments
+    BearerToken:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Your access token is required as a bearer token in the header of every request.
