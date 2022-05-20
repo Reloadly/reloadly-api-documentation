@@ -4,7 +4,7 @@ apis:
     root: openapi/openapi.yaml
 lint:
   extends:
-    - all
+    - recommended
   rules:
     no-unused-components: error
 features.openapi:
