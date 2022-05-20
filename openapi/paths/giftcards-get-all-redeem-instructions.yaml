@@ -4,6 +4,13 @@ get:
   summary: Get all redeem instructions
   description: Retrieve the redeem instruction details of every gift card product that can be purchased via Reloadly. 
   operationId: giftcards/get-all-redeem-instructions
+  parameters:
+    - in: header
+      name: Authorization
+      schema:
+        type: string
+        description: Your access token is required as a bearer token in the request's header
+      required: true
   responses:
     '200':
       description: Successfully retrieved details of all gift card redeem instructions.

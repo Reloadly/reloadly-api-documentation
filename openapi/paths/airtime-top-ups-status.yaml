@@ -5,18 +5,18 @@ get:
   description: Retrieve the real-time status of a top-up by making a request with its identification number.
   operationId: airtime/top-ups-status
   parameters:
-    - in: path
-      name: transactionId
-      description: The transaction identification number of a top-up
-      required: true
-      schema:
-        type: string
     - in: header
       name: Authorization
       schema:
         type: string
         description: Your access token is required as a bearer token in the request's header
       required: true
+    - in: path
+      name: transactionId
+      description: The transaction identification number of a top-up
+      required: true
+      schema:
+        type: string
   responses:
     '200':
       description: Successfully retrieved details of a top-up

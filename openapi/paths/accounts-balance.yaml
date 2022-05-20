@@ -4,15 +4,13 @@ get:
   summary: View an account's balance
   description: Retrieve the details of an account's balance.
   operationId: accounts-balance
-  security: 
-    - BearerToken: []
-  # parameters:
-  #   - in: header
-  #     name: Authorization
-  #     schema:
-  #       type: string
-  #       description: Your access token is required as a bearer token in the request's header
-  #     required: true
+  parameters:
+    - in: header
+      name: Authorization
+      schema:
+        type: string
+        description: Your access token is required as a bearer token in the request's header
+      required: true
   responses:
     '200':
       description: Successfully retrieved balance details
