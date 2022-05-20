@@ -1,0 +1,91 @@
+type: object
+properties:
+  content:
+    type: array
+    description: An array containing details of every biller accessbile via Reloadly.
+    items:
+      type: object
+      properties:
+        id:
+          description: This indicates the utility biller's identification number.
+          type: integer
+        name:
+          description: This indicates the utility biller's name.
+          type: string
+          example:
+        countryIsoCode:
+          description: This indicates the <a href="https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes">ISO code</a>  of the biller's country of origin.
+          type: string
+          example: 
+        type:
+          description: This indicates the type of utility payment handled by the biller.
+          type: string
+          example: 
+        serviceType:
+          description: This indicates the payment service type being rendered by the utility biller service.
+          type: string
+          example: 
+        localAmountSupported:
+          description: This indicates if the biller supports transactions made in its country of origin's local currency.
+          type: boolean
+          example: 
+        localTransactionCurencyCode:
+          description: This indicates the currency denomination of the biller's country of origin.
+          type: string
+          example: 
+        minLocalTransactionAmount:
+          description: This indicates the lowest amount that can be made in a single transaction through the biller. (Value is measured  in the local currency of the country where the biller is operating in).
+          type: integer
+          example: 
+        maxLocalTransactionAmount:
+          description: This indicates the highest amount that can be made in a single transaction through the biller. (Value is measured in the local currency of the country where the biller operates).
+          type: integer
+          example:  
+        localTransactionFee:
+          description: This indicates the fee charged per transaction made in the biller's local currency.
+          type: integer
+          example:  
+        localTransactionFeeCurrencyCode:
+          description: This indicates the currency denomination which the local transaction fee is charged in.
+          type: string
+          example: 
+        localDiscountPercentage:
+          description: This indicates the discount percentage applied to every transaction made in the biller's local currency.
+          type: integer
+          example:
+        internationalAmountSupported:
+          description: This indicates if foreign currencies can be used with the biller.
+          type: boolean
+          example:
+        internationalTransactionCurrencyCode:
+          description: This indicates the currency denomination of your account - if its a foreign currency.
+          type: string
+          example:
+        minInternationalTransactionAmount:
+          description: This indicates the lowest amount that can be made in a single transaction if your account uses a foreign currency.
+          type: integer
+          example:
+        internationalTransactionFee:
+          description: This indicates the fee charged per transaction made if your account uses a foreign currency.
+          type: integer
+          example:
+        internationalTransactionFeeCurrencyCode:
+          description: This indicates the currency denomination which the international transaction fee is charged in.
+          type: string
+          example:
+        internationalDiscountPercentage:
+          description: This indicates the fee charged per transaction made if you are using a foreign currency.
+          type: integer
+          example:
+        fx:
+          description: This indicates the fee charged per transaction made if your account uses a foreign currency.
+          type: object
+          properties:
+            rate:
+              description: This indicates the exchange rate between the biller's currency and your account's currency.
+              type: integer
+              example:    
+            currencyCode: 
+              description: This indicates your account's currency code. 
+              type: string 
+              example:

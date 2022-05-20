@@ -1,0 +1,147 @@
+get:
+  tags:
+    - Airtime
+  summary: Get operator by ISO code
+  description: Retrieve the details of all the operators within a particular country by making a request with the country's ISO code.
+  operationId: airtime/get-operator-by-iso
+  parameters:
+    - in: header
+      name: Authorization
+      schema:
+        type: string
+        description: Your access token is required as a bearer token in the request's header.
+      required: true
+    - in: path
+      name: countrycode
+      description: The ISO code of the country where the operator is registered.
+      required: true
+      schema:
+        type: string
+    - in: query
+      name: suggestedAmountsMap
+      schema:
+        type: boolean
+        description:  Indicates if this field should be returned as a response. Default value is false.
+      required: false
+    - in: query
+      name: suggestedAmounts
+      schema:
+        type: boolean
+        description:  Indicates if this field should be returned as a response. Default value is false.
+      required: false
+    - in: query
+      name: includePin
+      schema:
+        type: boolean
+        description:  Indicates if PIN details if applicable to the operator, should be returned as a response. Default value is true.
+      required: false
+    - in: query
+      name: includeData
+      schema:
+        type: boolean
+        description: Indicates if any data plans being offered by the operator should be returned as a response. Default value is true.
+      required: false
+    - in: query
+      name: includeBundles
+      schema:
+        type: boolean
+        description:  Indicates if any airtime and data bundles being offered by the operator should be returned as a response. Default value is true
+      required: false
+  responses:
+    '200':
+      description: Successfully retrieved details of an operator
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/airtime/get_operator_by_iso/GetOperatorByIsoResponse200.yaml
+          example:
+            example:
+              id: 88
+              operatorId: 88
+              name: Movistar Colombia
+              bundle: false
+              data: false
+              pin: false
+              supportsLocalAmounts: false
+              denominationType: RANGE
+              senderCurrencyCode: USD
+              senderCurrencySymbol: $
+              destinationCurrencyCode: COP
+              destinationCurrencySymbol: $
+              commission: 4.42
+              internationalDiscount: 4.42
+              localDiscount: 0.00
+              mostPopularAmount: null
+              minAmount: 5.00
+              maxAmount: 5.00
+              localMinAmount: null
+              localMaxAmount: null
+              country:
+                isoName: CO
+                name: Colombia
+              fx:
+                rate: 2192.1867
+                currencyCode: COP
+              logoUrls:
+                - https://s3.amazonaws.com/rld-operator/3f4a8bcd3268-size-1.png
+                - https://s3.amazonaws.com/rld-operator/3f4a8bcd3268-size-2.png
+                - https://s3.amazonaws.com/rld-operator/3f4a8bcd3268-size-3.png
+              fixedAmounts: []
+              fixedAmountsDescriptions: []
+              localFixedAmounts: []
+              localFixedAmountsDescriptions: []
+              suggestedAmounts:
+                - 7
+                - 10
+                - 15
+              suggestedAmountsMap:
+                "7": 19482.51
+                "10": 27832.16
+                "15": 41748.23
+              promotions: []
+    '401':
+      description: Failed due to an unauthorized request
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/airtime/get_operator_by_iso/GetOperatorByIsoResponse401.yaml
+          example:
+            timeStamp: 2021-03-15 21:14:00
+            message: Full authentication is required to access this resource
+            path: /operators/countries/PK
+            errorCode: INVALID_TOKEN
+            infoLink: null
+            details: []
+    '404':
+      description: Failed because the request was made to an incorrect URL path
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/airtime/get_operator_by_iso/GetOperatorByIsoResponse404.yaml
+          example:
+            timeStamp: 2021-02-11 11:54:00
+            message: Country not found and/or not currently supported
+            path: /countries/PKGG
+            errorCode: COUNTRY_NOT_SUPPORTED
+            infoLink:
+            details: []
+
+  x-codeSamples:
+    - lang: "C#"
+      source:
+        $ref: "../code_samples/csharp/airtime/get_operator_by_iso/code.cs"
+    - lang: "PHP"
+      source:
+        $ref: "../code_samples/PHP/airtime/get_operator_by_iso/code.php"
+    - lang: "Golang"
+      source:
+        $ref: "../code_samples/go/airtime/get_operator_by_iso/code.go"
+    - lang: "Java"
+      source:
+        $ref: "../code_samples/java/airtime/get_operator_by_iso/code.class"
+    - lang: "Node JS"
+      source:
+        $ref: "../code_samples/nodejs/airtime/get_operator_by_iso/code.js"
+    - lang: "Python"
+      source:
+        $ref: "../code_samples/python/airtime/get_operator_by_iso/code.py" 

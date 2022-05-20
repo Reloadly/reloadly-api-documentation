@@ -1,0 +1,80 @@
+post:
+  tags:
+    - Utility Payments
+  summary: Make a utility payment
+  description: Make a utility payment with a biller. A payment is synonymous to a transaction.
+  operationId: utilitypayments/pay-bill
+  parameters:
+    - in: header
+      name: Authorization
+      schema:
+        type: string
+        description: Your access token is required as a bearer token in the request's header.
+      required: true 
+  responses:
+    '200':
+      description: Successfully made a utility payment.
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/utility_payments/pay_bill/PayBillResponse200.yaml
+          example:
+            id: 36
+            status: PROCESSING
+            referenceId: 4a391847-n193-22k8-wqkl-9h3s7428m036
+            code: PAYMENT_PROCESSING_IN_PROGRESS
+            message: The payment is being processed, status will be updated when biller processes the payment.
+            submittedAt: 2022-05-18 09:13:53
+            finalStatusAvailabilityAt: 2022-05-19 09:13:52
+    '401':
+      description: Failed due to an unauthorized request.
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/utility_payments/pay_bill/PayBillResponse401.yaml
+          example:
+            timeStamp: 2022-01-06 18:37:10
+            message: Full authentication is required to access this resource
+            path: /pay
+            errorCode: INVALID_TOKEN
+            infoLink: null
+            details: []
+    '404':
+      description: Failed because the request was made to an incorrect URL path.
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/utility_payments/pay_bill/PayBillResponse404.yaml
+          example:
+            timeStamp: 2021-09-11 11:54:00
+            status: 404
+            error: Not Found
+            message: No message available
+            path: /pays
+  requestBody:
+    description: Payload Description
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/utility_payments/pay_bill/PayBillRequest.yaml
+  
+  x-codeSamples:
+    - lang: "C#"
+      source:
+        $ref: "../code_samples/csharp/utilitypayments/pay_bill/code.cs"
+    - lang: "PHP"
+      source:
+        $ref: "../code_samples/PHP/utilitypayments/pay_bill/code.php"
+    - lang: "Go"
+      source:
+        $ref: "../code_samples/go/utilitypayments/pay_bill/code.go"
+    - lang: "Java"
+      source:
+        $ref: "../code_samples/java/utilitypayments/pay_bill/code.class"
+    - lang: "Node JS"
+      source:
+        $ref: "../code_samples/nodejs/utilitypayments/pay_bill/code.js"
+    - lang: "Python"
+      source:
+        $ref: "../code_samples/python/utilitypayments/pay_bill/code.py"

@@ -1,0 +1,69 @@
+get:
+  tags:
+    - Airtime
+  summary: View your account's balance
+  description: Retrieve the details of your account's balance.
+  operationId: airtime/accounts-balance
+  parameters:
+    - in: header
+      name: Authorization
+      schema:
+        type: string
+        description: Your access token is required as a bearer token in the request's header.
+      required: true
+  responses:
+    '200':
+      description: Successfully retrieved balance details
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/airtime/accounts_balance/AccountsBalanceResponse200.yaml
+          example:
+            balance: 5000
+            currencyCode: USD
+            currencyName: US Dollar
+            updatedAt: 2021-12-04 08:45:51
+    '401':
+      description: Failed due to an unauthorized request
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/airtime/accounts_balance/AccountsBalanceResponse401.yaml
+          example:
+            timeStamp: 2021-05-11 21:14:00
+            message: Full authentication is required to access this resource
+            path: /accounts/balance
+            errorCode: INVALID_TOKEN
+            infoLink: null
+            details: []
+    '404':
+      description: Failed because the request was made to an incorrect URL path
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/airtime/accounts_balance/AccountsBalanceResponse404.yaml
+          example:
+            timeStamp: 2021-09-11 11:54:00
+            status: 404
+            error: Not Found
+            message: No message available
+            path: /accounts/balnce
+  x-codeSamples:
+    - lang: "C#"
+      source:
+        $ref: "../code_samples/csharp/airtime/accounts_balance/code.cs"
+    - lang: "PHP"
+      source:
+        $ref: "../code_samples/PHP/airtime/accounts_balance/code.php"
+    - lang: "Go"
+      source:
+        $ref: "../code_samples/go/airtime/accounts_balance/code.go"
+    - lang: "Java"
+      source:
+        $ref: "../code_samples/java/airtime/accounts_balance/code.class"
+    - lang: "Node JS"
+      source:
+        $ref: "../code_samples/nodejs/airtime/accounts_balance/code.js"
+    - lang: "Python"
+      source:
+        $ref: "../code_samples/python/airtime/accounts_balance/code.py" 

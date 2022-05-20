@@ -1,0 +1,73 @@
+get:
+  tags:
+    - Giftcards
+  summary: Get all discounts
+  description: Retrieve the details of all available discounts on gift card products that can be purchased on Reloadly.
+  operationId: giftcards/get-all-discounts
+  parameters:
+    - in: header
+      name: Authorization
+      schema:
+        type: string
+        description: Your access token is required as a bearer token in the request's header
+      required: true
+  responses:
+    '200':
+      description: Successfully retrieved details of all discounts on gift card products.
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/giftcards/get_all_discounts/GetAllDiscountsResponse200.yaml
+          example:
+            - product:
+                productId: 28
+                productName: Apple Music 12 month Canada
+                countryCode: CA
+                global: false
+              discountPercentage: 2
+            - {}
+            - {}
+    '401':
+      description: Failed due to an unauthorized request.
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/giftcards/get_all_discounts/GetAllDiscountsResponse401.yaml
+          example:
+            timeStamp: 2021-06-09 21:14:00
+            message: Full authentication is required to access this resource
+            path: /discounts
+            errorCode: INVALID_TOKEN
+            infoLink: null
+            details: []
+    '404':
+      description: Failed because the request was made to an incorrect URL path.
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/giftcards/get_all_discounts/GetAllDiscountsResponse404.yaml
+          example:
+            timeStamp: 2021-06-11 11:54:00
+            status: 404
+            error: Not Found
+            message: No message available
+            path: /discount
+  x-codeSamples:
+    - lang: "C#"
+      source:
+        $ref: "../code_samples/csharp/giftcards/get_all_discounts/code.cs"
+    - lang: "PHP"
+      source:
+        $ref: "../code_samples/PHP/giftcards/get_all_discounts/code.php"
+    - lang: "Go"
+      source:
+        $ref: "../code_samples/go/giftcards/get_all_discounts/code.go"
+    - lang: "Java"
+      source:
+        $ref: "../code_samples/java/giftcards/get_all_discounts/code.class"
+    - lang: "Node JS"
+      source:
+        $ref: "../code_samples/nodejs/giftcards/get_all_discounts/code.js"
+    - lang: "Python"
+      source:
+        $ref: "../code_samples/python/giftcards/get_all_discounts/code.py" 

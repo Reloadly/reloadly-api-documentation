@@ -1,0 +1,106 @@
+get:
+  tags:
+    - Utility Payments
+  summary: Get transaction by ID
+  description: Retrieve the details of a utility payment by making a request with the payment's identification number. 
+  operationId: utilitypayments/get-transaction-by-id
+  parameters:
+    - in: path
+      name: id
+      description: The utility payment's identification number.
+      required: true
+      schema:
+        type: integer
+    - in: header
+      name: Authorization
+      schema:
+        type: string
+        description: Your access token is required as a bearer token in the request's header.
+      required: true
+  responses:
+    '200':
+      description: Successfully retrieved details of a utility payment.
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/utility_payments/get_transaction_by_id/GetTransactionByIdResponse200.yaml
+          example:
+            - code: PAYMENT_PROCESSED_SUCCESSFULLY
+              message: The payment was processed successfully
+              transaction:
+                id: 13
+                status: SUCCESSFUL
+                referenceId: null
+                amount: 1000.00000
+                amountCurrencyCode: NGN
+                deliveryAmount: 1000.00000
+                deliveryAmountCurrencyCode: NGN
+                fee: 0.25000
+                feeCurrencyCode: USD
+                discount: 0.00000
+                discountCurrencyCode: USD
+                submittedAt: 2022-03-29 07:04:21
+                balanceInfo: 
+                  oldBalance: 9997.34912
+                  newBalance: 9994.69824
+                  cost: 2.65088
+                  currencyCode: USD
+                  curencyName: US Dollar
+                  updatedAt: 2022-03-29 11:04:21
+                billDetails: 
+                  type: ELECTRICITY_BILL_PAYMENT
+                  billerId: 2
+                  billerName: Abuja Electricity Postpaid
+                  billerCountryCode: NG
+                  serviceType: POSTPAID
+                  completedAt: 2022-03-29 07:04:25
+                  subscriberDetails:
+                    accountNumber: 04223568280 
+    '401':
+      description: Failed due to an unauthorized request.
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/utility_payments/get_transaction_by_id/GetTransactionByIdResponse401.yaml
+          example:
+            timeStamp: 2022-02-15 21:14:00
+            message: Full authentication is required to access this resource
+            path: /transactions/17
+            errorCode: INVALID_TOKEN
+            infoLink: null
+            details: []
+    '404':
+      description: Failed because the request was made to an incorrect URL path.
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/utility_payments/get_transaction_by_id/GetTransactionByIdResponse404.yaml
+          example:
+            timeStamp: 2022-02-11 11:54:00
+            status: 404
+            error: Not found
+            message: No message available
+            path: /transactions/17
+            errorCode: null
+            infoLink: null
+            details: []
+
+  x-codeSamples:
+    - lang: "C#"
+      source:
+        $ref: "../code_samples/csharp/utilitypayments/get_transaction_by_id/code.cs"
+    - lang: "PHP"
+      source:
+        $ref: "../code_samples/PHP/utilitypayments/get_transaction_by_id/code.php"
+    - lang: "Go"
+      source:
+        $ref: "../code_samples/go/utilitypayments/get_transaction_by_id/code.go"
+    - lang: "Java"
+      source:
+        $ref: "../code_samples/java/utilitypayments/get_transaction_by_id/code.class"
+    - lang: "Node JS"
+      source:
+        $ref: "../code_samples/nodejs/utilitypayments/get_transaction_by_id/code.js"
+    - lang: "Python"
+      source:
+        $ref: "../code_samples/python/utilitypayments/get_transaction_by_id/code.py" 

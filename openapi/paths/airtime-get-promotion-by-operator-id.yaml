@@ -1,0 +1,84 @@
+get:
+  tags:
+    - Airtime
+  summary: Get promotions by operator ID
+  description: Retrieve the details of every promotion being ofered by an operator by making a request with the operator's identification number.
+  operationId: airtime/get-promotion-by-operator-id
+  parameters:
+    - in: header
+      name: Authorization
+      schema:
+        type: string
+        description: Your access token is required as a bearer token in the request's header.
+      required: true
+    - in: path
+      name: operatorid
+      schema:
+        type: integer
+        description: The identification number of the operator whose promotions are to be retrieved.
+      required: true
+
+  responses:
+    '200':
+      description: Successfully retrieved details of all the promotions being offered by an operator.
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/airtime/get_promotion_by_operator_id/GetPromotionByOperatorIdResponse200.yaml
+          example:
+           content:
+              - promotionId: 1
+                operatorId: 129
+                title: Tigo El Salvador From 25 Jun 2018 00:00 To 25 July...
+                title2: Get 500 MB and 150 minutes for USA or Canada
+                description: For top ups of $10 or more, customer...
+                startDate: Mon, 25 Jun 2018 06:00:00 +0000
+                endDate: Tue, 26 Jun 2018 05:59:00 +0000
+                denominations: USD 10 and up
+                localDenominations: null
+              - {}
+              - {}
+    '401':  
+      description: Failed due to an unauthorized request.
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/airtime/get_promotion_by_operator_id/GetPromotionByOperatorIdResponse401.yaml
+          example:
+            timeStamp: 2021-02-15 21:14:00
+            message: Full authentication is required to access this resource
+            path: /promotions/operators/10
+            errorCode: INVALID_TOKEN
+            infoLink: null
+            details: []
+    '404':
+      description: Failed because the request was made to an incorrect URL path.
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/airtime/get_promotion_by_operator_id/GetPromotionByOperatorIdResponse404.yaml
+          example:
+            timeStamp: 2021-09-11 11:54:00
+            status: 404
+            error: Not Found
+            message: No message available
+            path: /promotions/operator/10
+  x-codeSamples:
+    - lang: "C#"
+      source:
+        $ref: "../code_samples/csharp/airtime/get_promotion_by_operator_id/code.cs"
+    - lang: "PHP"
+      source:
+        $ref: "../code_samples/PHP/airtime/get_promotion_by_operator_id/code.php"
+    - lang: "Go"
+      source:
+        $ref: "../code_samples/go/airtime/get_promotion_by_operator_id/code.go"
+    - lang: "Java"
+      source:
+        $ref: "../code_samples/java/airtime/get_promotion_by_operator_id/code.class"
+    - lang: "Node JS"
+      source:
+        $ref: "../code_samples/nodejs/airtime/get_promotion_by_operator_id/code.js"
+    - lang: "Python"
+      source:
+        $ref: "../code_samples/python/airtime/get_promotion_by_operator_id/code.py" 

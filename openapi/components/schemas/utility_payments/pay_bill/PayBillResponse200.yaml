@@ -1,0 +1,29 @@
+type: object
+properties:
+  id:
+    description: The unique transaction identification number for this payment. 
+    type: integer
+    example: 
+  status:
+    description: The current status of the transaction. Possible values are  **PROCESSING**, **SUCCESSFUL**, **FAILED** and **REFUNDED**.
+    type: string
+    example: 
+  referenceId:
+    description: The reference identification used to uniquley identify each utility payment request.
+    example:
+  code:
+    description: A message code if available. A message code is related to the current processing conditions the transaction is going through.
+    type: string
+    example: 
+  message:
+    description: A human friendly message associated with the code if available.
+    type: string
+    example: 
+  submittedAt:
+    description: The time instant at which the payment was submitted to Reloadly.
+    type: string
+    example: 
+  finalStatusAvailabilityAt:
+    description: A SLA promised by Reloadly. A final status for the transaction will be provided at or before this time instant. Most utility payments are successful within seconds. 
+    type: string
+    example:  

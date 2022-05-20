@@ -1,0 +1,86 @@
+post:
+  tags:
+    - Airtime
+  summary: Make an asynchronous top-up
+  description: Retrieve a transaction identification number that solely provides details and tracks the status of your top-up.
+  operationId: airtime/top-ups-async
+  parameters:
+  - in: header
+    name: Authorization
+    schema:
+      type: string
+      description: Your access token is required as a bearer token in the request's header.
+    required: true
+  responses:
+    '200':
+      description: Successfully retrieved a transaction identification number.
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/airtime/top_ups_async/TopUpsAsyncResponse200.yaml
+          example:
+            transactionId: 4602843
+    '400':
+      description: Failed because the request was made with an incorrect parameter in the payload.
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/airtime/top_ups_async/TopUpsAsyncResponse400.yaml
+          example:
+            timeStamp: 2022-01-06 18:37:10
+            message: Recipient phone number is not valid
+            path: /topups-async
+            errorCode: INVALID_RECIPIENT_PHONE
+            infoLink: null
+            details: [] 
+    '401':
+      description: Failed due to an unauthorized request.
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/airtime/top_ups_async/TopUpsAsyncResponse401.yaml
+          example:
+            timeStamp: 2022-01-06 18:37:10
+            message: Full authentication is required to access this resource
+            path: /topups-async
+            errorCode: INVALID_TOKEN
+            infoLink: null
+            details: []
+    '404':
+      description: Failed because the request was made to an incorrect URL path.
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/airtime/top_ups_async/TopUpsAsyncResponse404.yaml
+          example:
+            timeStamp: 2021-09-11 11:54:00
+            status: 404
+            error: Not Found
+            message: No message available
+            path: /topups-asyn
+  requestBody:
+    description: Payload Description
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/airtime/top_ups_async/TopUpsAsyncRequest.yaml
+  x-codeSamples:
+    - lang: "C#"
+      source:
+        $ref: "../code_samples/csharp/airtime/top_ups_async/code.cs"
+    - lang: "PHP"
+      source:
+        $ref: "../code_samples/PHP/airtime/top_ups_async/code.php"
+    - lang: "Go"
+      source:
+        $ref: "../code_samples/go/airtime/top_ups_async/code.go"
+    - lang: "Java"
+      source:
+        $ref: "../code_samples/java/airtime/top_ups_async/code.class"
+    - lang: "Node JS"
+      source:
+        $ref: "../code_samples/nodejs/airtime/top_ups_async/code.js"
+    - lang: "Python"
+      source:
+        $ref: "../code_samples/python/airtime/top_ups_async/code.py"

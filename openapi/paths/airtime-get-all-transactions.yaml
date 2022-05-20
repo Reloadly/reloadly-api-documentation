@@ -1,0 +1,135 @@
+get:
+  tags:
+    - Airtime
+  summary: Get all transactions
+  description: Retrieve the details of every top-up transaction carried out on your Reloadly account.
+  operationId: airtime/get-all-transactions
+  parameters:
+    - in: header
+      name: Authorization
+      schema:
+        type: string
+        description: Your access token is required as a bearer token in the request's header.
+      required: true
+    - in: query
+      name: size
+      schema:
+        type: integer
+        description: This indicates the number of transactions to be retrieved on a page. Default value is 200.
+    - in: query
+      name: page
+      schema:
+        type: integer
+        description: This indicates the page of the transactions list being retrieved. Default value is 1.
+    - in: query
+      name: countryCode
+      schema:
+        type: string
+        description: Indicates the ISO code of the country assigned to the top-up's receiver at the time the top-up transaction was made.
+    - in: query
+      name: operatorId
+      schema:
+        type: string
+        description: Indicates the operator identification number assigned to the top-up transaction at the time it was made.
+    - in: query
+      name: operatorName
+      schema:
+        type: string
+        description: Indicates the operator name assigned to the top-up transaction at the time it was made.
+    - in: query
+      name: customIdentifier
+      schema:
+        type: string
+        description: Indicates the unique reference assigned to the top-up transaction at the time it was made.
+    - in: query
+      name: startDate
+      schema:
+        type: string
+        description: Indicates the beginning of the timeframe range for the transactions to be retrieved. 
+    - in: query
+      name: endDate
+      schema:
+        type: string
+        description: Indicates the end of the timeframe range for the transactions to be retrieved. 
+  responses:
+    '200':
+      description: Successfully retrieved details of all transactions.
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/airtime/get_all_transactions/GetAllTransactionsResponse200.yaml
+          example:
+           content:
+            - transactionId: 4602843
+              status: SUCCESSFUL
+              operatorTransactionId: 7297929551:OrderConfirmed
+              customIdentifier: This is example identifier 130
+              recipientPhone: 447951631337
+              recipientEmail: null
+              senderPhone: 11231231231
+              countryCode: GB
+              operatorId: 535
+              operatorName: EE PIN England
+              discount: 63.37
+              discountCurrencyCode: NGN
+              requestedAmount: 3168.4
+              requestedAmountCurrencyCode: NGN
+              deliveredAmount: 4.9985
+              deliveredAmountCurrencyCode: GBP
+              transactionDate: 2021-12-06 08:13:39
+              pinDetail:
+                serial: 558111
+                info1: DIAL *611
+                info2: DIAL *611
+                info3: DIAL *611
+                value: null
+                code: 773709733097662
+                ivr: 1-888-888-8888
+                validity: 30 days
+              balanceInfo: null
+            - {}
+            - {}
+    '401':
+      description: Failed due to an unauthorized request.
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/airtime/get_all_transactions/GetAllTransactionsResponse401.yaml
+          example:
+            timeStamp: 2021-02-15 21:14:00
+            message: Full authentication is required to access this resource
+            path: /topups/reports/transactions
+            errorCode: INVALID_TOKEN
+            infoLink: null
+            details: []
+    '404':
+      description: Failed because the request was made to an incorrect URL path.
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/airtime/get_all_transactions/GetAllTransactionsResponse404.yaml
+          example:
+            timeStamp: 2021-09-11 11:54:00
+            status: 404
+            error: Not Found
+            message: No message available
+            path: /topups/reports/transaction
+  x-codeSamples:
+    - lang: "C#"
+      source:
+        $ref: "../code_samples/csharp/airtime/get_all_transactions/code.cs"
+    - lang: "PHP"
+      source:
+        $ref: "../code_samples/PHP/airtime/get_all_transactions/code.php"
+    - lang: "Go"
+      source:
+        $ref: "../code_samples/go/airtime/get_all_transactions/code.go"
+    - lang: "Java"
+      source:
+        $ref: "../code_samples/java/airtime/get_all_transactions/code.class"
+    - lang: "Node JS"
+      source:
+        $ref: "../code_samples/nodejs/airtime/get_all_transactions/code.js"
+    - lang: "Python"
+      source:
+        $ref: "../code_samples/python/airtime/get_all_transactions/code.py" 

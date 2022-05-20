@@ -1,29 +1,27 @@
 post:
   tags:
-    - Access Token
+    - Authentication
   summary: Create an access token
-  description: Reloadly's authentication flow uses the OAuth 2.0 standard. With this endpoint, you can create an access token that will be used when making requests through our API endpoints or SDKs.
-  operationId: access-token
-  security: 
-    - OAuth2Credentials: []
+  description: Reloadly employs the <a href="https://oauth.net/2/" target=__blank__> OAuth 2.0 standard</a>.Note that all API requests must be made over <a href='https://en.wikipedia.org/wiki/HTTP_Secure'>HTTPS</a>. Calls made over plain HTTP will fail. API requests without authentication will also fail. <br><br> Once successfully retrieved, your access token is then passed as a bearer token in the header of any API endpoint you wish to use in making a request.
+  operationId: authentication/access-token
   responses:
     '200':
-      description: Successfully created an access token
+      description: Successfully created an access token.
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/access_token/AccessTokenResponse200.yaml
+            $ref: ../components/schemas/authentication/access_token/AccessTokenResponse200.yaml
           example:
             access_token: eyJraXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
             scope: developer
             expires_in: 5184000
             token_type: Bearer
     '401':
-      description: Failed due to an unauthorized request
+      description: Failed due to an unauthorized request.
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/access_token/AccessTokenResponse401.yaml
+            $ref: ../components/schemas/authentication/access_token/AccessTokenResponse401.yaml
           example:
             timeStamp: 2022-01-06 10:57:50
             message: Access Denied
@@ -38,28 +36,23 @@ post:
     content:
       application/json:
         schema:
-          $ref: ../components/schemas/access_token/AccessTokenRequest.yaml
+          $ref: ../components/schemas/authentication/access_token/AccessTokenRequest.yaml
   x-codeSamples:
     - lang: "C#"
       source:
-        $ref: "../code_samples/csharp/access_token/code.cs"
+        $ref: "../code_samples/csharp/authentication/access_token/code.cs"
     - lang: "PHP"
       source:
-        $ref: "../code_samples/PHP/access_token/code.php"
-    - lang: "Golang"
+        $ref: "../code_samples/PHP/authentication/access_token/code.php"
+    - lang: "Go"
       source:
-        $ref: "../code_samples/golang/access_token/code.go"
+        $ref: "../code_samples/go/authentication/access_token/code.go"
     - lang: "Java"
       source:
-        $ref: "../code_samples/java/access_token/code.class"
+        $ref: "../code_samples/java/authentication/access_token/code.class"
     - lang: "Node JS"
       source:
-        $ref: "../code_samples/nodejs/access_token/code.js"
+        $ref: "../code_samples/nodejs/authentication/access_token/code.js"
     - lang: "Python"
       source:
-        $ref: "../code_samples/python/access_token/code.py"
-      
-
-      
-
-  
+        $ref: "../code_samples/python/authentication/access_token/code.py"

@@ -1,0 +1,126 @@
+get:
+  tags:
+    - Utility Payments
+  summary: Get all billers
+  description: Retrieve the details of every utility payment service / biller you can access via Reloadly.
+  operationId: utilitypayments/get-all-billers
+  parameters:
+    - in: header
+      name: Authorization
+      schema:
+        type: string
+        description: Your access token is required as a bearer token in the request's header.
+      required: true 
+    - in: query
+      name: id
+      schema:
+        type: integer
+        description: This is the unique identification number of each biller. It uniquely identifies the biller servicing the utility.
+    - in: query
+      name: name
+      schema:
+        type: string
+        description: This indicates the biller's name. In situations where the biller's name is exceptionally long, partial names are used.
+    - in: query
+      name: type
+      schema:
+        type: string
+        description: This indicates the type of utility payment handled by the biller. Values included are **ELECTRICITY_BILL_PAYMENT**, **WATER_BILL_PAYMENT**, **TV_BILL_PAYMENT** and **INTERNET_BILL_PAYMENT**.
+    - in: query
+      name: serviceType
+      schema:
+        type: string
+        description: This indicates the payment service type being rendered by the utility biller service. Examples are **PREPAID** and **POSTPAID**.
+    - in: query
+      name: countryISOCode
+      schema:
+        type: string
+        description: This indicates the <a href="https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes">ISO code</a> of the country where the utility biller is operating in.
+    - in: query
+      name: page
+      schema:
+        type: integer
+        description: This indicates the page of the billers list being retrieved. Default value is 1.
+    - in: query
+      name: size
+      schema:
+        type: integer
+        description: This indicates the number of billers to be retrieved on a page. Default value is 200.
+
+  responses:
+    '200':
+      description: Successfully retrieved details of all billers.
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/utility_payments/get_all_billers/GetAllBillersResponse200.yaml
+          example:
+           content:
+            - id: 1
+              name: Ikeja Electricity Postpaid
+              countryIsoCode: NG
+              type: ELECTRICITY_BILL_PAYMENT
+              serviceType: POSTPAID
+              localAmountSupported: true
+              localTransactionCurrencyCode: NGN
+              minLocalTransactionAmount: 1000.0
+              maxLocalTransactionAmount: 300000.0
+              localTransactionFee: 227.83997
+              localTransactionFeeCurrencyCode: INR
+              localDiscountPercentage: 0.00000
+              internatonalAmountSupported: true
+              internationalTransactionCurrencyCode: INR
+              minInternationalTransactionAmount: 194.73483
+              maxInternationalTransactionAmount: 45567.996
+              internationalTransactionFee: 227.83997
+              internationalTransactionFeeCurrencyCode: INR
+              internationalDiscountPercentage: 0.00000
+              fx:
+                - rate: 5.20265
+                - curencyCode: INR
+            - {}
+            - {}
+    '401':
+      description: Failed due to an unauthorized request.
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/utility_payments/get_all_billers/GetAllBillersResponse401.yaml
+          example:
+            timeStamp: 2022-03-15 21:14:00
+            message: Full authentication is required to access this resource
+            path: /billers
+            errorCode: INVALID_TOKEN
+            infoLink: null
+            details: []
+    '404':
+      description: Failed because the request was made to an incorrect URL path.
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/utility_payments/get_all_billers/GetAllBillersResponse404.yaml
+          example:
+            timeStamp: 2022-03-11 11:54:00
+            status: 404
+            error: Not Found
+            message: No message available
+            path: /biller
+  x-codeSamples:
+    - lang: "C#"
+      source:
+        $ref: "../code_samples/csharp/utilitypayments/get_all_billers/code.cs"
+    - lang: "PHP"
+      source:
+        $ref: "../code_samples/PHP/utilitypayments/get_all_billers/code.php"
+    - lang: "Go"
+      source:
+        $ref: "../code_samples/go/utilitypayments/get_all_billers/code.go"
+    - lang: "Java"
+      source:
+        $ref: "../code_samples/java/utilitypayments/get_all_billers/code.class"
+    - lang: "Node JS"
+      source:
+        $ref: "../code_samples/nodejs/utilitypayments/get_all_billers/code.js"
+    - lang: "Python"
+      source:
+        $ref: "../code_samples/python/utilitypayments/get_all_billers/code.py" 

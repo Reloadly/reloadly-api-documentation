@@ -1,0 +1,26 @@
+type: object
+required:
+  - subscriberAccountNumber
+  - amount
+  - billerId
+properties:
+  subscriberAccountNumber:
+    description: This indicates the account / reference / card number of the subscriber / recipient of the bill payment.
+    type: string
+    example: 04223568280
+  amount:
+    description: This indicates the amount to be paid.
+    type: integer
+    example: 1000
+  billerId:
+    description: The biller identifiation number you would have retrieved from the **Get Billers** endpoint.
+    type: string
+    example: 5
+  useLocalAmount:
+    description: Indicates if the amount being presented is in the local currency of the biller. If this parameter is not provided or is set to false, then the payment will be presented in the user's wallet currency.
+    type: boolean
+    example: false
+  referenceId:
+    description: A unique string that you may choose to provide. If you provide one, it will be tied to the transaction. You can query back your transaction with this **referenceId** as well.
+    type: string
+    example: april-electricity-bill

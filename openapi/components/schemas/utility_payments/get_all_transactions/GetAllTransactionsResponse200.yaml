@@ -1,0 +1,151 @@
+type: object
+properties:
+  content:
+    type: array
+    description: An array containing details of every utility payment transaction made on your account.
+    items:
+      type: object
+      properties:
+        code:
+          description: A code pertaining to the current processing conditions if available. May be **null**.
+          type: string
+        message:
+          description: A descriptive human friendly message related to the code if available. May be **null**.
+          type: string
+          example:
+        transaction:
+          description: An object that contains details of each transaction.
+          type: object
+          properties:
+            id:
+              description: This indicates the unique identification number of the transaction.
+              type: integer
+              example:
+            status:
+              description: This indicates the status of the transaction.
+              type: string
+              example:
+            referenceId: 
+              description: A unique reference identification number you may have inputted while making the transaction.
+              type: string
+              example:
+            amount:
+              description: The transaction amount.
+              type: integer
+              example:
+            amountCurrencyCode:
+              description: The transaction amount currency code.
+              type: string
+              example:
+            deliveryAmount:
+              description: The final amount to be delivered to the biller.
+              type: integer
+              example:
+            deliveryAmountCurrencyCode: 
+              description: The delivery amount currency code.
+              type: string
+              example:
+            fee:
+              description: The transaction fee.
+              type: integer
+              example:
+            feeCurrencyCode:
+              description: The fee currency code
+              type: string
+              example:
+            discount:
+              description: The commission you earned on the transaction.
+              type: integer
+              example:
+            discountCurrencyCode:
+              description: The commission currency code.
+              type: string
+              example:
+            submittedAt:
+              description: The time instant when the transaction was submitted to Reloadly.
+              type: string
+              example:
+            balanceInfo:
+              description: Object containing your balance information.
+              type: object
+              properties: 
+                oldBalance:
+                  description: Your account balance before the transaction was placed.
+                  type: integer
+                  example:
+                newBalance:
+                  description: Your account balance after the transaction processes successfully. You are not charged for **FAILED** transactions.
+                  type: integer
+                  example:
+                cost:
+                  description: The cost of the transaction. Your account will be debited by this amount.
+                  type: integer
+                  example:
+                currencyCode:
+                  description: The currency code of the cost.
+                  type: integer
+                  example:
+                currencyName:
+                  description: The currency name for the cost.
+                  type: integer
+                  example:
+                updatedAt:
+                  description: The time instant when your account balance was updated.
+                  type: string
+                  example:
+            billDetails:
+              description: An object containing your utility bill payment details.
+              type: object
+              properties:
+                type: 
+                  description: The type of the biller. An example is **ELECTRICITY_BILL_PAYMENT**. You should parse out the **billDetails** object based on this attribute.
+                  type: string
+                  example:  
+                billerId:
+                  description: The unique biller identificationn number.
+                  type: integer
+                  example:  
+                billerName:
+                  description: The biller name.
+                  type: string
+                  example:
+                billerCountryCode: 
+                  description: The biller country code.
+                  type: string
+                  example:
+                serviceType:
+                  description: The service type provided by the biller, e.g. **PREPAID** or **POSTPAID**.
+                  type: string
+                  example:
+                completedAt:
+                  description: The time instant the payment was processed by the biller.
+                  type: string
+                  example:
+                subscriberDetails:
+                  description: An object containing the subscriber details. A subscriber is an entity who maintains an account with the utility company. The subscriber is the ultimate beneficiary of the utility payment.
+                  type: object
+                  properties:
+                    accountNumber:
+                      description: The subscriber account number.
+                      type: string
+                      example:
+                pinDetails:
+                  description: An object containing **PIN** information for **PIN** based services if available/applicable. This is typically present for **PREPAID** services.
+                  type: object
+                  properties:
+                    token:
+                      description: Indicates the amount deducted from your account for the utility payment.
+                      type: string
+                      example:
+                    info1:
+                      description: Additional PIN related information if available.
+                      type: string
+                      example:
+                    info2:
+                      description: Additional PIN related information if available.
+                      type: string
+                      example:
+                    info3:
+                      description: Additional PIN related information if available.
+                      type: string
+                      example:

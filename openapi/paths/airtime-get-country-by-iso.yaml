@@ -1,0 +1,75 @@
+get:
+  tags:
+    - Airtime
+  summary: Get country by ISO code
+  description: Retrieve the details of a country by making a request with its ISO code.
+  operationId: airtime/get-country-by-iso
+  parameters:      
+    - in: path
+      name: countrycode
+      description: The country's ISO Code.
+      required: true
+      schema:
+        type: string
+  responses:
+    '200':
+      description: Successfully retrieved details of a country
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/airtime/get_country_by_iso/GetCountryByIsoResponse200.yaml
+          example:
+            - isoName: AG
+              name: Antigua and Barbuda
+              currencyCode: XCD
+              currencyName: East Caribbean Dollar
+              currencySymbol: XCD
+              flag: https://s3.amazonaws.com/rld-flags/ag.svg
+              callingCodes:
+                - "+1268"
+    '401':
+      description: Failed due to an unauthorized request
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/airtime/get_country_by_iso/GetCountryByIsoResponse401.yaml
+          example:
+            timeStamp: 2021-03-15 21:14:00
+            message: Full authentication is required to access this resource
+            path: /countries/PK
+            errorCode: INVALID_TOKEN
+            infoLink: null
+            details: []
+    '404':
+      description: Failed because the request was made to an incorrect URL path
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/airtime/get_country_by_iso/GetCountryByIsoResponse404.yaml
+          example:
+            timeStamp: 2021-02-11 11:54:00
+            message: Country not found and/or not currently supported
+            path: /countries/PKGG
+            errorCode: COUNTRY_NOT_SUPPORTED
+            infoLink:
+            details: []
+
+  x-codeSamples:
+    - lang: "C#"
+      source:
+        $ref: "../code_samples/csharp/airtime/get_country_by_iso/code.cs"
+    - lang: "PHP"
+      source:
+        $ref: "../code_samples/PHP/airtime/get_country_by_iso/code.php"
+    - lang: "Go"
+      source:
+        $ref: "../code_samples/go/airtime/get_country_by_iso/code.go"
+    - lang: "Java"
+      source:
+        $ref: "../code_samples/java/airtime/get_country_by_iso/code.class"
+    - lang: "Node JS"
+      source:
+        $ref: "../code_samples/nodejs/airtime/get_country_by_iso/code.js"
+    - lang: "Python"
+      source:
+        $ref: "../code_samples/python/airtime/get_country_by_iso/code.py" 

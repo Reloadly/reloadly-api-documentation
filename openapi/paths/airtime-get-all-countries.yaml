@@ -1,0 +1,68 @@
+get:
+  tags:
+    - Airtime
+  summary: Get all countries
+  description: Retrieve the details of every country where a top-up can be made.
+  operationId: airtime/get-all-countries
+  responses:
+    '200':
+      description: Successfully retrieved details of all countries
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/airtime/get_all_countries/GetAllCountriesResponse200.yaml
+          example:
+            - isoName: AF
+              name: Afghanistan
+              currencyCode: AFN
+              currencyName: Afghan Afghani
+              currencySymbol: ؋
+              flag: https://s3.amazonaws.com/rld-flags/af.svg
+              callingCodes:
+                - "+93"
+            - {}
+            - {}
+    '401':
+      description: Failed due to an unauthorized request
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/airtime/get_all_countries/GetAllCountriesResponse401.yaml
+          example:
+            timeStamp: 2021-02-15 21:14:00
+            message: Full authentication is required to access this resource
+            path: /countries
+            errorCode: INVALID_TOKEN
+            infoLink: null
+            details: []
+    '404':
+      description: Failed because the request was made to an incorrect URL path
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/airtime/get_all_countries/GetAllCountriesResponse404.yaml
+          example:
+            timeStamp: 2021-09-11 11:54:00
+            status: 404
+            error: Not Found
+            message: No message available
+            path: /countrie
+  x-codeSamples:
+    - lang: "C#"
+      source:
+        $ref: "../code_samples/csharp/airtime/get_all_countries/code.cs"
+    - lang: "PHP"
+      source:
+        $ref: "../code_samples/PHP/airtime/get_all_countries/code.php"
+    - lang: "Go"
+      source:
+        $ref: "../code_samples/go/airtime/get_all_countries/code.go"
+    - lang: "Java"
+      source:
+        $ref: "../code_samples/java/airtime/get_all_countries/code.class"
+    - lang: "Node JS"
+      source:
+        $ref: "../code_samples/nodejs/airtime/get_all_countries/code.js"
+    - lang: "Python"
+      source:
+        $ref: "../code_samples/python/airtime/get_all_countries/code.py" 
