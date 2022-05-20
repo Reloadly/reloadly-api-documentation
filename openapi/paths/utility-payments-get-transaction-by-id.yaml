@@ -5,18 +5,18 @@ get:
   description: Retrieve the details of a utility payment by making a request with the payment's identification number. 
   operationId: utilitypayments/get-transaction-by-id
   parameters:
-    - in: path
-      name: id
-      description: The utility payment's identification number.
-      required: true
-      schema:
-        type: integer
     - in: header
       name: Authorization
       schema:
         type: string
         description: Your access token is required as a bearer token in the request's header.
       required: true
+    - in: path
+      name: id
+      description: The utility payment's identification number.
+      required: true
+      schema:
+        type: integer
   responses:
     '200':
       description: Successfully retrieved details of a utility payment.
