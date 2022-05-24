@@ -31,12 +31,13 @@ tags:
 
 components:
   securitySchemes:
-    bearerToken:
+    bearerAuth:
       type: http
       scheme: bearer
+      bearerFormat: JWT
 
 security:
-  - bearerToken: [] 
+  - bearerAuth: [] 
   
 servers:
   - url: https://auth.reloadly.com
