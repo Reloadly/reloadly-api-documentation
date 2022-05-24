@@ -10,6 +10,7 @@ lint:
 features.openapi:
   showConsole: true
   htmlTemplate: ./docs/index.html
+  corsProxyUrl: https://cors.redoc.ly/
   theme:
     colors:
       primary:

@@ -28,7 +28,16 @@ tags:
     description: Gift cards are an awesome way to send and receive value in a digital economy that is fast becoming the future. Reloadly's GiftCard API connects you to over 200 gift card brands and 13000 gift card products that can be used both locally and internationally across 140+ countries. <br> <br> This enables you to purchase gift cards for both commercial and personal reasons. Some of the data you will need are your access token and the brand details of the gift card.
   - name: Utility Payments
     description: Utilities like Electricity, Water, TV and Internet are essential services that are provided by utility companies servicing your local region. These services are usually postpaid or prepaid. <br> <br> Reloadly's Utility Payments API provides you the capability to pay a growing number of service providers in multiple markets. An application developer can easily integrate with Reloadly's Utility Payments API and start accepting payments from end users. Payments are routed to the utility company in real-time via Reloadly's scalable network. You can either pay to local utility companies, or pay for cross-border companies. You don't need to deal with cumbersome paperwork or contracts since we have made this easy for you. <br> <br> Irrespective of the destination utility company, Reloadly's customers are completely abstracted away of the underlying heterogeneity and complexities involved in integrating with utility companies. We have already done the hard work of integration so that you don't have to.
-    
+
+components:
+  securitySchemes:
+    bearerToken:
+      type: http
+      scheme: bearer
+
+security:
+  - bearerToken: [] 
+  
 servers:
   - url: https://auth.reloadly.com
   
