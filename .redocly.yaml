@@ -13,8 +13,8 @@ features.openapi:
   corsProxyUrl: https://cors.redoc.ly/
   theme:
     colors:
-      primary:
-        main: "#32329f"
+      accent:
+        main: "#000000"
   # generateCodeSamples:
   #   languages:  # Array of language config objects; indicates in which languages to generate code samples.
   #     - lang: curl
