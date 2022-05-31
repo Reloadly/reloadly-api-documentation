@@ -37,22 +37,22 @@ post:
       application/json:
         schema:
           $ref: ../components/schemas/authentication/access_token/AccessTokenRequest.yaml
-  x-codeSamples:
-    - lang: "C#"
-      source:
-        $ref: "../code_samples/csharp/authentication/access_token/code.cs"
-    - lang: "PHP"
-      source:
-        $ref: "../code_samples/PHP/authentication/access_token/code.php"
-    - lang: "Go"
-      source:
-        $ref: "../code_samples/go/authentication/access_token/code.go"
-    - lang: "Java"
-      source:
-        $ref: "../code_samples/java/authentication/access_token/code.class"
-    - lang: "Node JS"
-      source:
-        $ref: "../code_samples/nodejs/authentication/access_token/code.js"
-    - lang: "Python"
-      source:
-        $ref: "../code_samples/python/authentication/access_token/code.py"
+  # x-codeSamples:
+  #   - lang: "C#"
+  #     source:
+  #       $ref: "../code_samples/csharp/authentication/access_token/code.cs"
+  #   - lang: "PHP"
+  #     source:
+  #       $ref: "../code_samples/PHP/authentication/access_token/code.php"
+  #   - lang: "Go"
+  #     source:
+  #       $ref: "../code_samples/go/authentication/access_token/code.go"
+  #   - lang: "Java"
+  #     source:
+  #       $ref: "../code_samples/java/authentication/access_token/code.class"
+  #   - lang: "Node JS"
+  #     source:
+  #       $ref: "../code_samples/nodejs/authentication/access_token/code.js"
+  #   - lang: "Python"
+  #     source:
+  #       $ref: "../code_samples/python/authentication/access_token/code.py"

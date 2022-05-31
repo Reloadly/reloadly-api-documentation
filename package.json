@@ -8,6 +8,7 @@
   "scripts": {
     "start": "redocly preview-docs",
     "build": "redocly bundle -o dist",
-    "test": "redocly lint"
+    "test": "redocly lint",
+    "login": "redocly login"
   }
 }
