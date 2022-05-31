@@ -27,8 +27,6 @@ features.openapi:
       buttons:
         borderRadius: 5px
         fontWeight: light
-      panels:
-        backgroundColor: '#f7fafc'
       httpBadges:
         borderRadius: 3px
         fontFamily: 'JetBrains Mono, monospace'
