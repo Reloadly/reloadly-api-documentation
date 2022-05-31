@@ -112,23 +112,3 @@ get:
             errorCode: null
             infoLink: null
             details: []
-
-  x-codeSamples:
-    - lang: "C#"
-      source:
-        $ref: "../code_samples/csharp/airtime/auto_detect_an_operator/code.cs"
-    - lang: "PHP"
-      source:
-        $ref: "../code_samples/PHP/airtime/auto_detect_an_operator/code.php"
-    - lang: "Go"
-      source:
-        $ref: "../code_samples/go/airtime/auto_detect_an_operator/code.go"
-    - lang: "Java"
-      source:
-        $ref: "../code_samples/java/airtime/auto_detect_an_operator/code.class"
-    - lang: "Node JS"
-      source:
-        $ref: "../code_samples/nodejs/airtime/auto_detect_an_operator/code.js"
-    - lang: "Python"
-      source:
-        $ref: "../code_samples/python/airtime/auto_detect_an_operator/code.py" 

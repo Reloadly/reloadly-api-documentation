@@ -1,6 +1,6 @@
 # See https://redocly.com/docs/cli/configuration/ for more information.
 apis:
-  sample@v1: 
+  reloadly@v1: 
     root: openapi/openapi.yaml
 lint:
   extends:
@@ -13,6 +13,71 @@ features.openapi:
   corsProxyUrl: https://cors.redoc.ly/
   theme:
     colors:
+      http:
+        post: '#480297'
+        get: '#3A9601'
       accent:
-        main: "#000000"
-
+        main: '#232d3d'
+    sidebar:
+      width: 20vw
+      backgroundColor: '#f7fafc'
+      spacing:
+        paddingHorizontal: 5px
+    components:
+      buttons:
+        borderRadius: 5px
+        fontWeight: light
+      panels:
+        backgroundColor: '#f7fafc'
+      httpBadges:
+        borderRadius: 3px
+        fontFamily: 'JetBrains Mono, monospace'
+        fontWeight: light
+        sizes:
+          medium:
+            fontSize: 18px
+    layout:
+      three-panel:
+        maxWidth:
+          small: 100%
+          medium: 100%
+          large: 100%
+    rightPanel:
+      width: 40vw
+      panelBackgroundColor: '#232d3d'
+    spacing:
+      sectionHorizontal: 75
+      sectionVertical: 50
+    typography:
+      fontFamily: 'Montserrat, sans-serif'
+      code:
+        fontFamily: 'Montserrat, sans-serif'
+        fontWeight: light
+      heading1:
+        fontFamily: 'JetBrains Mono, monospace'
+        fontWeight: light
+        transform: uppercase
+      heading2:
+        fontFamily: 'JetBrains Mono, monospace'
+        fontWeight: light
+      heading3:
+        fontFamily: 'JetBrains Mono, monospace'
+        fontWeight: light
+  generateCodeSamples:
+    languages:
+      - lang: curl
+        label: curl
+      - lang: Node.js
+        label: Node.js
+      - lang: Python
+        label: Python
+      - lang: 'C#'
+        label: 'C#'
+      - lang: Java8+Apache
+        label: Java 8 with Apache
+      - lang: Go
+        label: Go
+      - lang: PHP
+        label: PHP
+      - lang: Ruby
+        label: Ruby

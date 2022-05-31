@@ -84,23 +84,3 @@ get:
             errorCode: COUNTRY_NOT_SUPPORTED
             infoLink: null
             details: []
-
-  x-codeSamples:
-    - lang: "C#"
-      source:
-        $ref: "../code_samples/csharp/giftcards/get_product_by_iso/code.cs"
-    - lang: "PHP"
-      source:
-        $ref: "../code_samples/PHP/giftcards/get_product_by_iso/code.php"
-    - lang: "Go"
-      source:
-        $ref: "../code_samples/go/giftcards/get_product_by_iso/code.go"
-    - lang: "Java"
-      source:
-        $ref: "../code_samples/java/giftcards/get_product_by_iso/code.class"
-    - lang: "Node JS"
-      source:
-        $ref: "../code_samples/nodejs/giftcards/get_product_by_iso/code.js"
-    - lang: "Python"
-      source:
-        $ref: "../code_samples/python/giftcards/get_product_by_iso/code.py" 

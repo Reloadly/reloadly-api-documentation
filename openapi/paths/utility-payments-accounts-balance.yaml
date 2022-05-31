@@ -48,22 +48,3 @@ get:
             error: Not Found
             message: No message available
             path: /accounts/balnce
-  x-codeSamples:
-    - lang: "C#"
-      source:
-        $ref: "../code_samples/csharp/utilitypayments/accounts_balance/code.cs"
-    - lang: "PHP"
-      source:
-        $ref: "../code_samples/PHP/utilitypayments/accounts_balance/code.php"
-    - lang: "Go"
-      source:
-        $ref: "../code_samples/go/utilitypayments/accounts_balance/code.go"
-    - lang: "Java"
-      source:
-        $ref: "../code_samples/java/utilitypayments/accounts_balance/code.class"
-    - lang: "Node JS"
-      source:
-        $ref: "../code_samples/nodejs/utilitypayments/accounts_balance/code.js"
-    - lang: "Python"
-      source:
-        $ref: "../code_samples/python/utilitypayments/accounts_balance/code.py" 

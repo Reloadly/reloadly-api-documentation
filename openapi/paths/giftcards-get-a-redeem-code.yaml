@@ -53,22 +53,3 @@ get:
             errorCode: null
             infoLink: null
             details: []
-  x-codeSamples:
-    - lang: "C#"
-      source:
-        $ref: "../code_samples/csharp/giftcards/get_a_redeem_code/code.cs"
-    - lang: "PHP"
-      source:
-        $ref: "../code_samples/PHP/giftcards/get_a_redeem_code/code.php"
-    - lang: "Go"
-      source:
-        $ref: "../code_samples/go/giftcards/get_a_redeem_code/code.go"
-    - lang: "Java"
-      source:
-        $ref: "../code_samples/java/giftcards/get_a_redeem_code/code.class"
-    - lang: "Node JS"
-      source:
-        $ref: "../code_samples/nodejs/giftcards/get_a_redeem_code/code.js"
-    - lang: "Python"
-      source:
-        $ref: "../code_samples/python/giftcards/get_a_redeem_code/code.py" 

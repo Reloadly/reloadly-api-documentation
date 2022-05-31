@@ -59,23 +59,3 @@ get:
             errorCode: null
             infoLink: null
             details: []
-
-  x-codeSamples:
-    - lang: "C#"
-      source:
-        $ref: "../code_samples/csharp/giftcards/get_discount_by_product_id/code.cs"
-    - lang: "PHP"
-      source:
-        $ref: "../code_samples/PHP/giftcards/get_discount_by_product_id/code.php"
-    - lang: "Golang"
-      source:
-        $ref: "../code_samples/go/giftcards/get_discount_by_product_id/code.go"
-    - lang: "Java"
-      source:
-        $ref: "../code_samples/java/giftcards/get_discount_by_product_id/code.class"
-    - lang: "Node JS"
-      source:
-        $ref: "../code_samples/nodejs/giftcards/get_discount_by_product_id/code.js"
-    - lang: "Python"
-      source:
-        $ref: "../code_samples/python/giftcards/get_discount_by_product_id/code.py" 

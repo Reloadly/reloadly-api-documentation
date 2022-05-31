@@ -84,23 +84,3 @@ get:
             errorCode: null
             infoLink: null
             details: []
-
-  x-codeSamples:
-    - lang: "C#"
-      source:
-        $ref: "../code_samples/csharp/utilitypayments/get_transaction_by_id/code.cs"
-    - lang: "PHP"
-      source:
-        $ref: "../code_samples/PHP/utilitypayments/get_transaction_by_id/code.php"
-    - lang: "Go"
-      source:
-        $ref: "../code_samples/go/utilitypayments/get_transaction_by_id/code.go"
-    - lang: "Java"
-      source:
-        $ref: "../code_samples/java/utilitypayments/get_transaction_by_id/code.class"
-    - lang: "Node JS"
-      source:
-        $ref: "../code_samples/nodejs/utilitypayments/get_transaction_by_id/code.js"
-    - lang: "Python"
-      source:
-        $ref: "../code_samples/python/utilitypayments/get_transaction_by_id/code.py" 

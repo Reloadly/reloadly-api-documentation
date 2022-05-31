@@ -116,22 +116,3 @@ get:
             error: Not Found
             message: No message available
             path: /operator
-  x-codeSamples:
-    - lang: "C#"
-      source:
-        $ref: "../code_samples/csharp/airtime/get_all_operators/code.cs"
-    - lang: "PHP"
-      source:
-        $ref: "../code_samples/PHP/airtime/get_all_operators/code.php"
-    - lang: "Go"
-      source:
-        $ref: "../code_samples/go/airtime/get_all_operators/code.go"
-    - lang: "Java"
-      source:
-        $ref: "../code_samples/java/airtime/get_all_operators/code.class"
-    - lang: "Node JS"
-      source:
-        $ref: "../code_samples/nodejs/airtime/get_all_operators/code.js"
-    - lang: "Python"
-      source:
-        $ref: "../code_samples/python/airtime/get_all_operators/code.py" 

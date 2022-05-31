@@ -111,23 +111,3 @@ get:
             error: Not Found
             message: mnp lookup for given number failed
             path: /operators/mnp-lookup/03747658727/countries/ES
-
-  x-codeSamples:
-    - lang: "C#"
-      source:
-        $ref: "../code_samples/csharp/numberlookup/get/code.cs"
-    - lang: "PHP"
-      source:
-        $ref: "../code_samples/PHP/numberlookup/get/code.php"
-    - lang: "Go"
-      source:
-        $ref: "../code_samples/go/numberlookup/get/code.go"
-    - lang: "Java"
-      source:
-        $ref: "../code_samples/java/numberlookup/get/code.class"
-    - lang: "Node JS"
-      source:
-        $ref: "../code_samples/nodejs/numberlookup/get/code.js"
-    - lang: "Python"
-      source:
-        $ref: "../code_samples/python/numberlookup/get/code.py" 

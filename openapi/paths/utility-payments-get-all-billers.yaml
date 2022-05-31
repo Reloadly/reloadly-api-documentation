@@ -105,22 +105,3 @@ get:
             error: Not Found
             message: No message available
             path: /biller
-  x-codeSamples:
-    - lang: "C#"
-      source:
-        $ref: "../code_samples/csharp/utilitypayments/get_all_billers/code.cs"
-    - lang: "PHP"
-      source:
-        $ref: "../code_samples/PHP/utilitypayments/get_all_billers/code.php"
-    - lang: "Go"
-      source:
-        $ref: "../code_samples/go/utilitypayments/get_all_billers/code.go"
-    - lang: "Java"
-      source:
-        $ref: "../code_samples/java/utilitypayments/get_all_billers/code.class"
-    - lang: "Node JS"
-      source:
-        $ref: "../code_samples/nodejs/utilitypayments/get_all_billers/code.js"
-    - lang: "Python"
-      source:
-        $ref: "../code_samples/python/utilitypayments/get_all_billers/code.py" 

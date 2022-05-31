@@ -61,22 +61,3 @@ get:
             error: Not Found
             message: No message available
             path: /promotion/6984
-  x-codeSamples:
-    - lang: "C#"
-      source:
-        $ref: "../code_samples/csharp/airtime/get_promotion_by_id/code.cs"
-    - lang: "PHP"
-      source:
-        $ref: "../code_samples/PHP/airtime/get_promotion_by_id/code.php"
-    - lang: "Golang"
-      source:
-        $ref: "../code_samples/go/airtime/get_promotion_by_id/code.go"
-    - lang: "Java"
-      source:
-        $ref: "../code_samples/java/airtime/get_promotion_by_id/code.class"
-    - lang: "Node JS"
-      source:
-        $ref: "../code_samples/nodejs/airtime/get_promotion_by_id/code.js"
-    - lang: "Python"
-      source:
-        $ref: "../code_samples/python/airtime/get_promotion_by_id/code.py" 

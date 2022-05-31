@@ -70,25 +70,6 @@ post:
       application/json:
         schema:
           $ref: ../components/schemas/airtime/fx_rate/FxRateRequest.yaml
-  x-codeSamples:
-    - lang: "C#"
-      source:
-        $ref: "../code_samples/csharp/airtime/fx_rate/code.cs"
-    - lang: "PHP"
-      source:
-        $ref: "../code_samples/PHP/airtime/fx_rate/code.php"
-    - lang: "Go"
-      source:
-        $ref: "../code_samples/go/airtime/fx_rate/code.go"
-    - lang: "Java"
-      source:
-        $ref: "../code_samples/java/airtime/fx_rate/code.class"
-    - lang: "Node JS"
-      source:
-        $ref: "../code_samples/nodejs/airtime/fx_rate/code.js"
-    - lang: "Python"
-      source:
-        $ref: "../code_samples/python/airtime/fx_rate/code.py"
       
 
       

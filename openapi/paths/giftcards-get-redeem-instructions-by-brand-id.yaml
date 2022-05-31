@@ -54,23 +54,3 @@ get:
             error: Not Found
             message: No message available
             path: /redeem-instruction/1
-
-  x-codeSamples:
-    - lang: "C#"
-      source:
-        $ref: "../code_samples/csharp/giftcards/get_redeem_instructions_by_brand_id/code.cs"
-    - lang: "PHP"
-      source:
-        $ref: "../code_samples/PHP/giftcards/get_redeem_instructions_by_brand_id/code.php"
-    - lang: "Go"
-      source:
-        $ref: "../code_samples/go/giftcards/get_redeem_instructions_by_brand_id/code.go"
-    - lang: "Java"
-      source:
-        $ref: "../code_samples/java/giftcards/get_redeem_instructions_by_brand_id/code.class"
-    - lang: "Node JS"
-      source:
-        $ref: "../code_samples/nodejs/giftcards/get_redeem_instructions_by_brand_id/code.js"
-    - lang: "Python"
-      source:
-        $ref: "../code_samples/python/giftcards/get_redeem_instructions_by_brand_id/code.py" 

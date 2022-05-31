@@ -94,28 +94,3 @@ post:
       application/json:
         schema:
           $ref: ../components/schemas/number_lookup/post/NumberLookupPostRequest.yaml
-  
-  x-codeSamples:
-    - lang: "C#"
-      source:
-        $ref: "../code_samples/csharp/numberlookup/post/code.cs"
-    - lang: "PHP"
-      source:
-        $ref: "../code_samples/PHP/numberlookup/post/code.php"
-    - lang: "Go"
-      source:
-        $ref: "../code_samples/go/numberlookup/post/code.go"
-    - lang: "Java"
-      source:
-        $ref: "../code_samples/java/numberlookup/post/code.class"
-    - lang: "Node JS"
-      source:
-        $ref: "../code_samples/nodejs/numberlookup/post/code.js"
-    - lang: "Python"
-      source:
-        $ref: "../code_samples/python/numberlookup/post/code.py"
-      
-
-      
-
-  

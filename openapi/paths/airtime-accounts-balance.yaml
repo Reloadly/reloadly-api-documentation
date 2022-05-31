@@ -4,13 +4,13 @@ get:
   summary: View your account's balance
   description: Retrieve the details of your account's balance.
   operationId: airtime/accounts-balance
-  # parameters:
-    # - in: header
-    #   name: Authorization
-    #   schema:
-    #     type: string
-    #     description: Your access token is required as a bearer token in the request's header.
-    #   required: true
+  parameters:
+    - in: header
+      name: Authorization
+      schema:
+        type: string
+        description: Your access token is required as a bearer token in the request's header.
+      required: true
   responses:
     '200':
       description: Successfully retrieved balance details

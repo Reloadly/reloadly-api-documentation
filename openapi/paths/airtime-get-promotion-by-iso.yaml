@@ -63,22 +63,3 @@ get:
             error: Not Found
             message: No message available
             path: /promotions/country-code/US
-  x-codeSamples:
-    - lang: "C#"
-      source:
-        $ref: "../code_samples/csharp/airtime/get_promotion_by_iso/code.cs"
-    - lang: "PHP"
-      source:
-        $ref: "../code_samples/PHP/airtime/get_promotion_by_iso/code.php"
-    - lang: "Golang"
-      source:
-        $ref: "../code_samples/go/airtime/get_promotion_by_iso/code.go"
-    - lang: "Java"
-      source:
-        $ref: "../code_samples/java/airtime/get_promotion_by_iso/code.class"
-    - lang: "Node JS"
-      source:
-        $ref: "../code_samples/nodejs/airtime/get_promotion_by_iso/code.js"
-    - lang: "Python"
-      source:
-        $ref: "../code_samples/python/airtime/get_promotion_by_iso/code.py" 

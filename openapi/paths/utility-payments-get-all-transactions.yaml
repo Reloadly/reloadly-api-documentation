@@ -132,22 +132,3 @@ get:
             errorCode: null
             infoLink: null
             details: []
-  x-codeSamples:
-    - lang: "C#"
-      source:
-        $ref: "../code_samples/csharp/utilitypayments/get_all_transactions/code.cs"
-    - lang: "PHP"
-      source:
-        $ref: "../code_samples/PHP/utilitypayments/get_all_transactions/code.php"
-    - lang: "Go"
-      source:
-        $ref: "../code_samples/go/utilitypayments/get_all_transactions/code.go"
-    - lang: "Java"
-      source:
-        $ref: "../code_samples/java/utilitypayments/get_all_transactions/code.class"
-    - lang: "Node JS"
-      source:
-        $ref: "../code_samples/nodejs/utilitypayments/get_all_transactions/code.js"
-    - lang: "Python"
-      source:
-        $ref: "../code_samples/python/utilitypayments/get_all_transactions/code.py" 

@@ -82,23 +82,3 @@ get:
             error: Not Found
             message: No message available
             path: /topups/26545/statu
-
-  x-codeSamples:
-    - lang: "C#"
-      source:
-        $ref: "../code_samples/csharp/airtime/top_ups_status/code.cs"
-    - lang: "PHP"
-      source:
-        $ref: "../code_samples/PHP/airtime/top_ups_status/code.php"
-    - lang: "Go"
-      source:
-        $ref: "../code_samples/go/airtime/top_ups_status/code.go"
-    - lang: "Java"
-      source:
-        $ref: "../code_samples/java/airtime/top_ups_status/code.class"
-    - lang: "Node JS"
-      source:
-        $ref: "../code_samples/nodejs/airtime/top_ups_status/code.js"
-    - lang: "Python"
-      source:
-        $ref: "../code_samples/python/airtime/top_ups_status/code.py" 

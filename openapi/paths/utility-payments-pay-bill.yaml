@@ -58,23 +58,3 @@ post:
       application/json:
         schema:
           $ref: ../components/schemas/utility_payments/pay_bill/PayBillRequest.yaml
-  
-  x-codeSamples:
-    - lang: "C#"
-      source:
-        $ref: "../code_samples/csharp/utilitypayments/pay_bill/code.cs"
-    - lang: "PHP"
-      source:
-        $ref: "../code_samples/PHP/utilitypayments/pay_bill/code.php"
-    - lang: "Go"
-      source:
-        $ref: "../code_samples/go/utilitypayments/pay_bill/code.go"
-    - lang: "Java"
-      source:
-        $ref: "../code_samples/java/utilitypayments/pay_bill/code.class"
-    - lang: "Node JS"
-      source:
-        $ref: "../code_samples/nodejs/utilitypayments/pay_bill/code.js"
-    - lang: "Python"
-      source:
-        $ref: "../code_samples/python/utilitypayments/pay_bill/code.py"

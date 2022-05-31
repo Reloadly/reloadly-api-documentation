@@ -49,24 +49,4 @@ get:
             status: 404
             error: Not Found
             message: No message available
-            path: /redeem-instruction
-
-  x-codeSamples:
-    - lang: "C#"
-      source:
-        $ref: "../code_samples/csharp/giftcards/get_all_redeem_instructions/code.cs"
-    - lang: "PHP"
-      source:
-        $ref: "../code_samples/PHP/giftcards/get_all_redeem_instructions/code.php"
-    - lang: "Go"
-      source:
-        $ref: "../code_samples/go/giftcards/get_all_redeem_instructions/code.go"
-    - lang: "Java"
-      source:
-        $ref: "../code_samples/java/giftcards/get_all_redeem_instructions/code.class"
-    - lang: "Node JS"
-      source:
-        $ref: "../code_samples/nodejs/giftcards/get_all_redeem_instructions/code.js"
-    - lang: "Python"
-      source:
-        $ref: "../code_samples/python/giftcards/get_all_redeem_instructions/code.py" 
+            path: /redeem-instruction 
