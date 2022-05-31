@@ -1,6 +1,6 @@
 # See https://redocly.com/docs/cli/configuration/ for more information.
 apis:
-  reloadly@v1: 
+  Reloadly@v1: 
     root: openapi/openapi.yaml
 lint:
   extends:
