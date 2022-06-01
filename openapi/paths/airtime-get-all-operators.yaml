@@ -41,7 +41,7 @@ get:
     '200':
       description: Successfully retrieved details of all operators
       content:
-        'application/json, text/plain, */*':
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/airtime/get_all_operators/GetAllOperatorsResponse200.yaml
           example:
