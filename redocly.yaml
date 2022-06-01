@@ -11,6 +11,7 @@ features.openapi:
   disableDeepLinks: true
   showConsole: true
   htmlTemplate: ./docs/index.html
+  corsProxyUrl: https://cors.redoc.ly
   theme:
     colors:
       http:
