@@ -11,6 +11,7 @@ features.openapi:
   disableDeepLinks: true
   showConsole: true
   htmlTemplate: ./docs/index.html
+  corsProxyUrl: docs2.reloadly.com
   theme:
     colors:
       http:
