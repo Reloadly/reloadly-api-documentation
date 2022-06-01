@@ -8,10 +8,11 @@ lint:
   rules:
     no-unused-components: error
 features.openapi:
+  sendXUserAgentInTryIt: 'true'
   disableDeepLinks: true
   showConsole: true
   htmlTemplate: ./docs/index.html
-  corsProxyUrl: https://cors.redoc.ly
+  corsProxyUrl: 'https://cors.redoc.ly'
   theme:
     colors:
       http:
