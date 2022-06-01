@@ -4,6 +4,7 @@ post:
   summary: Create an access token
   description: Reloadly employs the <a href="https://oauth.net/2/" target=__blank__> OAuth 2.0 standard</a>.Note that all API requests must be made over <a href='https://en.wikipedia.org/wiki/HTTP_Secure'>HTTPS</a>. Calls made over plain HTTP will fail. API requests without authentication will also fail. <br><br> Once successfully retrieved, your access token is then passed as a bearer token in the header of any API endpoint you wish to use in making a request.
   operationId: authentication/access-token
+  security: []
   responses:
     '200':
       description: Successfully created an access token.
