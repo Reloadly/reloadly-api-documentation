@@ -5,12 +5,12 @@ get:
   description: Retrieve the details of every operator that can be used to send or receive a top-up.
   operationId: airtime/get-all-operators
   parameters:
-    - in: header
-      name: Authorization
-      schema:
-        type: string
-        description: Your access token is required as a bearer token in the request's header.
-      required: true
+    # - in: header
+    #   name: Authorization
+    #   schema:
+    #     type: string
+    #     description: Your access token is required as a bearer token in the request's header.
+    #   required: true
     - in: query
       name: includeBundles
       schema:
