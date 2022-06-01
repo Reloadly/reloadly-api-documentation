@@ -11,6 +11,7 @@ features.openapi:
   disableDeepLinks: true
   showConsole: true
   htmlTemplate: ./docs/index.html
+  corsProxyUrl: topups-sandbox.reloadly.com
   theme:
     colors:
       http:
