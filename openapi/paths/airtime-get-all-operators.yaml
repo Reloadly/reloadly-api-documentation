@@ -41,7 +41,7 @@ get:
     '200':
       description: Successfully retrieved details of all operators
       content:
-        application/json:
+        'application/json, text/plain, */*':
           schema:
             $ref: ../components/schemas/airtime/get_all_operators/GetAllOperatorsResponse200.yaml
           example:
