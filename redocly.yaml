@@ -8,6 +8,7 @@ lint:
   rules:
     no-unused-components: error
 features.openapi:
+  disableDeepLinks: true
   showConsole: true
   htmlTemplate: ./docs/index.html
   corsProxyUrl: https://cors.redoc.ly/
@@ -19,10 +20,10 @@ features.openapi:
       accent:
         main: '#232d3d'
     sidebar:
-      width: 20vw
+      width: 300px
       backgroundColor: '#f7fafc'
       spacing:
-        paddingHorizontal: 5px
+        paddingHorizontal: 10px
     components:
       buttons:
         borderRadius: 5px
@@ -41,7 +42,7 @@ features.openapi:
           medium: 100%
           large: 100%
     rightPanel:
-      width: 40vw
+      width: 400px
       panelBackgroundColor: '#232d3d'
     spacing:
       sectionHorizontal: 75
