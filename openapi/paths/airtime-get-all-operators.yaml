@@ -5,12 +5,6 @@ get:
   description: Retrieve the details of every operator that can be used to send or receive a top-up.
   operationId: airtime/get-all-operators
   parameters:
-    # - in: header
-    #   name: Authorization
-    #   schema:
-    #     type: string
-    #     description: Your access token is required as a bearer token in the request's header.
-    #   required: true
     - in: query
       name: includeBundles
       schema:
@@ -94,7 +88,7 @@ get:
     '401':
       description: Failed due to an unauthorized request
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/airtime/get_all_operators/GetAllOperatorsResponse401.yaml
           example:
@@ -107,7 +101,7 @@ get:
     '404':
       description: Failed because the request was made to an incorrect URL path
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/airtime/get_all_operators/GetAllOperatorsResponse404.yaml
           example:
