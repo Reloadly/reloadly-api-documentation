@@ -5,12 +5,6 @@ get:
   description: Retrieve the redeem instruction details of a gift card brand by making a request with its brand identification number. 
   operationId: get-redeem-instructions-by-brand-id
   parameters:
-    - in: header
-      name: Authorization
-      schema:
-        type: string
-        description: Your access token is required as a bearer token in the request's header.
-      required: true
     - in: path
       name: brandId
       description: The gift card brand's identification number.
@@ -21,7 +15,7 @@ get:
     '200':
       description: Successfully retrieved redeem instruction details of a gift card brand.
       content:
-        application/json:
+        'application/com.reloadly.giftcards-v1+json':
           schema:
             $ref: ../components/schemas/giftcards/get_redeem_instructions_by_brand_id/GetRedeemInstructionsByBrandIdResponse200.yaml
           example:
@@ -32,7 +26,7 @@ get:
     '401':
       description: Failed due to an unauthorized request.
       content:
-        application/json:
+        'application/com.reloadly.giftcards-v1+json':
           schema:
             $ref: ../components/schemas/giftcards/get_redeem_instructions_by_brand_id/GetRedeemInstructionsByBrandIdResponse401.yaml
           example:
@@ -45,7 +39,7 @@ get:
     '404':
       description: Failed because the request was made to an incorrect URL path.
       content:
-        application/json:
+        'application/com.reloadly.giftcards-v1+json':
           schema:
             $ref: ../components/schemas/giftcards/get_redeem_instructions_by_brand_id/GetRedeemInstructionsByBrandIdResponse404.yaml
           example:

@@ -5,12 +5,6 @@ get:
   description: Retrieve the details of a mobile number by making a request using the mobile number and the ISO code of the country where it is registered.
   operationId: airtime/auto-detect-an-operator
   parameters:
-    - in: header
-      name: Authorization
-      schema:
-        type: string
-        description: Your access token is required as a bearer token in the request's header.
-      required: true
     - in: path
       name: phone
       description: The mobile number whose details are to be retrieved.
@@ -39,7 +33,7 @@ get:
     '200':
       description: Successfully retrieved details of a mobile number
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/airtime/auto_detect_an_operator/AutoDetectAnOperatorResponse200.yaml
           example:
@@ -89,7 +83,7 @@ get:
     '401':
       description: Failed due to an unauthorized request
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/airtime/auto_detect_an_operator/AutoDetectAnOperatorResponse401.yaml
           example:
@@ -102,7 +96,7 @@ get:
     '404':
       description: Failed because the request was made to an incorrect URL path
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/airtime/auto_detect_an_operator/AutoDetectAnOperatorResponse404.yaml
           example:

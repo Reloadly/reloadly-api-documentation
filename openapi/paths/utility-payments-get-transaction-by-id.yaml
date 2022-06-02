@@ -5,12 +5,6 @@ get:
   description: Retrieve the details of a utility payment by making a request with the payment's identification number. 
   operationId: utilitypayments/get-transaction-by-id
   parameters:
-    - in: header
-      name: Authorization
-      schema:
-        type: string
-        description: Your access token is required as a bearer token in the request's header.
-      required: true
     - in: path
       name: id
       description: The utility payment's identification number.
@@ -21,7 +15,7 @@ get:
     '200':
       description: Successfully retrieved details of a utility payment.
       content:
-        application/json:
+        'application/com.reloadly.utilities-v1+json':
           schema:
             $ref: ../components/schemas/utility_payments/get_transaction_by_id/GetTransactionByIdResponse200.yaml
           example:
@@ -59,7 +53,7 @@ get:
     '401':
       description: Failed due to an unauthorized request.
       content:
-        application/json:
+        'application/com.reloadly.utilities-v1+json':
           schema:
             $ref: ../components/schemas/utility_payments/get_transaction_by_id/GetTransactionByIdResponse401.yaml
           example:
@@ -72,7 +66,7 @@ get:
     '404':
       description: Failed because the request was made to an incorrect URL path.
       content:
-        application/json:
+        'application/com.reloadly.utilities-v1+json':
           schema:
             $ref: ../components/schemas/utility_payments/get_transaction_by_id/GetTransactionByIdResponse404.yaml
           example:

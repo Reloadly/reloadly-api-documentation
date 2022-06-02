@@ -5,24 +5,17 @@ get:
   description: Retrieve the details of a promotion by making a request with its identification number.
   operationId: airtime/get-promotion-by-id
   parameters:
-    - in: header
-      name: Authorization
-      schema:
-        type: string
-        description: Your access token is required as a bearer token in the request's header.
-      required: true
     - in: path
       name: promotionid
       schema:
         type: integer
         description: The promotion's identification number.
       required: true
-
   responses:
     '200':
       description: Successfully retrieved details of a promotion.
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/airtime/get_promotion_by_id/GetPromotionByIdResponse200.yaml
           example:
@@ -39,7 +32,7 @@ get:
     '401':
       description: Failed due to an unauthorized request.
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/airtime/get_promotion_by_id/GetPromotionByIdResponse401.yaml
           example:
@@ -52,7 +45,7 @@ get:
     '404':
       description: Failed because the request was made to an incorrect URL path.
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/airtime/get_promotion_by_id/GetPromotionByIdResponse404.yaml
           example:

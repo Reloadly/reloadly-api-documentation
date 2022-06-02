@@ -4,18 +4,11 @@ post:
   summary: Make an asynchronous top-up
   description: Retrieve a transaction identification number that solely provides details and tracks the status of your top-up.
   operationId: airtime/top-ups-async
-  parameters:
-  - in: header
-    name: Authorization
-    schema:
-      type: string
-      description: Your access token is required as a bearer token in the request's header.
-    required: true
   responses:
     '200':
       description: Successfully retrieved a transaction identification number.
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/airtime/top_ups_async/TopUpsAsyncResponse200.yaml
           example:
@@ -23,7 +16,7 @@ post:
     '400':
       description: Failed because the request was made with an incorrect parameter in the payload.
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/airtime/top_ups_async/TopUpsAsyncResponse400.yaml
           example:
@@ -36,7 +29,7 @@ post:
     '401':
       description: Failed due to an unauthorized request.
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/airtime/top_ups_async/TopUpsAsyncResponse401.yaml
           example:
@@ -49,7 +42,7 @@ post:
     '404':
       description: Failed because the request was made to an incorrect URL path.
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/airtime/top_ups_async/TopUpsAsyncResponse404.yaml
           example:

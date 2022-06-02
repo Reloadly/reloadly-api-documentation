@@ -5,12 +5,6 @@ get:
   description: Retrieve the details of every utility payment service / biller you can access via Reloadly.
   operationId: utilitypayments/get-all-billers
   parameters:
-    - in: header
-      name: Authorization
-      schema:
-        type: string
-        description: Your access token is required as a bearer token in the request's header.
-      required: true 
     - in: query
       name: id
       schema:
@@ -51,7 +45,7 @@ get:
     '200':
       description: Successfully retrieved details of all billers.
       content:
-        application/json:
+        'application/com.reloadly.utilities-v1+json':
           schema:
             $ref: ../components/schemas/utility_payments/get_all_billers/GetAllBillersResponse200.yaml
           example:
@@ -83,7 +77,7 @@ get:
     '401':
       description: Failed due to an unauthorized request.
       content:
-        application/json:
+        'application/com.reloadly.utilities-v1+json':
           schema:
             $ref: ../components/schemas/utility_payments/get_all_billers/GetAllBillersResponse401.yaml
           example:
@@ -96,7 +90,7 @@ get:
     '404':
       description: Failed because the request was made to an incorrect URL path.
       content:
-        application/json:
+        'application/com.reloadly.utilities-v1+json':
           schema:
             $ref: ../components/schemas/utility_payments/get_all_billers/GetAllBillersResponse404.yaml
           example:

@@ -5,12 +5,6 @@ get:
   description: Retrieve the details of all the operators within a particular country by making a request with the country's ISO code.
   operationId: airtime/get-operator-by-iso
   parameters:
-    - in: header
-      name: Authorization
-      schema:
-        type: string
-        description: Your access token is required as a bearer token in the request's header.
-      required: true
     - in: path
       name: countrycode
       description: The ISO code of the country where the operator is registered.
@@ -51,7 +45,7 @@ get:
     '200':
       description: Successfully retrieved details of an operator
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/airtime/get_operator_by_iso/GetOperatorByIsoResponse200.yaml
           example:
@@ -102,7 +96,7 @@ get:
     '401':
       description: Failed due to an unauthorized request
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/airtime/get_operator_by_iso/GetOperatorByIsoResponse401.yaml
           example:
@@ -115,7 +109,7 @@ get:
     '404':
       description: Failed because the request was made to an incorrect URL path
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/airtime/get_operator_by_iso/GetOperatorByIsoResponse404.yaml
           example:

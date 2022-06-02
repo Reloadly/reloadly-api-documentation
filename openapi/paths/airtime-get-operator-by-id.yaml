@@ -5,12 +5,6 @@ get:
   description: Retrieve the details of an operator by making a request with its identification number
   operationId: airtime/get-operator-by-id
   parameters:
-    - in: header
-      name: Authorization
-      schema:
-        type: string
-        description: Your access token is required as a bearer token in the request's header.
-      required: true
     - in: path
       name: operatorid
       description: The operator's identification number.
@@ -21,7 +15,7 @@ get:
     '200':
       description: Successfully retrieved details of an operator
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/airtime/get_operator_by_id/GetOperatorByIdResponse200.yaml
           example:
@@ -71,7 +65,7 @@ get:
     '401':
       description: Failed due to an unauthorized request
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/airtime/get_operator_by_id/GetOperatorByIdResponse401.yaml
           example:
@@ -84,7 +78,7 @@ get:
     '404':
       description: Failed because the request was made to an incorrect URL path
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/airtime/get_operator_by_id/GetOperatorByIdResponse404.yaml
           example:

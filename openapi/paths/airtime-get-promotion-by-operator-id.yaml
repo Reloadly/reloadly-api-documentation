@@ -5,12 +5,6 @@ get:
   description: Retrieve the details of every promotion being ofered by an operator by making a request with the operator's identification number.
   operationId: airtime/get-promotion-by-operator-id
   parameters:
-    - in: header
-      name: Authorization
-      schema:
-        type: string
-        description: Your access token is required as a bearer token in the request's header.
-      required: true
     - in: path
       name: operatorid
       schema:
@@ -22,7 +16,7 @@ get:
     '200':
       description: Successfully retrieved details of all the promotions being offered by an operator.
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/airtime/get_promotion_by_operator_id/GetPromotionByOperatorIdResponse200.yaml
           example:
@@ -41,7 +35,7 @@ get:
     '401':  
       description: Failed due to an unauthorized request.
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/airtime/get_promotion_by_operator_id/GetPromotionByOperatorIdResponse401.yaml
           example:
@@ -54,7 +48,7 @@ get:
     '404':
       description: Failed because the request was made to an incorrect URL path.
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/airtime/get_promotion_by_operator_id/GetPromotionByOperatorIdResponse404.yaml
           example:

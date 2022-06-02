@@ -5,12 +5,6 @@ get:
   description: The **GET** method receives the mobile number and the given <a href="https://en.wikipedia.org/wiki/ISO_3166-1" target=__blank__>ISO code</a> of the country where the mobile number is registered as path parameters to make this request. A developer may make use of the **GET** method when retrieving the details of a number under the following circumstances <br> <br> &#9679; &nbsp; The number details to be retrieved need to be cached. <br> &#9679; &nbsp; The number details to be retrieved are not sensitive - this is determined by the use case involved. <br> &#9679; &nbsp; Details for a single mobile number are required.
   operationId: number-lookup/get
   parameters:
-    - in: header
-      name: Authorization
-      schema:
-        type: string
-        description: Your access token is required as a bearer token in the request's header.
-      required: true
     - in: path
       name: phone
       description: This is the mobile number whose details are to be retrieved.
@@ -39,7 +33,7 @@ get:
     '200':
       description: Successfully retrieved details of a mobile number
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/number_lookup/get/NumberLookupGetResponse200.yaml
           example:
@@ -89,7 +83,7 @@ get:
     '401':
       description: Failed due to an unauthorized request
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/number_lookup/get/NumberLookupGetResponse401.yaml
           example:
@@ -102,7 +96,7 @@ get:
     '404':
       description: Failed because the details of a mobile number's operator could not be retrieved.
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/number_lookup/get/NumberLookupGetResponse404.yaml
           example:

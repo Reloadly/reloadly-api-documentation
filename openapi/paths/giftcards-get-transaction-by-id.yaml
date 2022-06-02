@@ -5,12 +5,6 @@ get:
   description: Retrieve information on a gift card transaction by making a request with its transaction identification number.
   operationId: giftcards/get-transaction-by-id
   parameters:
-    - in: header
-      name: Authorization
-      schema:
-        type: string
-        description: Your access token is required as a bearer token in the request's header
-      required: true
     - in: path
       name: transactionId
       schema:
@@ -21,7 +15,7 @@ get:
     '200':
       description: Successfully retrieved details of a gift card transaction.
       content:
-        application/json:
+        'application/com.reloadly.giftcards-v1+json':
           schema:
             $ref: ../components/schemas/giftcards/get_transaction_by_id/GetTransactionByIdResponse200.yaml
           example:
@@ -49,7 +43,7 @@ get:
     '401':
       description: Failed due to an unauthorized request.
       content:
-        application/json:
+        'application/com.reloadly.giftcards-v1+json':
           schema:
             $ref: ../components/schemas/giftcards/get_transaction_by_id/GetTransactionByIdResponse401.yaml
           example:
@@ -62,7 +56,7 @@ get:
     '404':
       description: Failed because the request was made to an incorrect URL path.
       content:
-        application/json:
+        'application/com.reloadly.giftcards-v1+json':
           schema:
             $ref: ../components/schemas/giftcards/get_transaction_by_id/GetTransactionByIdResponse404.yaml
           example:

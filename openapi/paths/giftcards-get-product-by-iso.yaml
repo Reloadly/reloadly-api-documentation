@@ -5,12 +5,6 @@ get:
   description: Retrieve the details of every giftcard product available to a country by making a request with the country's ISO code. 
   operationId: giftcards/get-product-by-iso
   parameters:
-    - in: header
-      name: Authorization
-      schema:
-        type: string
-        description: Your access token is required as a bearer token in the request's header.
-      required: true
     - in: path
       name: countrycode
       description: The country's ISO code.
@@ -21,7 +15,7 @@ get:
     '200':
       description: Successfully retrieved details of a gift card product.
       content:
-        application/json:
+        'application/com.reloadly.giftcards-v1+json':
           schema:
             $ref: ../components/schemas/giftcards/get_product_by_iso/GetProductByIsoResponse200.yaml
           example:
@@ -61,7 +55,7 @@ get:
     '401':
       description: Failed due to an unauthorized request.
       content:
-        application/json:
+        'application/com.reloadly.giftcards-v1+json':
           schema:
             $ref: ../components/schemas/giftcards/get_product_by_iso/GetProductByIsoResponse401.yaml
           example:
@@ -74,7 +68,7 @@ get:
     '404':
       description: Failed because the request was made to an incorrect URL path.
       content:
-        application/json:
+        'application/com.reloadly.giftcards-v1+json':
           schema:
             $ref: ../components/schemas/giftcards/get_product_by_iso/GetProductByIsoResponse404.yaml
           example:

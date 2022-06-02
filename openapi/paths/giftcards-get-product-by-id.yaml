@@ -5,12 +5,6 @@ get:
   description: Retrieve the details of a giftcard product by making a request with the gift card product's identification number. 
   operationId: giftcards/get-product-by-id
   parameters:
-    - in: header
-      name: Authorization
-      schema:
-        type: string
-        description: Your access token is required as a bearer token in the request's header.
-      required: true
     - in: path
       name: productid
       description: The product's identification number.
@@ -21,7 +15,7 @@ get:
     '200':
       description: Successfully retrieved details of a gift card product.
       content:
-        application/json:
+        'application/com.reloadly.giftcards-v1+json':
           schema:
             $ref: ../components/schemas/giftcards/get_product_by_id/GetProductByIdResponse200.yaml
           example:
@@ -61,7 +55,7 @@ get:
     '400':
       description: Failed because the request was made with an incorrect gift card product identification number.
       content:
-        application/json:
+        'application/com.reloadly.giftcards-v1+json':
           schema:
             $ref: ../components/schemas/giftcards/get_product_by_id/GetProductByIdResponse400.yaml
           example:
@@ -74,7 +68,7 @@ get:
     '401':
       description: Failed due to an unauthorized request.
       content:
-        application/json:
+        'application/com.reloadly.giftcards-v1+json':
           schema:
             $ref: ../components/schemas/giftcards/get_product_by_id/GetProductByIdResponse401.yaml
           example:
@@ -87,7 +81,7 @@ get:
     '404':
       description: Failed because the request was made to an incorrect URL path.
       content:
-        application/json:
+        'application/com.reloadly.giftcards-v1+json':
           schema:
             $ref: ../components/schemas/giftcards/get_product_by_id/GetProductByIdResponse404.yaml
           example:

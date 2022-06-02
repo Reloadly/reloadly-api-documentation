@@ -4,18 +4,11 @@ get:
   summary: Get all redeem instructions
   description: Retrieve the redeem instruction details of every gift card product that can be purchased via Reloadly. 
   operationId: giftcards/get-all-redeem-instructions
-  parameters:
-    - in: header
-      name: Authorization
-      schema:
-        type: string
-        description: Your access token is required as a bearer token in the request's header
-      required: true
   responses:
     '200':
       description: Successfully retrieved details of all gift card redeem instructions.
       content:
-        application/json:
+        'application/com.reloadly.giftcards-v1+json':
           schema:
             $ref: ../components/schemas/giftcards/get_all_redeem_instructions/GetAllRedeemInstructionsResponse200.yaml
           example:
@@ -28,7 +21,7 @@ get:
     '401':
       description: Failed due to an unauthorized request.
       content:
-        application/json:
+        'application/com.reloadly.giftcards-v1+json':
           schema:
             $ref: ../components/schemas/giftcards/get_all_redeem_instructions/GetAllRedeemInstructionsResponse401.yaml
           example:
@@ -41,7 +34,7 @@ get:
     '404':
       description: Failed because the request was made to an incorrect URL path.
       content:
-        application/json:
+        'application/com.reloadly.giftcards-v1+json':
           schema:
             $ref: ../components/schemas/giftcards/get_all_redeem_instructions/GetAllRedeemInstructionsResponse404.yaml
           example:

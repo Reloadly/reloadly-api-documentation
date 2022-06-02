@@ -4,18 +4,11 @@ post:
   summary: Make a top-up
   description: Recharge a mobile number with airtime or data by making a request with its operator details.
   operationId: airtime/top-ups
-  parameters:
-    - in: header
-      name: Authorization
-      schema:
-        type: string
-        description: Your access token is required as a bearer token in the request's header.
-      required: true
   responses:
     '200':
       description: Successfully made a top-up to a mobile number.
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/airtime/top_ups/TopUpsResponse200.yaml
           example:
@@ -54,7 +47,7 @@ post:
     '400':
       description: Failed because the request was made with an incorrect parameter in the payload.
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/airtime/top_ups/TopUpsResponse400.yaml
           example:
@@ -67,7 +60,7 @@ post:
     '401':
       description: Failed due to an unauthorized request.
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/airtime/top_ups/TopUpsResponse401.yaml
           example:
@@ -80,7 +73,7 @@ post:
     '404':
       description: Failed because the request was made to an incorrect URL path.
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/airtime/top_ups/TopUpsResponse404.yaml
           example:

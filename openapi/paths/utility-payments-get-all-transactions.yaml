@@ -5,12 +5,6 @@ get:
   description: Retrieve information on all utility payment transactions made on your account. Results can be paginated for your convenience.
   operationId: utilitypayments/get-all-transactions
   parameters:
-    - in: header
-      name: Authorization
-      schema:
-        type: string
-        description: Your access token is required as a bearer token in the request's header.
-      required: true
     - in: query
       name: referenceId
       schema:
@@ -69,7 +63,7 @@ get:
     '200':
       description: Successfully retrieved details of all utility payment transactions.
       content:
-        application/json:
+        'application/com.reloadly.utilities-v1+json':
           schema:
             $ref: ../components/schemas/utility_payments/get_all_transactions/GetAllTransactionsResponse200.yaml
           example:
@@ -109,7 +103,7 @@ get:
     '401':
       description: Failed due to an unauthorized request.
       content:
-        application/json:
+        'application/com.reloadly.utilities-v1+json':
           schema:
             $ref: ../components/schemas/utility_payments/get_all_transactions/GetAllTransactionsResponse401.yaml
           example:
@@ -122,7 +116,7 @@ get:
     '404':
       description: Failed because the request was made to an incorrect URL path.
       content:
-        application/json:
+        'application/com.reloadly.utilities-v1+json':
           schema:
             $ref: ../components/schemas/utility_payments/get_all_transactions/GetAllTransactionsResponse404.yaml
           example:

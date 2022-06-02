@@ -8,7 +8,7 @@ get:
     '200':
       description: Successfully retrieved details of all countries
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/airtime/get_all_countries/GetAllCountriesResponse200.yaml
           example:
@@ -25,7 +25,7 @@ get:
     '401':
       description: Failed due to an unauthorized request
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/airtime/get_all_countries/GetAllCountriesResponse401.yaml
           example:
@@ -38,7 +38,7 @@ get:
     '404':
       description: Failed because the request was made to an incorrect URL path
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/airtime/get_all_countries/GetAllCountriesResponse404.yaml
           example:

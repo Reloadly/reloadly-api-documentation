@@ -4,18 +4,11 @@ post:
   summary: Fetch FX rate by operator ID
   description: Retrieve the foreign exchange rate details of an operator by making a request with its identification number.
   operationId: airtime/fx-rate
-  parameters:
-  - in: header
-    name: Authorization
-    schema:
-      type: string
-      description: Your access token is required as a bearer token in the request's header.
-    required: true
   responses:
     '200':
       description: Successfully retrieved details of an operator's foreign exchange rate.
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/airtime/fx_rate/FxRateResponse200.yaml
           example:
@@ -26,7 +19,7 @@ post:
     '401':
       description: Failed due to an unauthorized request.
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/airtime/fx_rate/FxRateResponse401.yaml
           example:
@@ -39,7 +32,7 @@ post:
     '404':
       description: Failed because the request was made to an incorrect URL path.
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/airtime/fx_rate/FxRateResponse404.yaml
           example:
@@ -51,7 +44,7 @@ post:
     '500':
       description: Failed because the request was made to an operator without a foreign exchange rate.
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/airtime/fx_rate/FxRateResponse500.yaml
           example:
@@ -60,9 +53,7 @@ post:
             path: /operators/fx-rate
             errorCode: FX_RATE_NOT_AVAILABLE
             infoLink: null
-            details: []
-
-   
+            details: [] 
   requestBody:
     description: Payload Description
     required: true
@@ -70,8 +61,3 @@ post:
       application/json:
         schema:
           $ref: ../components/schemas/airtime/fx_rate/FxRateRequest.yaml
-      
-
-      
-
-  

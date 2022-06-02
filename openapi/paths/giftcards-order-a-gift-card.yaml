@@ -15,7 +15,7 @@ post:
     '200':
       description: Successfully ordered a gift card.
       content:
-        application/json:
+        'application/com.reloadly.giftcards-v1+json':
           schema:
             $ref: ../components/schemas/giftcards/order_a_gift_card/OrderAGiftCardResponse200.yaml
           example:
@@ -45,7 +45,7 @@ post:
     '400':
       description: Failed because the request was made with an incorrect body parameter.
       content:
-        application/json:
+        'application/com.reloadly.giftcards-v1+json':
           schema:
             $ref: ../components/schemas/giftcards/order_a_gift_card/OrderAGiftCardResponse400.yaml
           example:
@@ -58,7 +58,7 @@ post:
     '401':
       description: Failed due to an unauthorized request.
       content:
-        application/json:
+        'application/com.reloadly.giftcards-v1+json':
           schema:
             $ref: ../components/schemas/giftcards/order_a_gift_card/OrderAGiftCardResponse401.yaml
           example:
@@ -71,7 +71,7 @@ post:
     '404':
       description: Failed because the request was made to an incorrect URL path.
       content:
-        application/json:
+        'application/com.reloadly.giftcards-v1+json':
           schema:
             $ref: ../components/schemas/giftcards/order_a_gift_card/OrderAGiftCardResponse404.yaml
           example:

@@ -4,18 +4,11 @@ get:
   summary: Get all discounts
   description: Retrieve the details of all available discounts on gift card products that can be purchased on Reloadly.
   operationId: giftcards/get-all-discounts
-  parameters:
-    - in: header
-      name: Authorization
-      schema:
-        type: string
-        description: Your access token is required as a bearer token in the request's header
-      required: true
   responses:
     '200':
       description: Successfully retrieved details of all discounts on gift card products.
       content:
-        application/json:
+        'application/com.reloadly.giftcards-v1+json':
           schema:
             $ref: ../components/schemas/giftcards/get_all_discounts/GetAllDiscountsResponse200.yaml
           example:
@@ -30,7 +23,7 @@ get:
     '401':
       description: Failed due to an unauthorized request.
       content:
-        application/json:
+        'application/com.reloadly.giftcards-v1+json':
           schema:
             $ref: ../components/schemas/giftcards/get_all_discounts/GetAllDiscountsResponse401.yaml
           example:
@@ -43,7 +36,7 @@ get:
     '404':
       description: Failed because the request was made to an incorrect URL path.
       content:
-        application/json:
+        'application/com.reloadly.giftcards-v1+json':
           schema:
             $ref: ../components/schemas/giftcards/get_all_discounts/GetAllDiscountsResponse404.yaml
           example:

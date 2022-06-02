@@ -5,12 +5,6 @@ get:
   description: Retrieve the real-time status of a top-up by making a request with its identification number.
   operationId: airtime/top-ups-status
   parameters:
-    - in: header
-      name: Authorization
-      schema:
-        type: string
-        description: Your access token is required as a bearer token in the request's header
-      required: true
     - in: path
       name: transactionId
       description: The transaction identification number of a top-up
@@ -21,7 +15,7 @@ get:
     '200':
       description: Successfully retrieved details of a top-up
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/airtime/top_ups_status/TopUpsStatusResponse200.yaml
           example:
@@ -60,7 +54,7 @@ get:
     '401':
       description: Failed due to an unauthorized request
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/airtime/top_ups_status/TopUpsStatusResponse401.yaml
           example:
@@ -73,7 +67,7 @@ get:
     '404':
       description: Failed because the request was made to an incorrect URL path
       content:
-        application/json:
+        'application/com.reloadly.topups-v1+json':
           schema:
             $ref: ../components/schemas/airtime/top_ups_status/TopUpsStatusResponse404.yaml
           example:

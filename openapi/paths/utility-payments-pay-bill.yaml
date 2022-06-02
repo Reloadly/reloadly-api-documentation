@@ -4,18 +4,11 @@ post:
   summary: Make a utility payment
   description: Make a utility payment with a biller. A payment is synonymous to a transaction.
   operationId: utilitypayments/pay-bill
-  parameters:
-    - in: header
-      name: Authorization
-      schema:
-        type: string
-        description: Your access token is required as a bearer token in the request's header.
-      required: true 
   responses:
     '200':
       description: Successfully made a utility payment.
       content:
-        application/json:
+        'application/com.reloadly.utilities-v1+json':
           schema:
             $ref: ../components/schemas/utility_payments/pay_bill/PayBillResponse200.yaml
           example:
@@ -29,7 +22,7 @@ post:
     '401':
       description: Failed due to an unauthorized request.
       content:
-        application/json:
+        'application/com.reloadly.utilities-v1+json':
           schema:
             $ref: ../components/schemas/utility_payments/pay_bill/PayBillResponse401.yaml
           example:
@@ -42,7 +35,7 @@ post:
     '404':
       description: Failed because the request was made to an incorrect URL path.
       content:
-        application/json:
+        'application/com.reloadly.utilities-v1+json':
           schema:
             $ref: ../components/schemas/utility_payments/pay_bill/PayBillResponse404.yaml
           example:
