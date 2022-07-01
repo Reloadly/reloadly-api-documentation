@@ -221,7 +221,7 @@ paths:
         description: Production
       - url: https://giftcards-sandbox.reloadly.com
         description: Sandbox
-  /redeem-instructions{brandId}:
+  /redeem-instructions/{brandId}:
     $ref: paths/giftcards-get-redeem-instructions-by-brand-id.yaml   
     servers:
       - url: https://giftcards.reloadly.com
