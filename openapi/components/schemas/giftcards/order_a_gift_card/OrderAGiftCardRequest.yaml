@@ -32,4 +32,4 @@ properties:
       phoneNumber:
         description: This indicates the mobile number of the recipient.Note that the mobile number format must adhere to the standard <a href='https://en.wikipedia.org/wiki/E.164'>E.164 numbering plan</a>.
         type: string
-        example: 657829900
+        example: "657829900"
