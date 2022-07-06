@@ -43,7 +43,7 @@ features.openapi:
           medium:
             fontSize: 18px
     codeBlock: 
-      backgroundColor: '#00163A'
+      backgroundColor: '#fa9f58'
     layout:
       three-panel:
         maxWidth:
