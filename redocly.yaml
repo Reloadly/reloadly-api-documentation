@@ -42,6 +42,8 @@ features.openapi:
         sizes:
           medium:
             fontSize: 18px
+    codeBlock: 
+      backgroundColor: '#00163A'
     layout:
       three-panel:
         maxWidth:
@@ -50,7 +52,7 @@ features.openapi:
           large: 100%
     rightPanel:
       width: 400px
-      backgroundColor: 'red'
+      backgroundColor: '#00163A'
       panelBackgroundColor: '#324367'
       panelControlsBackgroundColor: '#324367'
     spacing:
