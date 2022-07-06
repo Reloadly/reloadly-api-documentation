@@ -50,7 +50,7 @@ features.openapi:
           large: 100%
     rightPanel:
       width: 400px
-      panelBackgroundColor: '#232d3d'
+      panelBackgroundColor: '#00163A'
     spacing:
       sectionHorizontal: 75
       sectionVertical: 50
@@ -61,8 +61,7 @@ features.openapi:
         fontWeight: light
       heading1:
         fontFamily: "Jost, sans-serif"
-        fontWeight: light
-        transform: uppercase
+        fontWeight: bold
       heading2:
         fontFamily: "Jost, sans-serif"
         fontWeight: light
