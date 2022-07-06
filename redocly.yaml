@@ -36,7 +36,7 @@ features.openapi:
         fontWeight: light
       httpBadges:
         borderRadius: 3px
-        fontFamily: 'JetBrains Mono, monospace'
+        # fontFamily: 'JetBrains Mono, monospace'
         fontWeight: light
         sizes:
           medium:
@@ -54,19 +54,19 @@ features.openapi:
       sectionHorizontal: 75
       sectionVertical: 50
     typography:
-      fontFamily: 'Montserrat, sans-serif'
+      # fontFamily: 'Montserrat, sans-serif'
       code:
-        fontFamily: 'Montserrat, sans-serif'
+        # fontFamily: 'Montserrat, sans-serif'
         fontWeight: light
       heading1:
-        fontFamily: 'JetBrains Mono, monospace'
+        # fontFamily: 'JetBrains Mono, monospace'
         fontWeight: light
         transform: uppercase
       heading2:
-        fontFamily: 'JetBrains Mono, monospace'
+        # fontFamily: 'JetBrains Mono, monospace'
         fontWeight: light
       heading3:
-        fontFamily: 'JetBrains Mono, monospace'
+        # fontFamily: 'JetBrains Mono, monospace'
         fontWeight: light
   generateCodeSamples:
     languages:
