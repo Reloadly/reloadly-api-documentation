@@ -9,6 +9,7 @@ lint:
     no-unused-components: error
 features.openapi:
   sendXUserAgentInTryIt: 'true'
+  showObjectSchemaExamples: true
   disableDeepLinks: true
   nativeScrollbars: true
   sortPropsAlphabetically: true
