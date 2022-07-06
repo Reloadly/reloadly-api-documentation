@@ -25,7 +25,7 @@ features.openapi:
         post: '#7700ff'
         get: '#00faa3'
       accent:
-        main: '#232d3d'
+        main: '#00163A'
     sidebar:
       width: 300px
       backgroundColor: '#f7fafc'
@@ -42,8 +42,6 @@ features.openapi:
         sizes:
           medium:
             fontSize: 18px
-    codeBlock: 
-      backgroundColor: '#fa9f58'
     layout:
       three-panel:
         maxWidth:
