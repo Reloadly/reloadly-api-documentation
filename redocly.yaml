@@ -21,8 +21,8 @@ features.openapi:
   theme:
     colors:
       http:
-        post: '#480297'
-        get: '#3A9601'
+        post: '#7700ff'
+        get: '#00faa3'
       accent:
         main: '#232d3d'
     sidebar:
