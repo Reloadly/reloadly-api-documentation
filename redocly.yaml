@@ -12,7 +12,6 @@ features.openapi:
   disableDeepLinks: true
   nativeScrollbars: true
   pagination: 'none'
-  searchMaxDepth: 10
   showConsole: true
   htmlTemplate: ./docs/index.html
   corsProxyUrl: 'https://cors.redoc.ly'
