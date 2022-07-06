@@ -10,6 +10,7 @@ lint:
 features.openapi:
   sendXUserAgentInTryIt: 'true'
   disableDeepLinks: true
+  nativeScrollbars: true
   showConsole: true
   htmlTemplate: ./docs/index.html
   corsProxyUrl: 'https://cors.redoc.ly'
