@@ -50,7 +50,9 @@ features.openapi:
           large: 100%
     rightPanel:
       width: 400px
-      panelBackgroundColor: '#00163A'
+      backgroundColor: '#00163A'
+      panelBackgroundColor: '#324367'
+      panelControlsBackgroundColor: '#324367'
     spacing:
       sectionHorizontal: 75
       sectionVertical: 50
