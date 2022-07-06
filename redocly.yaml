@@ -11,7 +11,7 @@ features.openapi:
   sendXUserAgentInTryIt: 'true'
   disableDeepLinks: true
   nativeScrollbars: true
-  sortEnumValuesAlphabetically: true
+  sortPropsAlphabetically: true
   pagination: 'none'
   showConsole: true
   showRightPanelToggle: false
