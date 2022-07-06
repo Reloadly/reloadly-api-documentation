@@ -37,7 +37,7 @@ features.openapi:
         fontWeight: light
       httpBadges:
         borderRadius: 3px
-     
+        fontFamily: "Jost, sans-serif"
         fontWeight: light
         sizes:
           medium:
@@ -55,19 +55,19 @@ features.openapi:
       sectionHorizontal: 75
       sectionVertical: 50
     typography:
-     
+      fontFamily: "Jost, sans-serif"
       code:
-       
+        fontFamily: "Jost, sans-serif"
         fontWeight: light
       heading1:
-      
+        fontFamily: "Jost, sans-serif"
         fontWeight: light
         transform: uppercase
       heading2:
-       
+        fontFamily: "Jost, sans-serif"
         fontWeight: light
       heading3:
-      
+        fontFamily: "Jost, sans-serif"
         fontWeight: light
   generateCodeSamples:
     languages:
