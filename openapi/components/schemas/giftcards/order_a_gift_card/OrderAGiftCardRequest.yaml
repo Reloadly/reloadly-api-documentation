@@ -5,7 +5,7 @@ properties:
     type: integer
     example: 10
   countryCode:
-    description: This indicates the ISO code of the country where the gift card can be used. This parameter doesn't apply to global gift cards.
+    description: This indicates the ISO code of the sender's country.
     type: string
     example: US
   quantity:
