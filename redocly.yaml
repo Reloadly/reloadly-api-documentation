@@ -13,6 +13,7 @@ features.openapi:
   nativeScrollbars: true
   pagination: 'none'
   showConsole: true
+  showRightPanelToggle: false
   htmlTemplate: ./docs/index.html
   corsProxyUrl: 'https://cors.redoc.ly'
   theme:
