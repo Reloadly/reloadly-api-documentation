@@ -14,6 +14,7 @@ features.openapi:
   pagination: 'none'
   showConsole: true
   showRightPanelToggle: false
+  showChangeLayoutButton: false
   htmlTemplate: ./docs/index.html
   corsProxyUrl: 'https://cors.redoc.ly'
   theme:
