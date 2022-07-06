@@ -33,10 +33,10 @@ features.openapi:
         paddingHorizontal: 10px
     components:
       buttons:
-        borderRadius: 15px
+        borderRadius: 5px
         fontWeight: light
       httpBadges:
-        borderRadius: 3px
+        borderRadius: 15px
         fontFamily: "Jost, sans-serif"
         fontWeight: light
         sizes:
