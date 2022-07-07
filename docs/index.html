@@ -15,10 +15,15 @@
     So override default browser styles
     -->
     <style>
+      body {
+        height: 100%;
+        overflow: scroll;
+        font-family: "Futura";
+      }
        .header {
-          overflow: hidden;
-          position: fixed;
-          top: 0;
+          /* overflow: hidden;
+          position: fixed; */
+          /* top: 0; */
           margin-bottom: 30px;
           font-family: "Jost";
           font-weight: bold;
@@ -89,7 +94,7 @@
     </style>
     {{{redocHead}}}
   </head>
-  <body>
+  <header>
     <div class="header">
       <section class="reloadly-logo-section">
          <img class="reloadly-logo" src="https://res.cloudinary.com/reloadlydevelopers/image/upload/v1657214756/reloadly-svg_yakgwu.svg"/>
@@ -108,7 +113,9 @@
          </section>
       </div>
    </div>
-   </div>
+  </header>
+  <body>
+  
     {{{redocHTML}}}
   </body>
 </html>
