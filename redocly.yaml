@@ -58,7 +58,7 @@ features.openapi:
       sectionVertical: 50
     typography:
       fontFamily: "Jost, sans-serif"
-      fontSize: "20px"
+      fontSize: "15px"
       code:
         fontFamily: "Jost, sans-serif"
         fontWeight: light

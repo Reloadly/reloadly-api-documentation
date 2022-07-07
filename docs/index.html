@@ -15,42 +15,96 @@
     So override default browser styles
     -->
     <style>
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: "Jost";
+       .header {
+           font-family: "Jost";
+           font-weight: bold;
+           width: 100vw;
+           height: 100px;
+           display: flex;
+           flex-wrap: nowrap;
+           flex-direction: row;
+           justify-content: space-between;
+           background: #ffffff;
+           border-bottom: 1px solid #ececec;
       }
-      .header {
-  text-align: center;
-  background: #ffffff;
-  border-bottom: 1px solid #ececec;
-}
-.header section img {
-  width: 118px;
-}
-.header section p {
-  font-size: 32px;
-  font-weight: bold;
-}
+       .reloadly-logo {
+           width: 118px;
+           margin: auto;
+      }
+       .api-logo {
+           width: 45px;
+           margin: auto;
+      }
+       .docs-logo {
+           width: 24px;
+           margin: auto;
+      }
+       .support-logo {
+           width: 24px;
+          ;
+           margin: auto;
+      }
+       .reloadly-logo-section {
+           display: flex;
+           flex-wrap: nowrap;
+      }
+       .float-right {
+           width: 40vw;
+           display: flex;
+           flex-wrap: nowrap;
+           justify-content: flex-end;
+      }
+       .docs-section {
+           display: flex;
+           flex-wrap: nowrap;
+           margin-right: 10px;
+      }
+       .docs-section img {
+           margin: auto 10px auto 0;
+      }
+       .docs-section a {
+           margin: auto 30px auto 0;
+      }
+       .signup-section {
+           display: flex;
+           flex-wrap: nowrap;
+      }
+       .signup-section a {
+           margin: auto 15px auto 30px;
+           color: #7700FF;
+      }
+       .signup-section button {
+           background-color: #00163A;
+           color: #ffffff;
+           width: 100px;
+           height: 36px;
+           border-radius: 30px;
+           border: none;
+           margin: auto 32px auto 10px;
+      }
     </style>
     {{{redocHead}}}
   </head>
   <body>
     <div class="header">
-        <section class="reloadly-logo-header">
-        <img src="https://res.cloudinary.com/reloadlydevelopers/image/upload/v1657203652/Logo_Reloadly_khwg2x.png"/>
-        <p>API</p>
-        </section>
-        <section class="signup-header">
-          <img/>
-        <p>DOCS</p>
-        <img/>
-        <p>Support</p>
-        <a>Create account</a>
-        <button>Sign in</button>
-        </section>
-        </div>
-    </div>
+      <section class="reloadly-logo-section">
+         <img class="reloadly-logo" src="https://res.cloudinary.com/reloadlydevelopers/image/upload/v1657214756/reloadly-svg_yakgwu.svg"/>
+         <img class="api-logo" src="https://res.cloudinary.com/reloadlydevelopers/image/upload/v1657214756/API_zd1kgw.svg">
+      </section>
+      <div class="float-right">
+         <section class="docs-section">
+            <img class="docs-logo" src="https://res.cloudinary.com/reloadlydevelopers/image/upload/v1657215746/docs_upj9pe.svg"/>
+            <a>Docs</a>
+            <img class="support-logo" src="https://res.cloudinary.com/reloadlydevelopers/image/upload/v1650646150/support_nugpdt.png"/>
+            <a>Support</a>
+         </section>
+         <section class="signup-section">
+            <a>Create account</a>
+            <button>Sign In</button>
+         </section>
+      </div>
+   </div>
+   </div>
     {{{redocHTML}}}
   </body>
 </html>
