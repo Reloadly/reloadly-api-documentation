@@ -31,6 +31,7 @@ features.openapi:
       backgroundColor: '#f7fafc'
       spacing:
         paddingHorizontal: 10px
+        offsetLeft: 10px
     components:
       buttons:
         borderRadius: 15px
