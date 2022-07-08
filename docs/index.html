@@ -87,6 +87,39 @@
            border: none;
            margin: auto 32px auto 10px;
       }
+        footer section div {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          width: 30vw;
+          margin: 15px auto;
+      }
+      
+        footer section div img {
+          width: 1.2vw;
+          height: fit-content;
+      }
+      
+        footer section div p {
+          width: 20vw;
+          margin: 0 10px;
+          color: #6c7584;
+          font-size: small;
+          font-weight: lighter;
+      }
+      
+        footer section div form {
+          width: 20vw;
+          padding: 20px;
+          box-shadow: 0 0 20px #ccc;
+      
+      }
+      
+        footer section div form input {
+          background-color: #fff;
+          border: none;
+      }
     </style>
     {{{redocHead}}}
   </head>
@@ -113,6 +146,26 @@
     </header>
   
     {{{redocHTML}}}
+    <footer>
+      <section>
+        <div>
+        <img src="https://res.cloudinary.com/reloadlydevelopers/image/upload/v1650627306/mail_1_2x_xhiaxx.png"/>
+        <p>Questions? <a>Contact us</a></p>
+        </div>
+        <div>
+        <img src="https://res.cloudinary.com/reloadlydevelopers/image/upload/v1650627306/Group_2378_2x_tnygq7.png"/>
+        <p>View developer tutorials on <a>Youtube</a></p>
+        </div>
+    </section>
+    <section>
+        <div>
+        <p>Sign up for developer updates</p>
+        <form>
+            <input type="text" placeholder="Email " name="email" id="footerEmail">
+            <input type="submit" value="Subscribe">
+        </form>
+        </div>
+    </section>
+    </footer>
   </body>
-  <footer></footer>
 </html>
