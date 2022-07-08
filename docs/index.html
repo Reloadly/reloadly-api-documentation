@@ -15,22 +15,22 @@
     So override default browser styles
     -->
     <style>
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: "Jost";
+       body {
+           margin: 0;
+           padding: 0;
+           font-family: "Jost";
       }
        .header {
-          font-weight: bold;
-          font-size: 18px;
-          width: 100%;
-          height: 100px;
-          display: flex;
-          flex-wrap: nowrap;
-          flex-direction: row;
-          justify-content: space-between;
-          background-color: #ffffff;
-          border-bottom: 1.5px solid #ececec;
+           font-weight: bold;
+           font-size: 18px;
+           width: 100%;
+           height: 100px;
+           display: flex;
+           flex-wrap: nowrap;
+           flex-direction: row;
+           justify-content: space-between;
+           background-color: #ffffff;
+           border-bottom: 1.5px solid #ececec;
       }
        .reloadly-logo {
            width: 118px;
@@ -46,7 +46,7 @@
       }
        .support-logo {
            width: 24px;
-          ;
+           ;
            margin: auto;
       }
        .reloadly-logo-section {
@@ -87,74 +87,86 @@
            border: none;
            margin: auto 32px auto 10px;
       }
-        footer {
-          font-weight: lighter;
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          justify-content: space-around;
-          margin: 50px 20px 100px 20px;
-          padding: 50px 0 25px 0;
+       footer {
+           font-weight: lighter;
+           display: flex;
+           flex-direction: row;
+           flex-wrap: wrap;
+           justify-content: space-around;
+           margin: 50px 20px 100px 20px;
+           padding: 50px 0 25px 0;
       }
-        footer section div {
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          justify-content: flex-start;
-          width: 35vw;
-          margin: 15px auto;
+       footer section div {
+           display: flex;
+           flex-direction: row;
+           flex-wrap: wrap;
+           justify-content: flex-start;
+           width: 35vw;
+           margin: 15px auto;
       }
-      
-        footer section div img {
-          width: 1.2vw;
-          height: fit-content;
+       footer section div img {
+           width: 1.2vw;
+           height: fit-content;
       }
-      
-        .float-left-section div p {
-          width: 20vw;
-          margin: 0 10px;
-          color: #6c7584;
-          font-size: small;
-          font-weight: lighter;
+       .float-left-section div p {
+           width: 20vw;
+           margin: 0 10px;
+           color: #6c7584;
+           font-size: small;
+           font-weight: lighter;
+      }
+       .float-left-section div p a {
+           color: #7700FF;
+           font-weight: bold;
+           cursor: pointer;
+           transition: all 0.3s ease-out;
+      }
+       .float-left-section div p a:hover {
+           color: #6c7584 
+      }
+       .float-right-section div p {
+           width: 20vw;
+           color: #6c7584;
+           font-size: small;
+           font-weight: lighter;
+      }
+       footer form {
+           display: flex;
+      }
+       #footerEmail {
+           background-color: #fff;
+           width: 20vw;
+           padding: 7px 20px 7px 20px;
+           border: 0.5px solid #606A7A;
+           border-bottom-left-radius: 5px;
+           border-top-left-radius: 5px;
+           border-bottom-right-radius: 0;
+           border-top-right-radius: 0;
+           border-right: 0.5px solid #c6cbd2;
+           transition: all 0.3s ease-out;
+           font-size: medium;
+      }
+       #footerEmail:focus {
+           outline: none !important;
+           border: 0.5px solid #7700FF;
+           box-shadow: 0 0 5px #7700FF;
+           border-radius: 5px;
+      }
+       #subscribeButton {
+           background-color: #fff;
+           cursor: pointer;
+           width: 7vw;
+           padding: 15px 30px 15px 10px;
+           border: 0.5px solid #606A7A;
+           border-left: none;
+           border-bottom-right-radius: 5px;
+           border-top-right-radius: 5px;
+           border-top-left-radius: 0;
+           border-bottom-left-radius: 0;
+           color: #7700FF;
+           font-weight: bold;
       }
 
-      .float-right-section div p {
-          width: 20vw;
-          color: #6c7584;
-          font-size: small;
-          font-weight: lighter;
-      }
-
-      footer form {
-        display: flex;
-      }
-      
-        #footerEmail {
-          background-color: #fff;
-          width: 20vw;
-          padding: 15px 20px 15px 20px;
-          border: 0.5px solid #606A7A;
-          border-bottom-left-radius: 5px;
-          border-top-left-radius: 5px;
-          border-bottom-right-radius: 0;
-          border-top-right-radius: 0;
-          transition: all 0.3s ease-out;
-      }
-      #footerEmail:focus {
-    outline: none !important;
-    border: 0.5px solid #7700FF;
-    box-shadow: 0 0 5px #7700FF;
-  }
-     #subscribeButton {
-      cursor: pointer;
-      width: 7vw;
-      padding: 15px 20px 15px 20px;
-      border: 0.5px solid #606A7A;
-      border-bottom-right-radius: 5px;
-      border-top-right-radius: 5px;
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-     }
     </style>
     {{{redocHead}}}
   </head>
