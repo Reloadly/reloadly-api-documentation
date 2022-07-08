@@ -18,11 +18,11 @@
       body {
         margin: 0;
         padding: 0;
+        font-family: "Jost";
       }
        .header {
-          font-family: "Jost";
-          font-size: 18px;
           font-weight: bold;
+          font-size: 18px;
           width: 100%;
           height: 100px;
           display: flex;
@@ -88,12 +88,12 @@
            margin: auto 32px auto 10px;
       }
         footer {
-          width: 75vw;
+          font-weight: lighter;
           display: flex;
           flex-direction: row;
           flex-wrap: wrap;
-          justify-content: space-between;
-          margin: 50px auto 100px auto;
+          justify-content: space-around;
+          margin: 50px 20px 100px 20px;
           padding: 50px 0 25px 0;
       }
         footer section div {
@@ -101,7 +101,7 @@
           flex-direction: row;
           flex-wrap: wrap;
           justify-content: flex-start;
-          width: 30vw;
+          width: 35vw;
           margin: 15px auto;
       }
       
@@ -110,25 +110,51 @@
           height: fit-content;
       }
       
-        footer section div p {
+        .float-left-section div p {
           width: 20vw;
           margin: 0 10px;
           color: #6c7584;
           font-size: small;
           font-weight: lighter;
       }
-      
-        footer section div form {
+
+      .float-right-section div p {
           width: 20vw;
-          padding: 20px;
-          box-shadow: 0 0 20px #ccc;
-      
+          color: #6c7584;
+          font-size: small;
+          font-weight: lighter;
+      }
+
+      footer form {
+        display: flex;
       }
       
-        footer section div form input {
+        #footerEmail {
           background-color: #fff;
-          border: none;
+          width: 20vw;
+          padding: 15px 20px 15px 20px;
+          border: 0.5px solid #606A7A;
+          border-bottom-left-radius: 5px;
+          border-top-left-radius: 5px;
+          border-bottom-right-radius: 0;
+          border-top-right-radius: 0;
+          transition: all 0.3s ease-out;
       }
+      #footerEmail:focus {
+    outline: none !important;
+    border: 0.5px solid #7700FF;
+    box-shadow: 0 0 5px #7700FF;
+  }
+     #subscribeButton {
+      cursor: pointer;
+      width: 7vw;
+      padding: 15px 20px 15px 20px;
+      border: 0.5px solid #606A7A;
+      border-bottom-right-radius: 5px;
+      border-top-right-radius: 5px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+     }
     </style>
     {{{redocHead}}}
   </head>
@@ -156,7 +182,7 @@
   
     {{{redocHTML}}}
     <footer>
-      <section>
+      <section class="float-left-section">
         <div>
         <img src="https://res.cloudinary.com/reloadlydevelopers/image/upload/v1650627306/mail_1_2x_xhiaxx.png"/>
         <p>Questions? <a>Contact us</a></p>
@@ -166,12 +192,12 @@
         <p>View developer tutorials on <a>Youtube</a></p>
         </div>
     </section>
-    <section>
+    <section class="float-right-section">
         <div>
         <p>Sign up for developer updates</p>
         <form>
             <input type="text" placeholder="Email " name="email" id="footerEmail">
-            <input type="submit" value="Subscribe">
+            <input type="submit" id="subscribeButton" value="Subscribe">
         </form>
         </div>
     </section>
