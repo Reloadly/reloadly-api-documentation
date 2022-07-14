@@ -25,12 +25,12 @@ tags:
 
 components:
   securitySchemes:
-    bearerToken:
+    BearerToken:
       type: http
       scheme: bearer
 
 security:
-  - bearerToken: [] 
+  - BearerToken: [] 
   
 servers:
   - url: https://auth.reloadly.com
