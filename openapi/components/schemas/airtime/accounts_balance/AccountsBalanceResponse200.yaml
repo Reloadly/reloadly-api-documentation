@@ -2,8 +2,8 @@ type: object
 properties:
   balance:
     description: The account balance retrieved
-    type: integer
-    example: 5000
+    type: number
+    example: 5000.23
   currencyCode:
     description: The currency abbreviation of the account
     type: string

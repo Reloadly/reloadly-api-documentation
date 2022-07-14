@@ -6,7 +6,7 @@ properties:
     example: 2021-09-11 11:54:00
   status:
     description: The HTTP status code returned after the request was made
-    type: integer
+    type: number
     example: 404
   error:
     description: The error code received after the request was made

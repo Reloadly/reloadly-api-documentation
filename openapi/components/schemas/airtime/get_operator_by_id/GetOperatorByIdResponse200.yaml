@@ -50,27 +50,27 @@ properties:
     example: 
   commission:
     description: This indicates if the operator offers a commission or discount.
-    type: integer
+    type: number
     example:
   internationalDiscount:
     description: This indicates if the operator offers a discount for top-ups made to foreign numbers.
-    type: integer
+    type: number
     example: 
   localDiscount:
     description: This indicates if the operator offers a discount for top-ups made to local numbers.
-    type: integer
+    type: number
     example:
   mostPopularAmount:
     description: This indicates the amount that is often used to make a top-up.
-    type: integer
+    type: number
     example: 
   minAmount:
     description: This indicates the minimum amount that can be used to make a top-up.
-    type: integer
+    type: number
     example: 
   maxAmount:
     description: This indicates the maximum amount that can be used to make a top-up.
-    type: integer
+    type: number
     example: 
   localMinAmount:
     description: This indicates the minimum amount that can be used to make a top-up locally.
@@ -78,7 +78,7 @@ properties:
     example: 
   localMaxAmount:
     description: This indicates the maximum amount that can be used to make a top-up locally.
-    type: integer
+    type: number
     example: 
   country:
     type: object
@@ -96,7 +96,7 @@ properties:
     properties:
       rate:
         description: This indicates the FX rate at which the top-up will be made.
-        type: integer
+        type: number
         example: 
       currencyCode:
         description: This indicates the code of the currency at which the top-up will be made.

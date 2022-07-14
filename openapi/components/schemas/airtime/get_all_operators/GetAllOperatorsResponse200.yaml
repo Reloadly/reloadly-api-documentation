@@ -8,11 +8,11 @@ properties:
       properties:
         id:
           description: The operator's identification number.
-          type: integer
+          type: number
           example:
         operatorId:
           description: The operator's identification number.
-          type: integer
+          type: number
           example:
         name:
           description: The operator's name.
