@@ -2,12 +2,12 @@ type: object
 properties:
   operatorId:
     description: This indicates the operator's identification number.
-    type: integer
-    example: 535
+    type: string
+    example: "535"
   amount:
     description: This indicates the amount of airtime or data that is to be recharged.
-    type: number
-    example: 3168.4
+    type: string
+    example: "3168.4"
   useLocalAmount:
     description: This indicates if the recharge is to be made in the operator's local currency. Default is false.
     type: boolean
