@@ -60,7 +60,7 @@ features.openapi:
       fontFamily: "Jost, sans-serif"
       fontSize: "16px"
       code:
-        fontFamily: "Roboto, sans-serif"
+        fontFamily: "Courier Prime, monospace"
         fontWeight: light
       heading1:
         fontFamily: "Jost, sans-serif"
