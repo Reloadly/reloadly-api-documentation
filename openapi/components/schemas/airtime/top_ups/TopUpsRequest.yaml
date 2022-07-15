@@ -7,11 +7,11 @@ properties:
   amount:
     description: This indicates the amount of airtime or data that is to be recharged.
     type: string
-    example: "3168.4"
+    example: "5.00"
   useLocalAmount:
     description: This indicates if the recharge is to be made in the operator's local currency. Default is false.
     type: boolean
-    example: false
+    example: true
   customIdentifier:
     description: This indicates the transaction reference of the recharge. Note that each transaction reference is to be unique. Once a reference has been used for a top-up, it cannot be reused.
     type: string

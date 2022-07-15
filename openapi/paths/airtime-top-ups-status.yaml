@@ -10,7 +10,7 @@ get:
       description: The transaction identification number of a top-up
       required: true
       schema:
-        type: string
+        type: integer
   responses:
     '200':
       description: Successfully retrieved details of a top-up

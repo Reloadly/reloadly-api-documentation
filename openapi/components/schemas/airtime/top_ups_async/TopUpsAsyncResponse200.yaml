@@ -3,4 +3,4 @@ properties:
   transactionId:
     description: This indicates the unique identification number of a top-up.
     type: integer
-    example: 
+    example: 4602843
