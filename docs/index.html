@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Reloadly API</title>
     <link rel="icon" href="favicon.ico">
@@ -16,212 +17,431 @@
     So override default browser styles
     -->
     <style>
-       body {
-           margin: 0;
-           padding: 0;
-           font-family: "Jost";
-      }
-       .header {
-           font-weight: bold;
-           font-size: 18px;
-           width: 100%;
-           height: 100px;
-           display: flex;
-           flex-wrap: nowrap;
-           flex-direction: row;
-           justify-content: space-between;
-           background-color: #ffffff;
-           border-bottom: 1.5px solid #e6e6e6;
-      }
-       .reloadly-logo {
-           width: 118px;
-           margin: auto 5px auto 20px;
-      }
-       .api-logo {
-           width: 45px;
-           margin: auto;
-      }
-       .docs-logo {
-           width: 24px;
-           margin: auto;
-      }
-       .support-logo {
-           width: 24px;
-           ;
-           margin: auto;
-      }
-       .reloadly-logo-section {
-           display: flex;
-           flex-wrap: nowrap;
-      }
-       .float-right {
-           width: 40vw;
-           display: flex;
-           flex-wrap: nowrap;
-           justify-content: flex-end;
-      }
-       .docs-section {
-           display: flex;
-           flex-wrap: nowrap;
-           margin-right: 10px;
-      }
-       .docs-section img {
-           margin: auto 10px auto 0;
-      }
-       .docs-section a {
-           margin: auto 30px auto 0;
-      }
-       .signup-section {
-           display: flex;
-           flex-wrap: nowrap;
-      }
-       .signup-section a {
-           margin: auto 15px auto 30px;
-           color: #7700FF;
-      }
-       .signup-section button {
-           background-color: #00163A;
-           color: #ffffff;
-           width: 100px;
-           height: 36px;
-           border-radius: 30px;
-           border: none;
-           margin: auto 32px auto 10px;
-      }
-       footer {
-           font-weight: lighter;
-           display: flex;
-           flex-direction: row;
-           flex-wrap: wrap;
-           justify-content: space-around;
-           margin: 50px 20px 100px 20px;
-           padding: 50px 0 25px 0;
-           border-top: 1px solid #e6e6e6;
-      }
-       .float-left-section div {
-           display: flex;
-           flex-direction: row;
-           flex-wrap: wrap;
-           justify-content: flex-start;
-           width: 35vw;
-           margin: 15px auto;
-      }
-      .float-right-section div {
-           display: flex;
-           flex-direction: row;
-           flex-wrap: wrap;
-           justify-content: flex-start;
-           width: 35vw;
-      }
-       footer section div img {
-           width: 1.2vw;
-           height: fit-content;
-      }
-       .float-left-section div p {
-           width: 20vw;
-           margin: 0 10px;
-           color: #6c7584;
-           font-size: small;
-           font-weight: lighter;
-      }
-       .float-left-section div p a {
-           color: #7700FF;
-           font-weight: bold;
-           cursor: pointer;
-           transition: all 0.3s ease-out;
-      }
-       .float-left-section div p a:hover {
-           color: #6c7584 
-      }
-       .float-right-section div p {
-           width: 20vw;
-           color: #6c7584;
-           font-size: small;
-           font-weight: lighter;
-      }
-       footer form {
-           display: flex;
-      }
-       #footerEmail {
-           background-color: #fff;
-           width: 20vw;
-           padding: 7px 20px 7px 20px;
-           border: 0.5px solid #606A7A;
-           border-bottom-left-radius: 5px;
-           border-top-left-radius: 5px;
-           border-bottom-right-radius: 0;
-           border-top-right-radius: 0;
-           border-right: 0.5px solid #c6cbd2;
-           transition: all 0.3s ease-out;
-           font-size: medium;
-      }
-       #footerEmail:focus {
-           outline: none !important;
-           border: 0.5px solid #7700FF;
-           box-shadow: 0 0 5px #7700FF;
-           border-radius: 5px;
-      }
-       #subscribeButton {
-           background-color: #fff;
-           cursor: pointer;
-           width: 7vw;
-           padding: 15px 30px 15px 10px;
-           border: 0.5px solid #606A7A;
-           border-left: none;
-           border-bottom-right-radius: 5px;
-           border-top-right-radius: 5px;
-           border-top-left-radius: 0;
-           border-bottom-left-radius: 0;
-           color: #7700FF;
-           font-weight: bold;
-      }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Jost";
+        }
 
+        .header {
+            font-weight: bold;
+            font-size: 18px;
+            width: 100%;
+            height: 72px;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: #ffffff;
+            border-bottom: 1.5px solid #e6e6e6;
+        }
+
+        .nav-menu {
+            width: 25px;
+            position: relative;
+            display: none;
+            flex-flow: column;
+            margin-left: 20px;
+
+        }
+
+        .nav-menu .bar-1,
+        .nav-menu .bar-2,
+        .nav-menu .bar-3 {
+            width: 100%;
+            height: 3px;
+            content: "";
+            background: #1c1b1f;
+            border-radius: 1px;
+        }
+
+        .bar-2 {
+            margin-top: 3px;
+        }
+
+        .bar-3 {
+            margin-top: 3px;
+        }
+
+        .sideMenu {
+            width: 80%;
+            height: calc(100vh - 72px);
+            position: fixed;
+            top: 72px;
+            left: -80%;
+            z-index: 100;
+            background: white;
+            box-sizing: border-box;
+            padding: 40px 20px;
+            border-right: solid 1px rgb(230, 230, 230);
+            transition: all ease .4s;
+
+        }
+
+        .sideMenu a {
+            margin-bottom: 10px;
+            padding: 5px 0;
+            display: block;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .sideMenu a img {
+            width: 18px;
+            margin-right: 10px;
+        }
+
+        .reloadly-logo {
+            width: 118px;
+            margin: auto 5px auto 20px;
+        }
+
+        .api-logo {
+            width: 45px;
+            margin: auto;
+        }
+
+        .docs-logo {
+            width: 24px;
+            margin: auto;
+        }
+
+        .support-logo {
+            width: 24px;
+            margin: auto;
+        }
+
+        .reloadly-logo-section {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        .float-right {
+            width: 40vw;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: flex-end;
+            margin-left: auto;
+        }
+
+        .docs-section {
+            display: flex;
+            flex-wrap: nowrap;
+            margin-right: 10px;
+        }
+
+        .docs-section .link {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+        }
+
+        .docs-section .link img {
+            width: 24px;
+            margin: auto 10px auto 0;
+        }
+
+        .docs-section .link a {
+            margin: auto 30px auto 0;
+            font-size: 16px;
+        }
+
+        .signup-section {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        .signup-section a {
+            margin: auto 15px auto 30px;
+            color: #7700FF;
+            font-size: 18px;
+            font-weight: 450;
+        }
+
+        .signup-section button {
+            background-color: #00163A;
+            color: #ffffff;
+            width: 100px;
+            height: 36px;
+            border-radius: 30px;
+            border: none;
+            margin: auto 32px auto 10px;
+            font-size: 18px;
+            font-weight: 450;
+        }
+
+        .redoc-body {
+            padding-top: 72px;
+            position: relative;
+        }
+
+        .redoc-body .menu-content {
+            top: 72px !important;
+            height: calc(100vh - 72px) !important;
+        }
+
+        footer {
+            font-weight: lighter;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 50px 20px 100px 20px;
+            padding: 50px 0 25px 0;
+            border-top: 1px solid #e6e6e6;
+        }
+
+        .float-left-section div {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            width: 35vw;
+            margin: 15px auto;
+        }
+
+        .float-right-section div {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            width: 35vw;
+        }
+
+        footer section div img {
+            width: 1.2vw;
+            height: fit-content;
+        }
+
+        .float-left-section div p {
+            width: 20vw;
+            margin: 0 10px;
+            color: #6c7584;
+            font-size: small;
+            font-weight: lighter;
+        }
+
+        .float-left-section div p a {
+            color: #7700FF;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease-out;
+        }
+
+        .float-left-section div p a:hover {
+            color: #6c7584
+        }
+
+        .float-right-section div p {
+            width: 20vw;
+            color: #6c7584;
+            font-size: small;
+            font-weight: lighter;
+        }
+
+        footer form {
+            display: flex;
+        }
+
+        #footerEmail {
+            background-color: #fff;
+            width: 20vw;
+            padding: 7px 20px 7px 20px;
+            border: 0.5px solid #606A7A;
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 0;
+            border-right: 0.5px solid #c6cbd2;
+            transition: all 0.3s ease-out;
+            font-size: medium;
+        }
+
+        #footerEmail:focus {
+            outline: none !important;
+            border: 0.5px solid #7700FF;
+            box-shadow: 0 0 5px #7700FF;
+            border-radius: 5px;
+        }
+
+        #subscribeButton {
+            background-color: #fff;
+            cursor: pointer;
+            width: 7vw;
+            padding: 15px 30px 15px 10px;
+            border: 0.5px solid #606A7A;
+            border-left: none;
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            color: #7700FF;
+            font-weight: bold;
+        }
+
+        @media screen and (max-width:768px) {
+            .signup-section a {
+                font-size: 14px;
+                display: none;
+            }
+
+            .signup-section button {
+                font-size: 14px;
+            }
+        }
+
+        @media screen and (max-width:540px) {
+            .nav-menu {
+                display: flex;
+            }
+
+            .reloadly-logo {
+                width: 108px;
+            }
+
+            .api-logo {
+                width: 35px;
+            }
+
+            .signup-section a {
+                display: none;
+            }
+
+            .docs-section {
+                display: none;
+            }
+
+            footer {
+                flex-flow: column;
+                align-items: flex-start;
+            }
+
+            footer section {
+                width: 100%;
+            }
+
+            footer section.float-left-section div {
+                width: 100%;
+                flex-wrap: nowrap;
+                align-items: center;
+            }
+
+            footer section.float-left-section div p,
+            footer section.float-right-section div p {
+                width: 100%;
+            }
+
+            footer section.float-right-section div {
+                width: 100%;
+                flex-flow: column;
+                flex-wrap: nowrap;
+                align-items: flex-start;
+            }
+
+            footer section.float-right-section div form {
+                width: 100%;
+                display: flex;
+            }
+
+            footer section.float-right-section div form input#footerEmail,
+            footer section.float-right-section div form input#subscribeButton {
+                width: auto;
+            }
+
+        }
     </style>
     {{{redocHead}}}
-  </head>
-  <body>
+</head>
+
+<body>
     <header>
-      <div class="header">
-        <section class="reloadly-logo-section">
-           <img class="reloadly-logo" src="https://res.cloudinary.com/reloadlydevelopers/image/upload/v1657214756/reloadly-svg_yakgwu.svg"/>
-           <img class="api-logo" src="https://res.cloudinary.com/reloadlydevelopers/image/upload/v1657214756/API_zd1kgw.svg">
-        </section>
-        <div class="float-right">
-           <section class="docs-section">
-              <img class="docs-logo" src="https://res.cloudinary.com/reloadlydevelopers/image/upload/v1657215746/docs_upj9pe.svg"/>
-              <a>Docs</a>
-              <img class="support-logo" src="https://res.cloudinary.com/reloadlydevelopers/image/upload/v1650646150/support_nugpdt.png"/>
-              <a>Support</a>
-           </section>
-           <section class="signup-section">
-              <a>Create account</a>
-              <button>Sign In</button>
-           </section>
+        <div class="header">
+            <div class="nav-menu" onclick="toggleMenu()">
+                <div class="bar-1"></div>
+                <div class="bar-2"></div>
+                <div class="bar-3"></div>
+            </div>
+            <section class="reloadly-logo-section">
+                <img class="reloadly-logo"
+                    src="https://res.cloudinary.com/reloadlydevelopers/image/upload/v1657214756/reloadly-svg_yakgwu.svg" />
+                <img class="api-logo"
+                    src="https://res.cloudinary.com/reloadlydevelopers/image/upload/v1657214756/API_zd1kgw.svg">
+            </section>
+            <div class="float-right">
+                <section class="docs-section">
+                    <div class="link">
+                        <img class="docs-logo"
+                            src="https://res.cloudinary.com/reloadlydevelopers/image/upload/v1657215746/docs_upj9pe.svg" />
+                        <a href="https://developers.reloadly.com/" target="_blank">Docs</a>
+                    </div>
+                    <div class="link">
+                        <img class="support-logo"
+                            src="https://res.cloudinary.com/reloadlydevelopers/image/upload/v1650646150/support_nugpdt.png" />
+                        <a href="https://join.slack.com/t/reloadly-developers/shared_invite/zt-qflikche-fwiFA5Sxtst2mXzvJBPO3w" target="_blank">Support</a>
+                    </div>
+
+                </section>
+                <section class="signup-section">
+                    <a href="https://www.reloadly.com/registration" target="_blank">Create account</a>
+                    <button href="https://reloadly.auth0.com/login?state=hKFo2SBlc3liU2QwUDRPZGZYYm1ISEplNGt5WXE4bFcxZnBWVqFupWxvZ2luo3RpZNkgd0FUekszOGFUZUtOajNjblJPa1E5SnJOWEJNQ3Y4MjijY2lk2SBRajU1SHZFdDQ4SmZWY0hNNXQxR2dOWnA0QnlKc2p2UQ&client=Qj55HvEt48JfVcHM5t1GgNZp4ByJsjvQ&protocol=oauth2&audience=https%3A%2F%2Fportal.reloadly.com&redirect_uri=https%3A%2F%2Fwww.reloadly.com%2Floading&responseType=code&scope=openid%20profile%20email%20developer%20reseller%20team-member-finance%20team-member-developer%20offline_access&amp_device_id=2382c705-6441-4f2c-910e-8537b54c948dR&response_type=code&response_mode=query&nonce=bFBTSUdEcnNNdkMwWkMxbjBYQnRoaXR0b2liYVBHblFPdlRwWkh0Rk1OYQ%3D%3D&code_challenge=0CSUNUVvYnUsiQ9F5TM112HnVH13I5B29VMa8REWFhQ&code_challenge_method=S256&auth0Client=eyJuYW1lIjoiYXV0aDAtc3BhLWpzIiwidmVyc2lvbiI6IjEuMjEuMSJ9" target="_blank">Sign In</button>
+                </section>
+            </div>
         </div>
-     </div>
+        <div class="sideMenu" id="sideNav">
+            <a>
+                <img class="docs-logo"
+                    src="https://res.cloudinary.com/reloadlydevelopers/image/upload/v1657215746/docs_upj9pe.svg" />
+                Reloadly Developer Documentation
+            </a>
+            <a>
+                <img class="support-logo"
+                    src="https://res.cloudinary.com/reloadlydevelopers/image/upload/v1650646150/support_nugpdt.png" />
+                Support
+            </a>
+        </div>
     </header>
-  
-    {{{redocHTML}}}
+    <div class="redoc-body">
+        {{{redocHTML}}}
+    </div>
+
     <footer>
-      <section class="float-left-section">
-        <div>
-        <img src="https://res.cloudinary.com/reloadlydevelopers/image/upload/v1650627306/mail_1_2x_xhiaxx.png"/>
-        <p>Questions? <a>Contact us</a></p>
-        </div>
-        <div>
-        <img src="https://res.cloudinary.com/reloadlydevelopers/image/upload/v1650627306/Group_2378_2x_tnygq7.png"/>
-        <p>View developer tutorials on <a>Youtube</a></p>
-        </div>
-    </section>
-    <section class="float-right-section">
-        <div>
-        <p>Sign up for developer updates</p>
-        <form>
-            <input type="text" placeholder="Email " name="email" id="footerEmail">
-            <input type="submit" id="subscribeButton" value="Subscribe">
-        </form>
-        </div>
-    </section>
+        <section class="float-left-section">
+            <div>
+                <img
+                    src="https://res.cloudinary.com/reloadlydevelopers/image/upload/v1650627306/mail_1_2x_xhiaxx.png" />
+                <p>Questions? <a>Contact us</a></p>
+            </div>
+            <div>
+                <img
+                    src="https://res.cloudinary.com/reloadlydevelopers/image/upload/v1650627306/Group_2378_2x_tnygq7.png" />
+                <p>View developer tutorials on <a>Youtube</a></p>
+            </div>
+        </section>
+        <section class="float-right-section">
+            <div>
+                <p>Sign up for developer updates</p>
+                <form>
+                    <input type="text" placeholder="Email " name="email" id="footerEmail">
+                    <input type="submit" id="subscribeButton" value="Subscribe">
+                </form>
+            </div>
+        </section>
     </footer>
-  </body>
+</body>
+<script>
+    function toggleMenu() {
+        let left = document.getElementById("sideNav").style.left;
+        if (left == '-80%' || left == '') {
+            document.getElementById("sideNav").style.left = '0%';
+            return;
+        }
+        document.getElementById("sideNav").style.left = '-80%';
+    }
+
+</script>
+
 </html>
