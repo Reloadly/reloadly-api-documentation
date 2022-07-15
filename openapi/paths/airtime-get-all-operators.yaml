@@ -37,7 +37,7 @@ get:
       content:
         'application/com.reloadly.topups-v1+json':
           schema:
-            $ref: ../components/schemas/get_all_operators/GetAllOperatorsResponse200.yaml
+            $ref: ../components/schemas/airtime/get_all_operators/GetAllOperatorsResponse200.yaml
           example:
            content:
             - id: 88
@@ -90,7 +90,7 @@ get:
       content:
         'application/com.reloadly.topups-v1+json':
           schema:
-            $ref: ../components/schemas/get_all_operators/GetAllOperatorsResponse401.yaml
+            $ref: ../components/schemas/airtime/get_all_operators/GetAllOperatorsResponse401.yaml
           example:
             timeStamp: 2021-02-15 21:14:00
             message: Full authentication is required to access this resource
@@ -103,7 +103,7 @@ get:
       content:
         'application/com.reloadly.topups-v1+json':
           schema:
-            $ref: ../components/schemas/get_all_operators/GetAllOperatorsResponse404.yaml
+            $ref: ../components/schemas/airtime/get_all_operators/GetAllOperatorsResponse404.yaml
           example:
             timeStamp: 2021-09-11 11:54:00
             status: 404

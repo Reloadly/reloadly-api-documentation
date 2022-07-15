@@ -3,15 +3,15 @@ properties:
   timeStamp:
     description: The exact time the request for the operator's commission details was made.
     type: string
-    example: 
+    example: 2021-02-11 11:54:00
   message:
     description: The error message received after the request was made.
     type: string
-    example: 
+    example: Operator not found for given id
   path:
     description: The URL path to which the request was made.
     type: string
-    example:
+    example: /operators/12522/commissions
   errorCode:
     description: The error code received after the request was made.
     type: string
@@ -23,4 +23,4 @@ properties:
   details: 
     description: Further details of the error returned for the failed request.
     type: array
-    example: 
+    example: []

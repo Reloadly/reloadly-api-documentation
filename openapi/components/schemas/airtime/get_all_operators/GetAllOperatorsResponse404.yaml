@@ -1,7 +1,7 @@
 type: object
 properties:
   timeStamp:
-    description: The exact time the request for the list of countries was made.
+    description: The exact time the request for the list of operators was made.
     type: string
     example: 2021-04-11 13:24:00
   status:
@@ -11,12 +11,12 @@ properties:
   error:
     description: The error code received after the request was made.
     type: string
-    example: /operator
+    example: Not Found
   message:
     description: The error message received after the request was made.
     type: string
-    example: 
+    example: No message available
   path:
     description: The URL path to which the request was made.
     type: string
-    example: 
+    example: /operator
