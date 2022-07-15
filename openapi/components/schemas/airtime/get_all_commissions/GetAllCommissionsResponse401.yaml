@@ -1,7 +1,7 @@
 type: object
 properties:
   timeStamp:
-    description: The exact time the request for the operator's details was made.
+    description: The exact time the request for the list of commissions was made.
     type: string
     example: 2021-02-15 21:14:00
   message:

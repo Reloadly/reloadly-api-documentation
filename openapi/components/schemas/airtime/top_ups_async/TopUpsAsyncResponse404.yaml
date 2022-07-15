@@ -1,7 +1,7 @@
 type: object
 properties:
   timeStamp:
-    description: The exact time the top-up request was made.
+    description: The exact time the async top-up request was made.
     type: string
     example: 2021-09-11 11:54:00
   status:
