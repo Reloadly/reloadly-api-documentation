@@ -97,22 +97,22 @@ properties:
     description: This contains information of the top-up sender's account balance.
     properties:
       oldBalance:
-        description: This indicates if the operator has any existing bundle discounts.
+        description: This indicates the balance of your account before the top-up.
         type: number
         example: 5109.53732
       newBalance:
-        description: This indicates if the operator has any existing bundle discounts.
+        description: This indicates the balance of your account after the top-up.
         type: number
         example: 2004.50532
       currencyCode:
-        description: This indicates if the operator has any existing bundle discounts.
+        description: This indicates the currency symbol of your account.
         type: string
         example: NGN
       currencyName:
-        description: This indicates if the operator has any existing bundle discounts.
+        description: This indicates the currency denomination of your account.
         type: string
         example: Nigerian Naira
       updatedAt:
-        description: This indicates if the operator has any existing bundle discounts.
+        description: This indicates the time the top-up was made.
         type: string
         example: 2021-12-06 13:13:39 
