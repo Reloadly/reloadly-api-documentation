@@ -3,7 +3,7 @@ properties:
   phone: 
     description: This is the mobile number whose operator details are to be retrieved.
     type: string
-    example: 03238482221
+    example: "03238482221"
   countryCode:
     description: This indicates the <a href="https://en.wikipedia.org/wiki/ISO_3166-1" target=__blank__>ISO code</a> of the receiving mobile number's country.
     type: string
