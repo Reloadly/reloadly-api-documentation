@@ -49,8 +49,9 @@ get:
           schema:
             $ref: ../components/schemas/airtime/get_promotion_by_id/GetPromotionByIdResponse404.yaml
           example:
-            timeStamp: 2021-09-11 11:54:00
-            status: 404
-            error: Not Found
-            message: No message available
-            path: /promotion/6984
+            timeStamp: 2022-07-15 14:07:00
+            message: Promotion not found
+            path: /promotions/12
+            errorCode: null
+            infoLink: null
+            details: []
