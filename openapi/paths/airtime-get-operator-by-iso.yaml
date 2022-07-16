@@ -11,35 +11,41 @@ get:
       required: true
       schema:
         type: string
+        example: CO
     - in: query
       name: suggestedAmountsMap
       schema:
         type: boolean
         description:  Indicates if this field should be returned as a response. Default value is false.
+        example: false
       required: false
     - in: query
       name: suggestedAmounts
       schema:
         type: boolean
         description:  Indicates if this field should be returned as a response. Default value is false.
+        example: false
       required: false
     - in: query
       name: includePin
       schema:
         type: boolean
         description:  Indicates if PIN details if applicable to the operator, should be returned as a response. Default value is true.
+        example: false
       required: false
     - in: query
       name: includeData
       schema:
         type: boolean
         description: Indicates if any data plans being offered by the operator should be returned as a response. Default value is true.
+        example: false
       required: false
     - in: query
       name: includeBundles
       schema:
         type: boolean
-        description:  Indicates if any airtime and data bundles being offered by the operator should be returned as a response. Default value is true
+        description:  Indicates if any airtime and data bundles being offered by the operator should be returned as a response. Default value is true.
+        example: false
       required: false
   responses:
     '200':

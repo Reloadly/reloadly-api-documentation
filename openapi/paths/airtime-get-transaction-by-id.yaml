@@ -10,6 +10,7 @@ get:
       schema:
         type: integer
         description: This indicates the identification number of the transaction to be retrieved.
+        example: 101
       required: true
   responses:
     '200':

@@ -10,11 +10,13 @@ get:
       schema:
         type: integer
         description: This indicates the number of operators offering discounts to be retrieved on a page. Default value is 200.
+        example: 10
     - in: query
       name: page
       schema:
         type: integer
         description: This indicates the page of the discounts list being retrieved. Default value is 1.
+        example: 1
 
   responses:
     '200':

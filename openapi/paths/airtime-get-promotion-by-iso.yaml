@@ -10,6 +10,7 @@ get:
       schema:
         type: string
         description: The ISO code of the country whose promotions are to be retrieved.
+        example: US
       required: true
 
   responses:

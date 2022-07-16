@@ -10,6 +10,7 @@ get:
       schema:
         type: integer
         description: The identification number of the operator whose promotions are to be retrieved.
+        example: 341
       required: true
 
   responses:

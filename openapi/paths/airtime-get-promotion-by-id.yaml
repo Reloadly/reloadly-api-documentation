@@ -10,6 +10,7 @@ get:
       schema:
         type: integer
         description: The promotion's identification number.
+        example: 5583
       required: true
   responses:
     '200':
