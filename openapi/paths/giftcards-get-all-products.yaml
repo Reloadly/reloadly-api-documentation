@@ -10,8 +10,22 @@ get:
       schema:
         type: string
         description: Indicates the name of the gift card product.
-        example: Amazon
-      required: true
+    - in: query
+      name: countryCode
+      schema:
+        type: string
+        description: Indicates the ISO code of the country whose gift card products are to be retrieved.
+    - in: query
+      name: includeRange
+      schema: 
+        type: boolean
+        description: Indicates the list of gift card products with the **denominationType** property specified as **RANGE** are to be retrieved.
+    - in: query
+      name: includeFixed
+      schema: 
+        type: boolean
+        description: Indicates the list of gift card products with the **denominationType** property specified as **FIXED** are to be retrieved.
+      
   responses:
     '200':
       description: Successfully retrieved details of all gift card products.
