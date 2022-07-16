@@ -1,3 +1,7 @@
+required: 
+  -  operatorId
+  -  amount
+  -  recipientPhone.countryCode
 type: object
 properties:
   operatorId:

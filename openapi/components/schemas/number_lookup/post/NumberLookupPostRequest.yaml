@@ -1,3 +1,6 @@
+required: 
+  -  phone
+  -  countryCode
 type: object
 properties:
   phone: 
