@@ -11,12 +11,12 @@ properties:
   error:
     description: The error code received after the request was made.
     type: string
-    example: /reports/transaction
+    example: 
   message:
     description: The error message received after the request was made.
     type: string
-    example: 
+    example: Could not retrieve/update resources at the moment, please try again later
   path:
     description: The URL path to which the request was made.
     type: string
-    example: 
+    example: /reports/transaction

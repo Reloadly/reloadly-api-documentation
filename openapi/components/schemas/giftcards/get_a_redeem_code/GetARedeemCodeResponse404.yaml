@@ -11,11 +11,11 @@ properties:
   error:
     description: The error code received after the request was made.
     type: string
-    example: 
+    example: Not found
   message:
     description: The error message received after the request was made.
     type: string
-    example: 
+    example: Invalid transaction id
   path:
     description: The URL path to which the request was made.
     type: string
