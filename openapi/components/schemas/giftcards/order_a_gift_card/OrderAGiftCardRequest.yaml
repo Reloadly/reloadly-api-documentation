@@ -1,5 +1,7 @@
+required: 
+  -  recipientEmail
 type: object
-properties:
+properties: 
   productId:
     description: This indicates the product identification number of the gift card to be purchased/ordered.
     type: integer
@@ -16,7 +18,7 @@ properties:
     description: This is a unique reference assigned to a gift card order before it is purchased.
     type: string
     example: obucks10 
-  recipientEmail:
+  recipientEmail:     
     description: This indicates the recipient's email for the gift card purchase. If absent, the email of the user's account will be used.
     type: string
     example: anyone@email.com
