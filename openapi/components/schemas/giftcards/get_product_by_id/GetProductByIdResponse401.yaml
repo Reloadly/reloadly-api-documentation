@@ -23,4 +23,4 @@ properties:
   details: 
     description: Further details of the error returned for the failed request.
     type: array
-    example: 
+    example: []

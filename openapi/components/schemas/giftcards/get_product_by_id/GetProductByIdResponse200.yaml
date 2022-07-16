@@ -14,11 +14,11 @@ properties:
     example: false
   senderFee:
     description: This indicates the fee applied for every gift card purchase. Note that this fee is applied with the user's account currency. Universally, it is a flat fee of  0.5 USD.
-    type: string
+    type: number
     example: 205.29
   discountPercentage:
     description: This indicates the percentage discount available for every purchase of the gift card.
-    type: integer
+    type: number
     example: 7.5
   denominationType:
     description: This indicates the price(s) for which the gift card can be purchased. Options are either FIXED or RANGE.
@@ -30,24 +30,24 @@ properties:
     example: USD
   minRecipientDenomination:
     description: This indicates the minimum amount for which a gift card can be purchased. It only applies to gift cards that have a denomination type of RANGE.
-    type: integer
-    example: null
+    type: number
+    example: 10
   maxRecipientDenomination:
     description: This indicates the maximum amount for which a gift card can be purchased. It only applies to gift cards that have a denomination type of RANGE.
-    type: integer
-    example: null
+    type: number
+    example: 1000
   senderCurrencyCode:
     description: This indicates the currency of the user's account.
     type: string
     example: NGN
   minSenderDenomination:
     description: This indicates the minimum amount for which a gift card can be purchased in the user's account currency. This only applies to gift cards that have a denomination type of RANGE.
-    type: integer
-    example: null
+    type: number
+    example: 10
   maxSenderDenomination:
     description: This indicates the maximum amount for which a gift card can be purchased in the user's account currency. This only applies to gift cards that have a denomination type of RANGE
-    type: integer
-    example: null
+    type: number
+    example: 1000
   fixedRecipientDenominations:
     description: This indicates an array of fixed amounts for which a gift card can be purchased. This only applies to gift cards that have a denomination type of FIXED.
     type: array

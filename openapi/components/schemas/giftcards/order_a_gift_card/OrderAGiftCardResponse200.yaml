@@ -6,19 +6,19 @@ properties:
     example: 1
   amount:
     description: This indicates the amount deducted for the purchase of the gift card plus fees incurred 
-    type: integer
+    type: number
     example: 60553.3575
   discount:
     description: This indicates the discount applied, if there was any - at the point of purchasing the gift card
-    type: integer
-    example: 0
+    type: number
+    example: 0.00
   currencyCode:
     description: This is the currency denomination of the user's account
     type: string
     example: NGN
   fee:
     description: This indicates the fee applied at the point of purchasing the gift card. This fee is applied in the currency denomination of the user's account.
-    type: integer
+    type: number
     example: 198.35026
   recipientEmail:
     description: This indicates the email address of the gift card's recipient.
@@ -54,12 +54,12 @@ properties:
         example: 5
       unitPrice:
         description: This indicates the gift card price.
-        type: integer
-        example: 5
+        type: number
+        example: 5.00
       totalPrice:
         description: This indicates the total price at which the gift cards were purchased.
-        type: integer
-        example: 125
+        type: number
+        example: 25.00
       currencyCode:
         description: This is the currency denomination in which the gift card was purchased.
         type: string
@@ -78,12 +78,12 @@ properties:
             example: Amazon
   smsFee:
     description: This indicates the email address of the gift card's recipient. This fee is applied in the currency denomination of the user's account.
-    type: integer
+    type: number
     example: 56.91
   recipientPhone:
     description: This indcates the mobile number of the recipient.
     type: string
-    example: 657829900
+    example: "657829900"
   transactionCreatedTime:
     description: This indicates the date the transaction was made.
     type: string

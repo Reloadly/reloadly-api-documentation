@@ -22,5 +22,5 @@ properties:
         example: false
   discountPercentage:
     description: This indicates the percentage discount available for every purchase of the gift card.
-    type: integer
+    type: number
     example: 7.5       

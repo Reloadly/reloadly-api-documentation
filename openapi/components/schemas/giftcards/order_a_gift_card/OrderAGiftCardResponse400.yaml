@@ -15,7 +15,7 @@ properties:
   errorCode:
     description: The error code associated with the reason for the failed request.
     type: string
-    example:
+    example: 
   infoLink:
     description: A link to further information about the error.
     type: string
@@ -23,4 +23,4 @@ properties:
   details: 
     description: Further details of the error returned for the failed request.
     type: array
-    example: 
+    example: []

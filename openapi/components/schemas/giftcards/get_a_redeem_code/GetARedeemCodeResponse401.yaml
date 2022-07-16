@@ -11,7 +11,7 @@ properties:
   path:
     description: The URL path which the request was made through.
     type: string
-    example: /orders/transactions/{transactionId}/cards
+    example: /orders/transactions/3/cards
   errorCode:
     description: The error code associated with the reason for the failed request.
     type: string
