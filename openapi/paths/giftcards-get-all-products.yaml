@@ -25,6 +25,7 @@ get:
       schema: 
         type: boolean
         description: Indicates the list of gift card products with the **denominationType** property specified as **FIXED** are to be retrieved.
+        example: true
       
   responses:
     '200':
@@ -94,8 +95,3 @@ get:
             error: Not Found
             message: No message available
             path: /product
-  requestBody:
-    content:
-      application/json:
-        schema:
-          $ref: ../components/schemas/giftcards/get_all_products/GetAllProductsRequest.yaml
