@@ -11,6 +11,7 @@ get:
       required: true
       schema:
         type: integer
+        example: 4
   responses:
     '200':
       description: Successfully retrieved redeem instruction details of a gift card brand.

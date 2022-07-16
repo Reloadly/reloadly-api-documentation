@@ -7,10 +7,11 @@ get:
   parameters:
     - in: path
       name: countrycode
-      description: The country's ISO code.
+      description: The ISO code of the country you want to display available gift cards for.
       required: true
       schema:
-        type: integer
+        type: string
+        example: US
   responses:
     '200':
       description: Successfully retrieved details of a gift card product.
