@@ -11,12 +11,12 @@ properties:
   error:
     description: The error code received after the request was made.
     type: string
-    example: /redeem-instruction
+    example: Not Found
   message:
     description: The error message received after the request was made.
     type: string
-    example: 
+    example: No message available
   path:
     description: The URL path to which the request was made.
     type: string
-    example: 
+    example: /redeem-instruction
