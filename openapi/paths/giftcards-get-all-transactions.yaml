@@ -10,13 +10,13 @@ get:
       schema:
         type: string
         description: Indicates the start date for the range of transactions to be retrieved.
-        example: 2021-06-01%2000:00:00
+        example: 2021-06-01 10:00:00
     - in: query
       name: endDate
       schema:
         type: string
         description: Indicates the end date for the range of transactions to be retrieved.
-        example: 2021-07-20%2023:17:02
+        example: 2021-07-20 19:17:02
   responses:
     '200':
       description: Successfully retrieved details of all gift card transactions.
