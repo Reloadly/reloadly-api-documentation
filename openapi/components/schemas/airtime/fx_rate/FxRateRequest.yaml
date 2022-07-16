@@ -1,3 +1,6 @@
+required: 
+  -  operatorId
+  -  amount
 type: object
 properties:
   operatorId:

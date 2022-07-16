@@ -1,3 +1,7 @@
+required: 
+  -  operatorId
+  -  amount
+  -  recipientPhone
 type: object
 properties:
   operatorId:

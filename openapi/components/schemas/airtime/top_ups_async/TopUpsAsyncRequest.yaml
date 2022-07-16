@@ -1,7 +1,7 @@
 required: 
   -  operatorId
   -  amount
-  -  recipientPhone.countryCode
+  -  recipientPhone
 type: object
 properties:
   operatorId:
