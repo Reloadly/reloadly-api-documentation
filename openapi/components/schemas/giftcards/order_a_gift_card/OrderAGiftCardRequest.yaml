@@ -1,5 +1,9 @@
 required: 
   -  recipientEmail
+  -  senderName
+  -  productId
+  -  quantity
+  -  unitPrice
 type: object
 properties: 
   productId:

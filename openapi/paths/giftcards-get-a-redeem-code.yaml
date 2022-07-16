@@ -8,8 +8,9 @@ get:
     - in: path
       name: transactionId
       schema:
-        type: string
+        type: integer
         description: Indicates the transaction identification number of the gift card's redeem code to be retrieved.
+        example: 2
       required: true
   responses:
     '200':
