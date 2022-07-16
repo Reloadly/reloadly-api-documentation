@@ -10,25 +10,29 @@ get:
       description: This is the mobile number whose details are to be retrieved.
       required: true
       schema:
-        type: string
+        type: number
+        example: 08147658721
     - in: path
       name: countryCode
       description: This is the <a href="https://en.wikipedia.org/wiki/ISO_3166-1">ISO code</a> of the country where the mobile number is registered.
       required: true
       schema:
         type: string
+        example: NG
     - in: query
       name: suggestedAmountsMap
       description: Indicates if this field should be returned as a response. Default value is false.
       required: false
       schema:
         type: boolean
+        example: false
     - in: query
       name: suggestedAmounts
       description: Indicates if this field should be returned as a response. Default value is false.
       required: false
       schema:
         type: boolean
+        example: false
   responses:
     '200':
       description: Successfully retrieved details of a mobile number
