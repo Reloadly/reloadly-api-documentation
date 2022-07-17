@@ -18,10 +18,18 @@ properties:
     description: This indicates the number of gift cards to be ordered.
     type: integer
     example: 2
+  unitPrice:
+    description: This indicates the price of the gift card to be purchased. <br> *Note that this must be specified using a price listed in any of the following sections <br> 1. The ==fixedRecipientDenominations== section of the gift card product's details — for gift cards where ==denominationType== equals ==FIXED== <br> 2. The ==minRecipientDenominations== or ==maxRecipientDenominations== section of the gift card product's details — for gift cards where ==denominationType== equals ==RANGE==.   
+    type: number
+    example: 305.4
   customIdentifier:
     description: This is a unique reference assigned to a gift card order before it is purchased.
     type: string
     example: obucks10 
+  senderName:
+    description: This indicates the name on the gift card receipt upon purchase.
+    type: string
+    example: John Doe
   recipientEmail:     
     description: This indicates the recipient's email for the gift card purchase. If absent, the email of the user's account will be used.
     type: string
