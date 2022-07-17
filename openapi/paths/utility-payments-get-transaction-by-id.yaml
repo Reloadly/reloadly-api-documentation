@@ -25,7 +25,7 @@ get:
               transaction:
                 id: 13
                 status: SUCCESSFUL
-                referenceId: null
+                referenceId: april-electricity-bill
                 amount: 1000.00000
                 amountCurrencyCode: NGN
                 deliveryAmount: 1000.00000
