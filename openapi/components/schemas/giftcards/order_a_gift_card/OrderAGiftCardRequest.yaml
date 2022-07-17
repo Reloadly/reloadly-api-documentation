@@ -19,11 +19,11 @@ properties:
     type: integer
     example: 2
   unitPrice:
-    description: This indicates the price of the gift card to be purchased. <br><br> Note that this must be specified using a price listed in any of the following sections <br> <br> 1. The **fixedRecipientDenominations** section of the gift card product's details — for gift cards where **denominationType** equals **FIXED** <br> <br> 2. The **minRecipientDenominations** or **maxRecipientDenominations** section of the gift card product's details — for gift cards where **denominationType** equals **RANGE**.   
+    description: This indicates the price of the gift card to be purchased. <br><br> _Note that this must be specified using a price listed in any of the following sections <br> <br> 1. The **fixedRecipientDenominations** section of the gift card product's details — for gift cards where **denominationType** equals **FIXED** <br> <br> 2. The **minRecipientDenominations** or **maxRecipientDenominations** section of the gift card product's details — for gift cards where **denominationType** equals **RANGE**_.   
     type: number
     example: 5.0
   customIdentifier:
-    description: This is a unique reference assigned to a gift card order before it is purchased. <br> <br> _Ensure_ you change
+    description: This is a unique reference assigned to a gift card order before it is purchased. <br> <br> _Ensure you change the sample custom identifier in the payload before making a request so as to avoid any errors._
     type: string
     example: obucks10 
   senderName:
