@@ -22,7 +22,7 @@ get:
       schema:
         type: string
         description: This indicates the type of utility payment handled by the biller. Values included are **ELECTRICITY_BILL_PAYMENT**, **WATER_BILL_PAYMENT**, **TV_BILL_PAYMENT** and **INTERNET_BILL_PAYMENT**.
-        example: ELECTRICITY BILL PAYMENT
+        example: ELECTRICITY_BILL_PAYMENT
     - in: query
       name: serviceType
       schema:
@@ -67,7 +67,7 @@ get:
               minLocalTransactionAmount: 1000.0
               maxLocalTransactionAmount: 300000.0
               localTransactionFee: 227.83997
-              localTransactionFeeCurrencyCode: INR
+              localTransactionFeeCurrencyCode: NGN
               localDiscountPercentage: 0.00000
               internatonalAmountSupported: true
               internationalTransactionCurrencyCode: INR
