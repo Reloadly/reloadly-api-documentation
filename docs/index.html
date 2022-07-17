@@ -28,9 +28,6 @@
             font-size: 18px;
             width: 100%;
             height: 72px;
-            position: fixed;
-            top: 0;
-            z-index: 1000;
             display: flex;
             flex-wrap: nowrap;
             flex-direction: row;
@@ -71,24 +68,33 @@
 
         .sideMenu {
             width: 80%;
-            height: calc(100vh - 72px);
+            height: 100vh;
             position: fixed;
-            top: 72px;
+            top: 0;
             left: -80%;
             z-index: 100;
             background: white;
             box-sizing: border-box;
-            padding: 40px 20px;
+            padding: 60px 20px;
             border-right: solid 1px rgb(230, 230, 230);
             transition: all ease .4s;
 
         }
 
+
+
+        .sideMenu .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 5px;
+            font-size: 16px;
+        }
         .sideMenu a {
             margin-bottom: 10px;
             padding: 5px 0;
             display: block;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 500;
         }
 
@@ -178,15 +184,7 @@
             font-weight: 450;
         }
 
-        .redoc-body {
-            padding-top: 72px;
-            position: relative;
-        }
-
-        .redoc-body .menu-content {
-            top: 72px !important;
-            height: calc(100vh - 72px) !important;
-        }
+    
 
         footer {
             font-weight: lighter;
@@ -245,9 +243,10 @@
             color: #6c7584;
             font-size: small;
             font-weight: lighter;
+            margin-top: 0;
         }
 
-        footer form {
+        footer .form {
             display: flex;
         }
 
@@ -294,6 +293,21 @@
             color: #fff;
             margin-left: 16px;
             padding: 8px 20px;
+        }
+
+        #subscribeSuccess {
+            color: green;
+            font-size: 16px;
+            margin: 5px 0;
+            display: none;
+        }
+
+        #subscribeError {
+            color: red;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 5px 0;
+            display: none;
         }
 
         @media screen and (max-width:768px) {
@@ -355,13 +369,13 @@
                 align-items: flex-start;
             }
 
-            footer section.float-right-section div form {
+            footer section.float-right-section div .form {
                 width: 100%;
                 display: flex;
             }
 
-            footer section.float-right-section div form input#footerEmail,
-            footer section.float-right-section div form input#subscribeButton {
+            footer section.float-right-section div .form input#footerEmail,
+            footer section.float-right-section div .form input#subscribeButton {
                 width: auto;
             }
 
@@ -405,6 +419,7 @@
             </div>
         </div>
         <div class="sideMenu" id="sideNav">
+            <span class="close" onclick="toggleMenu()">&times;</span>
             <a>
                 <img class="docs-logo"
                     src="https://res.cloudinary.com/reloadlydevelopers/image/upload/v1657215746/docs_upj9pe.svg" />
@@ -437,10 +452,14 @@
         <section class="float-right-section">
             <div>
                 <p>Sign up for developer updates</p>
-                <form>
+                <div class="form">
                     <input type="text" placeholder="Email " name="email" id="footerEmail">
-                    <input type="submit" id="subscribeButton" value="Subscribe">
-                </form>
+                    <button id="subscribeButton" onclick="subscribe()">Subscribe</button>
+                </div>
+                <p id="subscribeSuccess">
+                    You have been successfully subscribed to our newsletter!
+                </p>
+                <p id="subscribeError">Error</p>
             </div>
         </section>
     </footer>
@@ -453,6 +472,54 @@
             return;
         }
         document.getElementById("sideNav").style.left = '-80%';
+    }
+    async function subscribe(e) {
+        let email = document.getElementById('footerEmail').value;
+        if (email == '') {
+            document.getElementById('subscribeError').innerText = 'Please enter a valid email.';
+            document.getElementById('subscribeError').style.display = 'block';
+            return;
+        };
+
+        document.getElementById('subscribeButton').disabled = true;
+        document.getElementById('subscribeSuccess').style.display = 'none';
+        document.getElementById('subscribeError').style.display = 'none';
+        let data = {
+            email: email
+        }
+
+        fetch("https://portal2.reloadly.com/newsletter/subscribe", {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/vnd.reloadly.app-v1+json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data),
+        }).then(res => {
+            document.getElementById('subscribeButton').disabled = false;
+            document.getElementById('subscribeSuccess').style.display = 'block';
+            document.getElementById('footerEmail').value = '';
+            setTimeout(() => {
+                document.getElementById('subscribeSuccess').style.display = 'none';
+            }, 5000);
+        }).catch(e => {
+            document.getElementById('subscribeButton').disabled = false;
+            let error;
+            console.log(e)
+            if (e.error?.message) {
+                error = e.error.message;
+            }
+            else {
+                error = 'An error occurred. please try again later.';
+            }
+            document.getElementById('subscribeError').innerText = error;
+            document.getElementById('subscribeError').style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('subscribeError').innerText = '';
+                document.getElementById('subscribeError').style.display = 'none';
+            }, 5000);
+        })
+
     }
 
 </script>

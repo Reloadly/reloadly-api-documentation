@@ -7,14 +7,14 @@ properties:
   subscriberAccountNumber:
     description: This indicates the account / reference / card number of the subscriber / recipient of the bill payment.
     type: string
-    example: 04223568280
+    example: "04223568280"
   amount:
     description: This indicates the amount to be paid.
-    type: integer
+    type: number
     example: 1000
   billerId:
     description: The biller identifiation number you would have retrieved from the **Get Billers** endpoint.
-    type: string
+    type: number
     example: 5
   useLocalAmount:
     description: Indicates if the amount being presented is in the local currency of the biller. If this parameter is not provided or is set to false, then the payment will be presented in the user's wallet currency.

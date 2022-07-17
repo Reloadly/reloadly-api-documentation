@@ -10,54 +10,63 @@ get:
       schema:
         type: string
         description: The reference ID you may have specified while placing the transaction.
+        example: april-electricity-bill
       required: false
     - in: query
       name: page
       schema:
         type: integer
         description: The page to be retrieved from the transaction list.
+        example: 10
       required: false
     - in: query
       name: size
       schema:
         type: integer
         description: Number of items to include in a single page.
+        example: 1
       required: false
     - in: query
       name: startDate
       schema:
         type: string
         description: Indicates the start date for the range of transactions to be retrieved.
+        example: 2021-06-01 00:00:00
       required: false
     - in: query
       name: endDate
       schema:
         type: string
         description: Indicates the end date for the range of transactions to be retrieved.
+        example: 2022-06-01 10:00:00
       required: false  
     - in: query
       name: status
       schema:
         type: string
         description: The transaction's status. Can be either **PROCESSING**, **SUCCESSFUL**, **FAILED**, or **REFUNDED**.
+        example: PROCESSING
       required: false
     - in: query
       name: serviceType
       schema:
         type: string
         description: The biller's service type. Can be either **PREPAID** or **POSTPAID**.
+        example: PREPAID
       required: false
     - in: query
       name: billerType
       schema:
         type: string
         description: The biller's type. Can be either **ELECTRICITY_BILL_PAYMENT**, **WATER_BILL_PAYMENT**, **TV_BILL_PAYMENT**, or **INTERNET_BILL_PAYMENT**
+        example: ELECTRICITY_BILL_PAYMENT
       required: false
     - in: query
       name: billerCountryCode
       schema:
         type: string
         description: Indicates the <a href="https://en.wikipedia.org/wiki/ISO_3166-1">ISO code</a> of the contry where the biller is located.
+        example: NG
       required: false  
   responses:
     '200':

@@ -10,36 +10,43 @@ get:
       schema:
         type: integer
         description: This is the unique identification number of each biller. It uniquely identifies the biller servicing the utility.
+        example: 12
     - in: query
       name: name
       schema:
         type: string
         description: This indicates the biller's name. In situations where the biller's name is exceptionally long, partial names are used.
+        example: Eko Electricity
     - in: query
       name: type
       schema:
         type: string
         description: This indicates the type of utility payment handled by the biller. Values included are **ELECTRICITY_BILL_PAYMENT**, **WATER_BILL_PAYMENT**, **TV_BILL_PAYMENT** and **INTERNET_BILL_PAYMENT**.
+        example: ELECTRICITY BILL PAYMENT
     - in: query
       name: serviceType
       schema:
         type: string
         description: This indicates the payment service type being rendered by the utility biller service. Examples are **PREPAID** and **POSTPAID**.
+        example: PREPAID
     - in: query
       name: countryISOCode
       schema:
         type: string
         description: This indicates the <a href="https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes">ISO code</a> of the country where the utility biller is operating in.
+        example: KE
     - in: query
       name: page
       schema:
         type: integer
         description: This indicates the page of the billers list being retrieved. Default value is 1.
+        example: 1
     - in: query
       name: size
       schema:
         type: integer
         description: This indicates the number of billers to be retrieved on a page. Default value is 200.
+        example: 10
 
   responses:
     '200':
