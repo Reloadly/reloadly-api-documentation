@@ -23,7 +23,7 @@ properties:
     type: number
     example: 5.0
   customIdentifier:
-    description: This is a unique reference assigned to a gift card order before it is purchased. <br> <br> __Ensure__ you change
+    description: This is a unique reference assigned to a gift card order before it is purchased. <br> <br> _Ensure_ you change
     type: string
     example: obucks10 
   senderName:
