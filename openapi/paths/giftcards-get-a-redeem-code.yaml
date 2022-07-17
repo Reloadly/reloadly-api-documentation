@@ -1,6 +1,6 @@
 get:
   tags:
-    - Giftcards
+    - Gift Cards
   summary: Get a redeem code.
   description: Retrieve details of a gift card's redeem code after a successful transaction by making a request with the gift card's transaction identification number.
   operationId: giftcards/get-a-redeem-code

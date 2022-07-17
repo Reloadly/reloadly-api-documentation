@@ -1,6 +1,6 @@
 get:
   tags:
-    - Giftcards
+    - Gift Cards
   summary: Get product by ISO code
   description: Retrieve the details of every giftcard product available to a country by making a request with the country's ISO code. 
   operationId: giftcards/get-product-by-iso

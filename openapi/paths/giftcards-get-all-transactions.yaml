@@ -1,6 +1,6 @@
 get:
   tags:
-    - Giftcards
+    - Gift Cards
   summary: Get all transactions
   description: Retrieve information on all gift card transactions made on an account.
   operationId: giftcards/get-all-transactions

@@ -1,6 +1,6 @@
 get:
   tags:
-    - Giftcards
+    - Gift Cards
   summary: Get all discounts
   description: Retrieve the details of all available discounts on gift card products that can be purchased on Reloadly.
   operationId: giftcards/get-all-discounts

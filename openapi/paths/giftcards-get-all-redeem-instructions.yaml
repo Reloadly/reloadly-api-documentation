@@ -1,6 +1,6 @@
 get:
   tags:
-    - Giftcards
+    - Gift Cards
   summary: Get all redeem instructions
   description: Retrieve the redeem instruction details of every gift card product that can be purchased via Reloadly. 
   operationId: giftcards/get-all-redeem-instructions

@@ -1,6 +1,6 @@
 get:
   tags:
-    - Giftcards
+    - Gift Cards
   summary: Get product by ID
   description: Retrieve the details of a giftcard product by making a request with the gift card product's identification number. 
   operationId: giftcards/get-product-by-id

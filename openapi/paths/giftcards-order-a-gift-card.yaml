@@ -1,16 +1,9 @@
 post:
   tags:
-    - Giftcards
+    - Gift Cards
   summary: Order a gift card
   description: Order a gift card product by making a request with its details.
   operationId: giftcards/order-a-gift-card
-  # parameters:
-  #   - in: header
-  #     name: Authorization
-  #     schema:
-  #       type: string
-  #       description: Your access token is required as a bearer token in the request's header.
-  #     required: true
   responses:
     '200':
       description: Successfully ordered a gift card.
