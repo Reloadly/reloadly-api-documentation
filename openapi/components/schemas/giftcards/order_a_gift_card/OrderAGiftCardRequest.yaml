@@ -19,9 +19,9 @@ properties:
     type: integer
     example: 2
   unitPrice:
-    description: This indicates the price of the gift card to be purchased. <br> *Note that this must be specified using a price listed in any of the following sections <br> 1. The ==fixedRecipientDenominations== section of the gift card product's details — for gift cards where ==denominationType== equals ==FIXED== <br> 2. The ==minRecipientDenominations== or ==maxRecipientDenominations== section of the gift card product's details — for gift cards where ==denominationType== equals ==RANGE==.   
+    description: This indicates the price of the gift card to be purchased. <br><br> Note that this must be specified using a price listed in any of the following sections <br> <br> 1. The **fixedRecipientDenominations** section of the gift card product's details — for gift cards where **denominationType** equals **FIXED** <br> <br> 2. The **minRecipientDenominations** or **maxRecipientDenominations** section of the gift card product's details — for gift cards where **denominationType** equals **RANGE**.   
     type: number
-    example: 305.4
+    example: 5.0
   customIdentifier:
     description: This is a unique reference assigned to a gift card order before it is purchased.
     type: string
