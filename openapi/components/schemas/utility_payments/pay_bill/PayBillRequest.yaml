@@ -5,7 +5,7 @@ required:
   - billerId
 properties:
   subscriberAccountNumber:
-    description: This indicates the account / reference / card number of the subscriber / recipient of the bill payment.
+    description: This indicates the account, reference, or card number of the subscriber or recipient of the bill payment.
     type: string
     example: "04223568280"
   amount:
