@@ -17,7 +17,7 @@ properties:
     type: boolean
     example: true
   customIdentifier:
-    description: This indicates the transaction reference of the recharge. Note that each transaction reference is to be unique. Once a reference has been used for a top-up, it cannot be reused.
+    description: This indicates the transaction reference of the recharge. Note that each transaction reference is to be unique. Once a reference has been used for a top-up, it cannot be reused. <br> <br> _Ensure you change the sample custom identifier in the payload before making a request so as to avoid any errors._
     type: string
     example: This is example identifier 130
   recipientEmail:

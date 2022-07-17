@@ -21,6 +21,6 @@ properties:
     type: boolean
     example: false
   referenceId:
-    description: A unique string that you may choose to provide. If you provide one, it will be tied to the transaction. You can query back your transaction with this **referenceId** as well.
+    description: A unique string that you may choose to provide. If you provide one, it will be tied to the transaction. You can query back your transaction with this **referenceId** as well. <br> <br> _Ensure you change the sample custom identifier in the payload before making a request so as to avoid any errors._
     type: string
     example: april-electricity-bill
