@@ -1,7 +1,7 @@
 get:
   tags:
     - Gift Cards
-  summary: Get transaction by ID
+  summary: Get Transaction by ID
   description: Retrieve information on a gift card transaction by making a request with its transaction identification number.
   operationId: giftcards/get-transaction-by-id
   parameters:

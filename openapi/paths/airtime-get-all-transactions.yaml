@@ -1,7 +1,7 @@
 get:
   tags:
     - Airtime
-  summary: Get all transactions
+  summary: Get Transactions
   description: Retrieve the details of every top-up transaction carried out on your Reloadly account.
   operationId: airtime/get-all-transactions
   parameters:

@@ -1,7 +1,7 @@
 get:
   tags:
     - Accounts Balance
-  summary: View an account's balance
+  summary: View Account Balance
   description: Retrieve the details of an account's balance.
   operationId: accounts-balance
   responses:

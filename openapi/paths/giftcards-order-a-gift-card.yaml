@@ -1,7 +1,7 @@
 post:
   tags:
     - Gift Cards
-  summary: Order a gift card
+  summary: Order Gift Card
   description: Order a gift card product by making a request with its details.
   operationId: giftcards/order-a-gift-card
   responses:

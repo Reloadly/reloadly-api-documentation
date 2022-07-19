@@ -1,7 +1,7 @@
 get:
   tags:
     - Utility Payments
-  summary: View your account's balance
+  summary: View Account Balance
   description: Retrieve the details of your account's balance.
   operationId: utilitypayments/accounts-balance
   responses:

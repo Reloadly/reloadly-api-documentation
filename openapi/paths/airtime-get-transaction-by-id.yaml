@@ -1,7 +1,7 @@
 get:
   tags:
     - Airtime
-  summary: Get transaction by ID
+  summary: Get Transaction by ID
   description: Retrieve the details of a top-up transaction by making a request with its identification number.
   operationId: airtime/get-transaction-by-id
   parameters:

@@ -1,7 +1,7 @@
 get:
   tags:
     - Utility Payments
-  summary: Get all billers
+  summary: Get Billers
   description: Retrieve the details of every utility payment service / biller you can access via Reloadly.
   operationId: utilitypayments/get-all-billers
   parameters:

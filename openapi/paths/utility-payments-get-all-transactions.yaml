@@ -1,7 +1,7 @@
 get:
   tags:
     - Utility Payments
-  summary: Get all transactions
+  summary: Get Transactions
   description: Retrieve information on all utility payment transactions made on your account. Results can be paginated for your convenience.
   operationId: utilitypayments/get-all-transactions
   parameters:

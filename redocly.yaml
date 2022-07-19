@@ -26,9 +26,13 @@ features.openapi:
       accent:
         main: '#00163A'
     sidebar:
-      width: 300px
-      backgroundColor: '#f7fafc'
+      fontSize: 15px
+      width: 330px
+      rightLineColor: '#f5f7f9'
+      activeTextColor: '#7700ff'
+      backgroundColor: '#f5f7f9'
       spacing:
+        paddingVertical: '8'
         paddingHorizontal: 10px
         unit: 10
     components:
@@ -36,13 +40,17 @@ features.openapi:
         borderRadius: 15px
         fontWeight: light
       httpBadges:
-        borderRadius: "15px"
-        fontFamily: "Jost, sans-serif"
-        fontWeight: light
+        color: '#ffffff'
         sizes:
           medium:
             fontSize: 18px
+          small:
+            fontSize: 12px
+        fontFamily: 'JetBrains Mono, monospace'
+        fontWeight: bold
+        borderRadius: 15px
     layout:
+      showDarkRightPanel: true
       three-panel:
         maxWidth:
           small: 100%
@@ -57,19 +65,19 @@ features.openapi:
       sectionHorizontal: 75
       sectionVertical: 50
     typography:
-      fontFamily: "Jost, sans-serif"
+      fontFamily: "Ubuntu, sans-serif"
       fontSize: "16px"
       code:
         fontFamily: "Courier Prime, monospace"
         fontWeight: light
       heading1:
-        fontFamily: "Jost, sans-serif"
+        fontFamily: "Ubuntu, sans-serif"
         fontWeight: bold
       heading2:
-        fontFamily: "Jost, sans-serif"
+        fontFamily: "Ubuntu, sans-serif"
         fontWeight: light
       heading3:
-        fontFamily: "Jost, sans-serif"
+        fontFamily: "Ubuntu, sans-serif"
         fontWeight: light
   generateCodeSamples:
     languages:

@@ -1,7 +1,7 @@
 get:
   tags:
     - Airtime
-  summary: Get all countries
+  summary: Get Countries
   description: Retrieve the details of every country where a top-up can be made.
   operationId: airtime/get-all-countries
   responses:

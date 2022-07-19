@@ -1,7 +1,7 @@
 get:
   tags:
     - Airtime
-  summary: Get the status of a top-up
+  summary: Get Top-up Status
   description: Retrieve the real-time status of a top-up by making a request with its identification number.
   operationId: airtime/top-ups-status
   parameters:

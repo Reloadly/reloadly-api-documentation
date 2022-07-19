@@ -1,7 +1,7 @@
 post:
   tags:
     - Utility Payments
-  summary: Make a utility payment
+  summary: Pay Bill
   description: Make a utility payment with a biller. A payment is synonymous to a transaction.
   operationId: utilitypayments/pay-bill
   responses:

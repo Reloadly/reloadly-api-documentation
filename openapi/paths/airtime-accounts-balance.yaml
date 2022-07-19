@@ -1,7 +1,7 @@
 get:
   tags:
     - Airtime
-  summary: View your account's balance
+  summary: View Account Balance
   description: Retrieve the details of your account's balance.
   operationId: airtime/accounts-balance
   responses:

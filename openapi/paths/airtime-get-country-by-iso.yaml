@@ -1,7 +1,7 @@
 get:
   tags:
     - Airtime
-  summary: Get country by ISO code
+  summary: Get Country by ISO code
   description: Retrieve the details of a country by making a request with its ISO code.
   operationId: airtime/get-country-by-iso
   parameters:      

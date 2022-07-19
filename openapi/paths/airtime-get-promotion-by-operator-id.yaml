@@ -1,7 +1,7 @@
 get:
   tags:
     - Airtime
-  summary: Get promotions by operator ID
+  summary: Get Promotions by Operator ID
   description: Retrieve the details of every promotion being ofered by an operator by making a request with the operator's identification number.
   operationId: airtime/get-promotion-by-operator-id
   parameters:

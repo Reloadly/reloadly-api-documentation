@@ -1,7 +1,7 @@
 get:
   tags:
     - Airtime
-  summary: Get commission by operator ID
+  summary: Get Commission by Operator ID
   description: Retrieve the details of a discount being offered by an operator by making a request with the operator's identification number. 
   operationId: airtime/get-commission-by-id
   parameters:

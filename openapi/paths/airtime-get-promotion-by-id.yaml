@@ -1,7 +1,7 @@
 get:
   tags:
     - Airtime
-  summary: Get promotion by ID
+  summary: Get Promotion by ID
   description: Retrieve the details of a promotion by making a request with its identification number.
   operationId: airtime/get-promotion-by-id
   parameters:
