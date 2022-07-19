@@ -10,7 +10,7 @@ lint:
 features.openapi:
   showObjectSchemaExamples: true
   disableDeepLinks: true
-  nativeScrollbars: true
+  nativeScrollbars: false
   sortPropsAlphabetically: false
   pagination: 'section'
   showConsole: true
