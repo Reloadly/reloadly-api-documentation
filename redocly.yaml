@@ -65,7 +65,6 @@ features.openapi:
       sectionVertical: 50
     typography:
       fontFamily: "Ubuntu, sans-serif"
-      fontSize: "16px"
       code:
         fontFamily: "Courier Prime, monospace"
         fontWeight: light
