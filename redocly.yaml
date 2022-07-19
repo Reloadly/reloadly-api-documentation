@@ -46,7 +46,7 @@ features.openapi:
             fontSize: 18px
           small:
             fontSize: 12px
-        fontFamily: 'JetBrains Mono, monospace'
+        fontFamily: "IBM Plex Mono, monospace"
         fontWeight: bold
         borderRadius: 15px
     layout:
