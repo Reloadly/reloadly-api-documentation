@@ -26,7 +26,6 @@ features.openapi:
       accent:
         main: '#00163A'
     sidebar:
-      fontSize: 15px
       width: 300px
       rightLineColor: '#f5f7f9'
       activeTextColor: '#7700ff'
