@@ -1,6 +1,6 @@
 post:
   tags:
-    - Gift Cards
+    - Orders
   summary: Order Gift Card
   description: Order a gift card product by making a request with its details.
   operationId: giftcards/order-a-gift-card

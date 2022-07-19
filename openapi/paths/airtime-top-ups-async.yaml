@@ -1,6 +1,6 @@
 post:
   tags:
-    - Airtime
+    - Top-ups
   summary: Make Asynchronous Top-up
   description: Retrieve a transaction identification number that solely provides details and tracks the status of your top-up.
   operationId: airtime/top-ups-async

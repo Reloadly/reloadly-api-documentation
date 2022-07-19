@@ -1,6 +1,6 @@
 get:
   tags:
-    - Gift Cards
+    - Discounts
   summary: Get Discount by Product ID
   description: Retrieve the discount details of a giftcard product by making a request with the product's identification number. 
   operationId: giftcards/get-discount-by-product-id

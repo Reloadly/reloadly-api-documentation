@@ -1,6 +1,6 @@
 get:
   tags:
-    - Airtime
+    - Operators
   summary: Auto Detect Operator
   description: Retrieve the details of a mobile number by making a request using the mobile number and the ISO code of the country where it is registered.
   operationId: airtime/auto-detect-an-operator

@@ -1,6 +1,6 @@
 get:
   tags:
-    - Airtime
+    - Commissions
   summary: Get Commissions
   description: Retrieve the details of every discount being issued by all the airtime and data operators available on Reloadly.
   operationId: airtime/get-all-commissions

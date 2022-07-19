@@ -1,6 +1,6 @@
 get:
   tags:
-    - Gift Cards
+    - Redeem Instructions
   summary: Get Redeem Instructions by Brand ID
   description: Retrieve the redeem instruction details of a gift card brand by making a request with its brand identification number. 
   operationId: get-redeem-instructions-by-brand-id

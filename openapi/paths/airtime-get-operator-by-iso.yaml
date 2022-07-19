@@ -1,6 +1,6 @@
 get:
   tags:
-    - Airtime
+    - Countries
   summary: Get Operator by ISO Code
   description: Retrieve the details of all the operators within a particular country by making a request with the country's ISO code.
   operationId: airtime/get-operator-by-iso

@@ -1,6 +1,6 @@
 get:
   tags:
-    - Airtime
+    - Operators
   summary: Get Operators
   description: Retrieve the details of every operator that can be used to send or receive a top-up.
   operationId: airtime/get-all-operators

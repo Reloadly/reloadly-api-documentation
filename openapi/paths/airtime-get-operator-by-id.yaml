@@ -1,6 +1,6 @@
 get:
   tags:
-    - Airtime
+    - Operators
   summary: Get Operator by ID
   description: Retrieve the details of an operator by making a request with its identification number
   operationId: airtime/get-operator-by-id

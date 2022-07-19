@@ -1,6 +1,6 @@
 post:
   tags:
-    - Airtime
+    - Top-ups
   summary: Make Top-up
   description: Recharge a mobile number with airtime or data by making a request with its operator details.
   operationId: airtime/top-ups

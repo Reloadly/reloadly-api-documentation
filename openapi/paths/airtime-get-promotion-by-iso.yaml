@@ -1,6 +1,6 @@
 get:
   tags:
-    - Airtime
+    - Promotions
   summary: Get Promotions by ISO Code
   description: Retrieve the details of every promotion going on in a country by making a request with its ISO code.
   operationId: airtime/get-promotion-by-iso

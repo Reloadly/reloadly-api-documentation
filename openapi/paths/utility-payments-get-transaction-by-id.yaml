@@ -1,6 +1,6 @@
 get:
   tags:
-    - Utility Payments
+    - Transactions
   summary: Get Transaction by ID
   description: Retrieve the details of a utility payment by making a request with the payment's identification number. 
   operationId: utilitypayments/get-transaction-by-id

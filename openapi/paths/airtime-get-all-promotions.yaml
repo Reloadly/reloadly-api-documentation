@@ -1,6 +1,6 @@
 get:
   tags:
-    - Airtime
+    - Promotions
   summary: Get Promotions
   description: Retrieve the details of every promotion being issued by any operator available on Reloadly.
   operationId: airtime/get-all-promotions
