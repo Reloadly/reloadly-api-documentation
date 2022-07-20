@@ -2,7 +2,7 @@ post:
   tags:
     - Top-ups
   summary: Make Asynchronous Top-up
-  description: Retrieve a transaction identification number that solely provides details and tracks the status of your top-up.
+  description: This endpoint helps users by returning a  **transactionId**  for every top-up transaction made. This ID can then be used to requery the transaction and get its real-time status. <br> <br> <a href="https://faq.reloadly.com/en/articles/5250158-introduction-to-asynchronous-top-ups" target="_blank">This guide</a> provides more information on how to work with async top-ups.
   operationId: airtime/top-ups-async
   responses:
     '200':
