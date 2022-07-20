@@ -31,7 +31,7 @@ features.openapi:
       activeTextColor: '#7700ff'
       backgroundColor: '#f5f7f9'
       spacing:
-        paddingVertical: '12'
+        paddingVertical: '14'
         unit: 10
     components:
       buttons:
