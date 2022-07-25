@@ -11,7 +11,11 @@ properties:
   path:
     description: The URL path to which the request was made.
     type: string
+<<<<<<<< HEAD:openapi/components/schemas/airtime/get_operator_by_id/GetOperatorByIdResponse404.yaml
     example: /operators/12522
+========
+    example: /operators/12522/commissions
+>>>>>>>> c774a73c3de7c9c30b259fdf6e0489ed39582bab:openapi/components/schemas/get_commission_by_id/GetCommissionByIdResponse404.yaml
   errorCode:
     description: The error code received after the request was made.
     type: string

@@ -3,7 +3,11 @@ properties:
   timeStamp:
     description: The exact time the request for the list of countries was made
     type: string
+<<<<<<<< HEAD:openapi/components/schemas/airtime/get_all_countries/GetAllCountriesResponse401.yaml
     example: 2021-02-15 21:14:00
+========
+    example: 2022-01-06 18:37:10
+>>>>>>>> c774a73c3de7c9c30b259fdf6e0489ed39582bab:openapi/components/schemas/fx_rate/FxRateResponse401.yaml
   message:
     description: The error message returned for the failed request
     type: string
@@ -11,7 +15,11 @@ properties:
   path:
     description: The URL Path which the request was made through
     type: string
+<<<<<<<< HEAD:openapi/components/schemas/airtime/get_all_countries/GetAllCountriesResponse401.yaml
     example: /countries
+========
+    example: /operators/fx-rate
+>>>>>>>> c774a73c3de7c9c30b259fdf6e0489ed39582bab:openapi/components/schemas/fx_rate/FxRateResponse401.yaml
   errorCode:
     description: The error code associated with the reason for the failed request
     type: string
@@ -23,4 +31,11 @@ properties:
   details: 
     description: Further details of the error returned for the failed request
     type: array
+<<<<<<<< HEAD:openapi/components/schemas/airtime/get_all_countries/GetAllCountriesResponse401.yaml
     example: []
+========
+    example: []
+ 
+
+
+>>>>>>>> c774a73c3de7c9c30b259fdf6e0489ed39582bab:openapi/components/schemas/fx_rate/FxRateResponse401.yaml

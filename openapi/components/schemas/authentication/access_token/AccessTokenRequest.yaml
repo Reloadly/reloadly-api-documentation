@@ -1,18 +1,13 @@
-required: 
-  -  client_id
-  -  client_secret
-  -  grant_type
-  -  audience
 type: object
 properties:
   client_id:
     description: Your account's client ID.
     type: string
-    example: qwcLzefigu34894393jfdwj23
+    example: qwcLzXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
   client_secret:
     description: Your account's client secret.
     type: string
-    example: 7kscVxQZ32-fjgvee2842393bfdd383
+    example: 7kscVxQZ32-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
   grant_type:
     description: The access type being specified.
     type: string
@@ -20,4 +15,4 @@ properties:
   audience:
     description: The product which the access token is to be used for.
     type: string
-    example: https://giftcards.reloadly.com
+    example: INSERT_PRODUCT_SERVER_URL_HERE

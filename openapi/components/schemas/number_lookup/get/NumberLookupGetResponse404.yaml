@@ -1,22 +1,29 @@
 type: object
 properties:
   timeStamp:
-    description: The exact time the request for the number's details was made.
+    description: The exact time the request for the operator's details was made.
     type: string
-    example: 2021-09-11 11:54:00
-  status:
-    description: The HTTP status code returned after the request was made
-    type: integer
-    example: 404
-  error:
-    description: The error code received after the request was made
-    type: string
-    example: Not Found
+    example: 
   message:
-    description: The error message received after the request was made
+    description: The error message received after the request was made.
     type: string
-    example: mnp lookup for given number failed
+    example: 
   path:
-    description: The URL path to which the request was made
+    description: The URL path to which the request was made.
     type: string
-    example: /operators/mnp-lookup/03747658727/countries/ES
+    example: 
+  errorCode:
+    description: The error code received after the request was made.
+    type: string
+    example: 
+  infoLink:
+    description: A link to further information about the error.
+    type: string
+    example: 
+  details: 
+    description: Further details of the error returned for the failed request.
+    type: array
+    example: 
+ 
+  
+ 

@@ -1,6 +1,6 @@
 post:
   tags:
-    - Fx Rates
+    - FX Rates
   summary: Fetch FX Rate
   description: Retrieve the foreign exchange rate details of an operator by making a request with its identification number.
   operationId: airtime/fx-rate

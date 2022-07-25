@@ -1,9 +1,9 @@
 type: object
 properties:
   timeStamp:
-    description: The exact time the request for the mobile number's details was made.
+    description: The exact time the request for the operator's details was made.
     type: string
-    example: 2021-03-15 21:14:00
+    example: 2021-02-15 21:14:00
   message:
     description: The error message returned for the failed request.
     type: string
@@ -11,15 +11,19 @@ properties:
   path:
     description: The URL Path which the request was made through.
     type: string
-    example: /mnp-lookup/operators
+<<<<<<<< HEAD:openapi/components/schemas/number_lookup/post/NumberLookupPostResponse401.yaml
+    example:
+========
+    example: /commissions
+>>>>>>>> c774a73c3de7c9c30b259fdf6e0489ed39582bab:openapi/components/schemas/get_all_commissions/GetAllCommissionsResponse401.yaml
   errorCode:
     description: The error code associated with the reason for the failed request.
     type: string
-    example:
+    example: INVALID_TOKEN
   infoLink:
     description: A link to further information about the error.
     type: string
-    example: INVALID_TOKEN
+    example: 
   details: 
     description: Further details of the error returned for the failed request.
     type: array
