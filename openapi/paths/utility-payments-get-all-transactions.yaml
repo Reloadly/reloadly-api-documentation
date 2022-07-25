@@ -1,0 +1,137 @@
+get:
+  tags:
+    - Transactions
+  summary: Get Transactions
+  description: Retrieve information on all utility payment transactions made on your account. Results can be paginated for your convenience.
+  operationId: utilitypayments/get-all-transactions
+  parameters:
+    - in: query
+      name: referenceId
+      schema:
+        type: string
+        description: The reference ID you may have specified while placing the transaction.
+        example: april-electricity-bill
+      required: false
+    - in: query
+      name: page
+      schema:
+        type: integer
+        description: The page to be retrieved from the transaction list.
+        example: 10
+      required: false
+    - in: query
+      name: size
+      schema:
+        type: integer
+        description: Number of items to include in a single page.
+        example: 1
+      required: false
+    - in: query
+      name: startDate
+      schema:
+        type: string
+        description: Indicates the start date for the range of transactions to be retrieved.
+        example: 2021-06-01 00:00:00
+      required: false
+    - in: query
+      name: endDate
+      schema:
+        type: string
+        description: Indicates the end date for the range of transactions to be retrieved.
+        example: 2022-06-01 10:00:00
+      required: false  
+    - in: query
+      name: status
+      schema:
+        type: string
+        description: The transaction's status. Can be either **PROCESSING**, **SUCCESSFUL**, **FAILED**, or **REFUNDED**.
+        example: PROCESSING
+      required: false
+    - in: query
+      name: serviceType
+      schema:
+        type: string
+        description: The biller's service type. Can be either **PREPAID** or **POSTPAID**.
+        example: PREPAID
+      required: false
+    - in: query
+      name: billerType
+      schema:
+        type: string
+        description: The biller's type. Can be either **ELECTRICITY_BILL_PAYMENT**, **WATER_BILL_PAYMENT**, **TV_BILL_PAYMENT**, or **INTERNET_BILL_PAYMENT**
+        example: ELECTRICITY_BILL_PAYMENT
+      required: false
+    - in: query
+      name: billerCountryCode
+      schema:
+        type: string
+        description: Indicates the <a href="https://en.wikipedia.org/wiki/ISO_3166-1">ISO code</a> of the contry where the biller is located.
+        example: NG
+      required: false  
+  responses:
+    '200':
+      description: Successfully retrieved details of all utility payment transactions.
+      content:
+        'application/com.reloadly.utilities-v1+json':
+          schema:
+            $ref: ../components/schemas/utility_payments/get_all_transactions/GetAllTransactionsResponse200.yaml
+          example:
+            - code: PAYMENT_PROCESSED_SUCCESSFULLY
+              message: The payment was processed successfully
+              transaction:
+                id: 13
+                status: SUCCESSFUL
+                referenceId: april-electricity-bill
+                amount: 1000.00000
+                amountCurrencyCode: NGN
+                deliveryAmount: 1000.00000
+                deliveryAmountCurrencyCode: NGN
+                fee: 0.25000
+                feeCurrencyCode: USD
+                discount: 0.00000
+                discountCurrencyCode: USD
+                submittedAt: 2022-03-29 07:04:21
+                balanceInfo: 
+                  oldBalance: 9997.34912
+                  newBalance: 9994.69824
+                  cost: 2.65088
+                  currencyCode: USD
+                  curencyName: US Dollar
+                  updatedAt: 2022-03-29 11:04:21
+                billDetails: 
+                  type: ELECTRICITY_BILL_PAYMENT
+                  billerId: 2
+                  billerName: Abuja Electricity Postpaid
+                  billerCountryCode: NG
+                  serviceType: POSTPAID
+                  completedAt: 2022-03-29 07:04:25
+                  subscriberDetails:
+                    accountNumber: 04223568280  
+            - {}
+            - {}
+    '401':
+      description: Failed due to an unauthorized request.
+      content:
+        'application/com.reloadly.utilities-v1+json':
+          schema:
+            $ref: ../components/schemas/utility_payments/get_all_transactions/GetAllTransactionsResponse401.yaml
+          example:
+            timeStamp: 2022-07-15 21:14:00
+            message: Full authentication is required to access this resource
+            path: /transactions
+            errorCode: INVALID_TOKEN
+            infoLink: null
+            details: []
+    '404':
+      description: Failed because the request was made to an incorrect URL path.
+      content:
+        'application/com.reloadly.utilities-v1+json':
+          schema:
+            $ref: ../components/schemas/utility_payments/get_all_transactions/GetAllTransactionsResponse404.yaml
+          example:
+            timeStamp: 2021-01-11 11:54:00
+            message: Could not retrieve/update resources at the moment, please try again later
+            path: /transaction
+            errorCode: null
+            infoLink: null
+            details: []

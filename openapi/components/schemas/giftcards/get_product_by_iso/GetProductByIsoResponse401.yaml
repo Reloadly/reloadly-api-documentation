@@ -1,21 +1,17 @@
 type: object
 properties:
   timeStamp:
-    description: The exact time the request for the operator's details was made.
+    description: The exact time the request for the gift card product was made.
     type: string
     example: 2021-02-15 21:14:00
   message:
     description: The error message returned for the failed request.
     type: string
-    example: Full authentication is required to access this resource
+    example: Full authentication is required to access this resource.
   path:
-    description: The URL Path which the request was made through.
+    description: The URL path which the request was made through.
     type: string
-<<<<<<<< HEAD:openapi/components/schemas/number_lookup/get/NumberLookupGetResponse401.yaml
-    example:
-========
-    example: /operators/128/commissions
->>>>>>>> c774a73c3de7c9c30b259fdf6e0489ed39582bab:openapi/components/schemas/get_commission_by_id/GetCommissionByIdResponse401.yaml
+    example: /products/US
   errorCode:
     description: The error code associated with the reason for the failed request.
     type: string

@@ -3,11 +3,7 @@ properties:
   balance:
     description: The account balance retrieved
     type: number
-<<<<<<<< HEAD:openapi/components/schemas/airtime/accounts_balance/AccountsBalanceResponse200.yaml
-    example: 5000.23
-========
-    example: 5500.38
->>>>>>>> c774a73c3de7c9c30b259fdf6e0489ed39582bab:openapi/components/schemas/accounts_balance/AccountsBalanceResponse200.yaml
+    example: 5000.38
   currencyCode:
     description: The currency abbreviation of the account
     type: string

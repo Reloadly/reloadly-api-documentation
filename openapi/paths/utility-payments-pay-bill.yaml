@@ -1,0 +1,53 @@
+post:
+  tags:
+    - Pay Bills
+  summary: Pay Bill
+  description: Make a utility payment with a biller. A payment is synonymous to a transaction.
+  operationId: utilitypayments/pay-bill
+  responses:
+    '200':
+      description: Successfully made a utility payment.
+      content:
+        'application/com.reloadly.utilities-v1+json':
+          schema:
+            $ref: ../components/schemas/utility_payments/pay_bill/PayBillResponse200.yaml
+          example:
+            id: 36
+            status: PROCESSING
+            referenceId: 4a391847-n193-22k8-wqkl-9h3s7428m036
+            code: PAYMENT_PROCESSING_IN_PROGRESS
+            message: The payment is being processed, status will be updated when biller processes the payment.
+            submittedAt: 2022-05-18 09:13:53
+            finalStatusAvailabilityAt: 2022-05-19 09:13:52
+    '401':
+      description: Failed due to an unauthorized request.
+      content:
+        'application/com.reloadly.utilities-v1+json':
+          schema:
+            $ref: ../components/schemas/utility_payments/pay_bill/PayBillResponse401.yaml
+          example:
+            timeStamp: 2022-01-06 18:37:10
+            message: Full authentication is required to access this resource
+            path: /pay
+            errorCode: INVALID_TOKEN
+            infoLink: null
+            details: []
+    '404':
+      description: Failed because the request was made to an incorrect URL path.
+      content:
+        'application/com.reloadly.utilities-v1+json':
+          schema:
+            $ref: ../components/schemas/utility_payments/pay_bill/PayBillResponse404.yaml
+          example:
+            timeStamp: 2021-09-11 11:54:00
+            status: 404
+            error: Not Found
+            message: No message available
+            path: /pays
+  requestBody:
+    description: Payload Description
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/utility_payments/pay_bill/PayBillRequest.yaml

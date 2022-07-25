@@ -1,25 +1,21 @@
 type: object
 properties:
   timeStamp:
-    description: The exact time the request for the operator's details was made.
+    description: The exact time the request for the gift card propduct was made.
     type: string
-    example: 2021-02-11 11:54:00
+    example: 2021-04-11 13:24:00
   message:
     description: The error message received after the request was made.
     type: string
-    example: Operator not found for given id
+    example: Country not found and/or not currently supported
   path:
     description: The URL path to which the request was made.
     type: string
-<<<<<<<< HEAD:openapi/components/schemas/airtime/get_operator_by_id/GetOperatorByIdResponse404.yaml
-    example: /operators/12522
-========
-    example: /operators/12522/commissions
->>>>>>>> c774a73c3de7c9c30b259fdf6e0489ed39582bab:openapi/components/schemas/get_commission_by_id/GetCommissionByIdResponse404.yaml
+    example: /countries/USG/products
   errorCode:
     description: The error code received after the request was made.
     type: string
-    example: 
+    example: COUNTRY_NOT_SUPPORTED
   infoLink:
     description: A link to further information about the error.
     type: string
